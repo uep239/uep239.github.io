@@ -14,8 +14,8 @@ jobs:
       with:
         python-version: 3.7
       run: pip install -r requirements.txt
-      run: jupyter-book build ./source
+      run: jupyter-book build source
     - uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./source/_build/html
+        publish_dir: source/_build/html
