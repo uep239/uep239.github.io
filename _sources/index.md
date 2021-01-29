@@ -1,4 +1,4 @@
-# Gesopatial Programming with Python
+# Geospatial Programming with Python
 UEP-0239 | Tufts University | Urban and Environmental Policy and Planning | Spring 2021
 
 ```{attention}
