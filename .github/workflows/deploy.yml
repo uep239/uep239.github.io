@@ -13,8 +13,8 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: 3.7
-      run: pip install -r requirements.txt
-      run: jupyter-book build ./source
+    - run: pip install -r requirements.txt
+    - run: jupyter-book build ./source
     - uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
