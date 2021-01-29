@@ -1,0 +1,24 @@
+title: 'UEP-0239: Geospatial Programming with Python'
+author: Uku-Kaspar Uustalu
+copyright: '2021'
+logo: logo.png
+
+parse:
+  myst_extended_syntax: true
+
+repository:
+  url: https://github.com/uep239/uep239.github.io
+  path_to_book: source
+  branch: main
+
+html:
+  use_edit_page_button: true
+  use_issues_button: true
+  use_repository_button: true
+  home_page_in_navbar: false
+  baseurl: https://uep239.github.io/
+  extra_navbar: ''
+
+sphinx:
+  config:
+    html_last_updated_fmt: '%b %d, %Y'
