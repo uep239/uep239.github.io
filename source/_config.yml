@@ -12,11 +12,12 @@ repository:
   branch: main
 
 html:
+  baseurl: https://uep239.github.io/
+  google_analytics_id: G-1XJPQEJ2NF
   use_edit_page_button: true
   use_issues_button: true
   use_repository_button: true
   home_page_in_navbar: false
-  baseurl: https://uep239.github.io/
   extra_navbar: ''
 
 sphinx:
