@@ -5,6 +5,11 @@ UEP-0239 | Tufts University | Urban and Environmental Policy and Planning | Spri
 [canvas-link]: https://canvas.tufts.edu/courses/27438
 [piazza-link]: https://piazza.com/tufts/spring2021/uep239/resources
 
+```{admonition} Online Python Interpreter
+:class: tip
+If we have the time, we will use this for an in-class activity today:&emsp;<a href="https://www.python.org/shell/" target="_blank" onclick="window.open('https://console.python.org/python-dot-org-console/','_blank','height=300,width=745'); return false;"><img src="https://tuftsdatalab.github.io/badges/python.svg" alt="Launch Python Interpreter"></a>
+```
+
 ```{admonition} Welcome
 :class: note
 The first lecture is on **February 1** at 10 am EST and will take place via Zoom. Please see [Canvas][canvas-link] for the meeting link.
