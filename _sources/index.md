@@ -30,7 +30,7 @@ Instructor
 
 Teaching Assistant
 ^^^
-[**Ana Arskova**](https://www.linkedin.com/in/ana-arsovska-505398188/)\
+[**Ana Arsovska**](https://www.linkedin.com/in/ana-arsovska-505398188/)\
 [ana.arsovska@tufts.edu](mailto:ana.arsovska@tufts.edu)
 ---
 
