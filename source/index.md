@@ -48,10 +48,10 @@ Week | Date | Main Topic | Assignments Out | Assignments Due
 0 | February 1 | What is programming? | HW 0 |
 1 | February 8 | Introduction to Python | HW 1 | HW 0
 2 | **February 16** <br/> **Tuesday** | Intermediate and Advanced Python | HW 2 | HW 1
-3 | February 22 | Package Management and Scientific Computing | HW 3 <br/> **Midterm Project**| HW 4
+3 | February 22 | Package Management and Scientific Computing | HW 3 <br/> **Midterm Project**| HW 2
 4 | March 1 | Python for Data Analysis and Visualization | HW 4 | HW 3
 5 | March 8 | The Spatial Data Model | HW 5 | HW 4
-6 | March 15 | Visualizing Spatial Data | HW 5 | HW 6 <br/> **Midterm Project**
+6 | March 15 | Visualizing Spatial Data | HW 6 | HW 5 <br/> **Midterm Project**
 7 | March 22 | Vector Analysis | HW 7 <br/> **Final Project** | HW 6
 8 | March 29 | Raster Analysis | HW 8 | HW 7
 9 | April 5 | Network Analysis | HW 9 | HW 8
