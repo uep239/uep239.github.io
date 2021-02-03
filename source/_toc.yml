@@ -1,1 +1,5 @@
 - file: index
+
+- part: Week 0
+  chapters:
+  - file: wk00/setup
