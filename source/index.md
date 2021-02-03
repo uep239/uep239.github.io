@@ -5,11 +5,6 @@ UEP-0239 | Tufts University | Urban and Environmental Policy and Planning | Spri
 [canvas-link]: https://canvas.tufts.edu/courses/27438
 [piazza-link]: https://piazza.com/tufts/spring2021/uep239/resources
 
-```{admonition} Notice
-:class: note
-The first homework assignment (HW 0) will be posted on the morning of Wednesday, February 3.
-```
-
 ```{admonition} Attention
 :class: caution
 Course information will be added to the course website throughout the first two weeks of classes. Please refer to the the PDF version of the course syllabus available at <https://tufts.box.com/v/uep239-syllabus> in the meantime.
