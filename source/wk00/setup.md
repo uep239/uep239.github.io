@@ -53,9 +53,8 @@ The following will make your system more vulnerable to malicious scripts and app
 2. Click **yes** when asked for confirmation, enter an **administrator** password if needed
 3. Run the following command (*either type or copy and paste, then press __Enter__ to run*)
     ```powershell
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
     ```
-4. When asked for confirmation, type **`A`** and press **Enter**
 ````
 ````{tabbed} macOS
 **Show filename extensions and configure Finder**
@@ -74,6 +73,7 @@ The following will make your system more vulnerable to malicious scripts and app
     ```
 
 **Allow the installation of third-party applications**
+
 1. Open **Terminal** from *Applications*
 2. Run the following command (*either type or copy and paste, then press __Return__ to run*)
     ```sh
@@ -205,6 +205,7 @@ You will need to create GitHub account before proceeding (unless you already hav
 11. Keep clicking though the installer and accepting the default settings until the installation has completed
 
 **Configure Git**
+
 1. Launch **Git Bash** from *Start > Git*
 2. Run the following command, replacing the example name with your own name (wrap it in quotes as in the example)
     ```bash
@@ -212,12 +213,12 @@ You will need to create GitHub account before proceeding (unless you already hav
     ```
 3. Run the following command, replacing the example email with the email address linked to your GitHub account
     ```bash
-    git config --global user.email johndoe@example.com
+    git config --global user.email john.doe@example.com
     ```
 
 ````
 ````{tabbed} macOS
-**Install Git or Confirm your Installation**
+**Install Git or confirm your installation**
 
 1. Open **Terminal** from *Applications* and run the following command
     ```sh
@@ -227,6 +228,7 @@ You will need to create GitHub account before proceeding (unless you already hav
 - If a version number is returned instead and no installer launches, you have Git installed
 
 **Configure Git**
+
 1. Close any open **Terminal** windows and open a new **Terminal** window from *Applications*
 2. Run the following command, replacing the example name with your own name (wrap it in quotes as in the example)
     ```sh
@@ -234,7 +236,7 @@ You will need to create GitHub account before proceeding (unless you already hav
     ```
 3. Run the following command, replacing the example email with the email address linked to your GitHub account
     ```sh
-    git config --global user.email johndoe@example.com
+    git config --global user.email john.doe@example.com
     ```
 4. Run the following command
     ```sh
@@ -254,27 +256,107 @@ You will need to create GitHub account before proceeding (unless you already hav
 
 ### Configure an SSH Key for GitHub Authentication
 
+Setting up an SSH (Secure Shell) key and linking it to your GitHub account will allow you to use the `git` command to access your GitHub account directly without having to manually type in your password and username every time.
+
+```{warning}
+This will allow anyone with access to your computer (or local user account) also access your GitHub account.
+```
+```{note}
+If you know that you already have a public-private SSH key pair that you would like to use for GitHub, feel free to skip the section on generating an SSH key. Any preexisting SSH keys would be located in the `~/.ssh` directory.
+```
+
 ```{tabbed} Windows
-Windows instructions here
+**Create a new SSH key to use with GitHub**
+
+1. Launch **Git Bash** from *Start > Git*
+2. Run the following command, replacing the example email with the email address linked to your GitHub account
+    ```bash
+    ssh-keygen -t ed25519 -C "john.doe@example.com"
+    ```
+3. When prompted to *enter a file in which to save the key*, press **Enter** to accept the default location
+    - *Make note of the filename if it differs from the default filename of `id_ed25519`*
+4. When prompted to *enter passphrase*, leave it empty and press **Enter** twice to confirm
+
+**Link a new SSH key to your GitHub account**
+
+1. If not already open, launch **Git Bash** from *Start > Git*
+2. Copy the newly generated (or any toher desired) SSH **public** key to your clipboard *(modify the filename if needed)*
+    ```bash
+    clip < ~/.ssh/id_ed25519.pub
+    ```
+3. Go to [**github.com/settings/keys**](https://github.com/settings/keys) and log in with your GitHub account if needed
+4. Click on **New SSH key**
+5. The **Title** field should contain a descriptive label that will allow you to identify this key later (as the key is linked to your computer, the name or description of the computer would be a good choice, for example *ThinkPad X1*)
+6. Paste the copied **public** key into the **Key** field
+7. Click on **Add SSH key**
+8. If prompted, confirm your GitHub password
 ```
 ```{tabbed} macOS
-MacOS instructions here
+**Create a new SSH key to use with GitHub**
+
+1. Launch **Terminal** from *Applications*
+2. Run the following command, replacing the example email with the email address linked to your GitHub account
+    ```sh
+    ssh-keygen -t ed25519 -C "john.doe@example.com"
+    ```
+3. When prompted to *enter a file in which to save the key*, press **Return** to accept the default location
+    - *Make note of the filename if it differs from the default filename of `id_ed25519`*
+4. When prompted to *enter passphrase*, leave it empty and press **Return** twice to confirm
+
+**Link a new SSH key to your GitHub account**
+
+1. If not already open, launch **Terminal** from *Applications*
+2. Copy the newly generated (or any toher desired) SSH **public** key to your clipboard *(modify the filename if needed)*
+    ```bash
+    pbcopy < ~/.ssh/id_ed25519.pub
+    ```
+3. Go to [**github.com/settings/keys**](https://github.com/settings/keys) and log in with your GitHub account if needed
+4. Click on **New SSH key**
+5. The **Title** field should contain a descriptive label that will allow you to identify this key later (as the key is linked to your computer, the name or description of the computer would be a good choice, for example *MacBook Air*)
+6. Paste the copied **public** key into the **Key** field
+7. Click on **Add SSH key**
+8. If prompted, confirm your GitHub password
 ```
 
 ### Add Git Status to your Terminal
 
-```{tabbed} Windows
-Windows instructions here
-```
+Although not exactly necessary, reconfiguring your Terminal or PowerShell to display the status of your Git repository whenever you are in one will make working with Git on the command line much easier, especially if you are just starting up.
+
+````{tabbed} Windows
+1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**
+2. Click **yes** when asked for confirmation, enter an **administrator** password if needed
+3. Run the following commands to configure the prerequisites needed to install modules from the  [PowerShell Gallery](https://www.powershellgallery.com/)
+    ```powershell
+    Install-PackageProvider -Name NuGet -Force
+    Install-Module PowerShellGet -Scope CurrentUser -Force -AllowClobber
+    ```
+4. Close PowerShell and restart it by *right-clicking* on the **Start** button and selecting **Windows PowerShell (Admin)**
+5. As before, click **yes** when asked for confirmation, enter an **administrator** password if needed
+3. Run the following commands to install and configure [`posh-git`](https://github.com/dahlbyk/posh-git) (a Git status module for PowerShell)
+    ```powershell
+    PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
+    Add-PoshGitToProfile
+    ```
+````
 ```{tabbed} macOS
 MacOS instructions here
 ```
 
 ### Install the GitHub CLI (Optional)
 
-```{tabbed} Windows
-Windows instructions here
-```
+The GitHub command-line interface (CLI) allows you to work with your GitHub repositories without having to type out long commands and gives you access to additional GitHub functionality not possible with the traditional `git` tool. Once you are more comfortable with Git and GitHub, it will simplify various workflows and make your life easier. However, right now you might not see much value in installing it, so feel free to skip this part.
+
+````{tabbed} Windows
+1. Go to [**github.com/cli/cli/releases/latest**](https://github.com/cli/cli/releases/latest)
+2. Scroll down to **Assets** and download the MSI installer (the filename should be similar to `gh_X.X.X_windows_amd64.msi`)
+3. Run the downloaded installer and accept all default settings
+4. *Right-click* on the **Start** button and select **Windows PowerShell**
+5. Configure the GitHub CLI by running the following command
+    ```powershell
+    gh auth login
+    ```
+6. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions
+````
 ````{tabbed} macOS
 ```{tabbed} Homebrew
 Windows instructions here
@@ -282,7 +364,7 @@ Windows instructions here
 ```{tabbed} MacPorts
 Windows instructions here
 ```
-```{tabbed} Binary
+```{tabbed} Binary Installation
 Windows instructions here
 ```
 ````
