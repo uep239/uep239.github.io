@@ -154,16 +154,33 @@ After completing this setup, your base environment will be configured and you sh
 
 ## Install Visual Studio Code
 
+Visual Studio Code is a powerful open-source text editor that works well with both Python and Markdown, and is well suited for our purposes. It is cross-platform and has numerous extremely useful features, making it a robust coding environment for all operating systems. However, its functionality is unmatched on the Windows platform, making it a must-have for aspiring developers who also happen to be Windows users.
+
 ```{tabbed} Windows
-Windows instructions here
+1. Download a suitable Visual Studio Code installer from [**code.visualstudio.com/download**](https://code.visualstudio.com/download)
+2. Run the downloaded installer and accept the default settings **until you reach _Select Additional Tasks_**
+3. In the *Select Additional Tasks* window, ensure the following options are **selected**
+    - Add *Open with Code* action to Windows Explorer file context menu
+    - Add *Open with Code* action to Windows Explorer directory context menu
+    - **Register Code as an editor for supported file types**
+    - **Add to PATH (requires shell restart)** *(this should be selected by default, __do not unselect__)*
+4. Click **Next** and then **Install** to confirm the installation
 ```
 ```{tabbed} macOS
-MacOS instructions here
+1. Download a suitable Visual Studio Code installer from [**code.visualstudio.com/download**](https://code.visualstudio.com/download)
+2. Locate the downloaded archive and select the *magnifying glass* icon to open it in **Finder**
+3. Drag **Visual Studio Code.app** into the *Applications* folder
+4. (Optional) *Right-click* on Visual Studio Code icon and select ***Options > Keep in Dock***
+5. Launch Visual Studio Code
+6. Open the **Command Palette** by pressing **Ctrl+Shift+P**
+7. Type ***shell command*** into the Command Palette
+8. Select **Shell Command: Install 'code' command in PATH**
 ```
 
 
 ## Install and Configure Git
 
+Git is the most popular distributed version control software. The following will guide you thorough installing Git on your computer and configuring it to be more convenient for you to use throughout the semester.
 ```{attention}
 You will need to create GitHub account before proceeding (unless you already have one): [**github.com/join**](https://github.com/join)
 ```
