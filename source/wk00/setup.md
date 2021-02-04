@@ -20,6 +20,10 @@ If you already happen to have any of the aforementioned software installed and c
 
 Please perform all installations and configuration changes in the order they are listed. Toggle the tab corresponding to your operating system to view the appropriate instructions.
 
+```{note}
+Instead of manually typing the commands in the instructions into Terminal or PowerShell, you can just copy and paste the command, and then press **Enter/Return** to run it.
+```
+
 
 ## Configure System Preferences
 
@@ -30,49 +34,49 @@ The following will make your system more vulnerable to malicious scripts and app
 ```
 
 ````{tabbed} Windows
-**Show hidden files and filename extensions:**
+**Show hidden files and filename extensions**
 
 1. Open **File Explorer**
 2. Select the **View** tab
-3. In the *Show/Hide* section, ensure the following boxes are **checked**:
+3. In the *Show/Hide* section, ensure the following boxes are **checked**
     - ***File name extensions***
     - ***Hidden items***
 
-**Set PowerShell as your default shell:**
+**Set PowerShell as your default shell**
 
 1. *Right-click* on your taskbar and click on **Taskbar settings**
-2. Ensure *Replace Command Prompt with Windows Powershell in the menu when I right-click the start button or...* is toggled **On**
+2. Ensure *Replace Command Prompt with Windows Powershell in the menu when...* is toggled **ON**
 
-**Allow the execution of third-party scripts:**
+**Allow the execution of third-party scripts**
 
 1. *Right-click* on the start button and select **Windows PowerShell (Admin)**
-2. Click **Yes** when asked for confirmation, enter an **administrator** password if needed
-3. Type the following command and press **Enter**
+2. Click **yes** when asked for confirmation, enter an **administrator** password if needed
+3. Run the following command (*either type or copy and paste, then press __Enter__ to run*)
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
     ```
 4. When asked for confirmation, type **`A`** and press **Enter**
 ````
 ````{tabbed} macOS
-**Show filename extensions and configure Finder:**
+**Show filename extensions and configure Finder**
 
 1. Open **Finder** and ensure that *View > Show Path Bar* is **checked**
 2. Then go to *Finder > Preferences...*
 2. In the *General* section, ensure all items under ***Show these items on the desktop*** are **checked**
 3. In the *Advanced* section, ensure ***Show all filename extensions*** is **checked**
 
-**Show hidden files:**
+**Show hidden files**
 
 1. Open **Terminal** from *Applications*
-2. Type the following command and press **Return**
-    ```
+2. Run the following command (*either type or copy and paste, then press __Return__ to run*)
+    ```sh
     defaults write com.apple.finder AppleShowAllFiles YES
     ```
 
-**Allow the installation of third-party applications:**
+**Allow the installation of third-party applications**
 1. Open **Terminal** from *Applications*
-2. Type the following command and press **Return**
-    ```
+2. Run the following command (*either type or copy and paste, then press __Return__ to run*)
+    ```sh
     sudo spctl --master-disable
     ```
 3. When prompted, enter your **administrator** password
@@ -103,13 +107,13 @@ After completing this setup, your base environment will be configured and you sh
 
 ````{tabbed} Windows
 1. [**Click here**](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe) to download the latest 64-bit Minconda installer for Windows (exe)
-2. Run the downloaded installer and select the following options:
-    - Install for: **Just Me (recommended)**
+2. Run the downloaded installer and select the following options
+    - Install for **Just Me (recommended)**
     - Accept the default destination folder
     - **DO NOT** add Miniconda3 to PATH (keep this **unchecked**)
     - **DO** register Miniconda3 as your default Python (keep this **checked**)
 3. Once the installer has finished, open **Anaconda PowerShell Prompt** from *Start > Anaconda3*
-4. Using **Anaconda PowerShell Prompt**, run the following commands:
+4. Using **Anaconda PowerShell Prompt**, run the following commands to configure your base environment
     ```powershell
     conda config --add channels conda-forge
     conda config --set channel_priority strict
@@ -118,14 +122,25 @@ After completing this setup, your base environment will be configured and you sh
     mamba update --all --yes
     mamba install jupyterlab>=3 nb_conda_kernels --yes
     ```
-    *Feel free to just copy all of the commands and paste them into the prompt. All but the last line should run automatically one after the other. You will need to press Enter to run the last command once all previous commands have finished.*
+    *Feel free to just copy all of the commands and paste them into the prompt. All but the last line should automatically run one after the other. You will need to press Enter to run the last command once all previous commands have finished.*
 ````
 ````{tabbed} macOS
-1. [**Click here**](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.pkg) to download the latest 64-bit Minconda installer for macOS (pkg)
-2. Run the downloaded installer and accept all default settings
-3. Once the installer has finished, open **Terminal** from *Applications*
-4. Using **Terminal**, run the following commands:
+1. Open **Terminal** from *Applications*
+2. Download the latest Miniconda install script for macOS by running the following command
+    ```sh
+    curl -L -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
     ```
+3. Once the download has finisher, run the following command to start the installation process
+    ```sh
+    bash Miniconda3-latest-MacOSX-x86_64.sh
+    ```
+4. Follow the installation prompts and accept all default settings
+5. Answer **YES** to *Do you wish the installer to initialize Miniconda3 by running conda init?*
+6. Once the installer has finished, close your terminal and restart it via *Applications > Terminal*
+7. The line where you enter your commands should now begin with **`(base)`**
+    - *__STOP__ and contact course staff if this is not the case*
+8. Run the following commands to configure your base environment
+    ```sh
     conda config --add channels conda-forge
     conda config --set channel_priority strict
     conda update conda --yes
@@ -133,7 +148,7 @@ After completing this setup, your base environment will be configured and you sh
     mamba update --all --yes
     mamba install jupyterlab>=3 nb_conda_kernels --yes
     ```
-    *Feel free to just copy all of the commands and paste them into the terminal. All but the last line should run automatically one after the other. You will need to press Return to run the last command once all previous commands have finished.*
+    *Feel free to just copy all of the commands and paste them into the terminal. All but the last line should automatically run one after the other. You will need to press Return to run the last command once all previous commands have finished.*
 ````
 
 
