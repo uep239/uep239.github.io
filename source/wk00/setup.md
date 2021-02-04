@@ -49,7 +49,7 @@ The following will make your system more vulnerable to malicious scripts and app
 
 **Allow the execution of third-party scripts**
 
-1. *Right-click* on the start button and select **Windows PowerShell (Admin)**
+1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**
 2. Click **yes** when asked for confirmation, enter an **administrator** password if needed
 3. Run the following command (*either type or copy and paste, then press __Enter__ to run*)
     ```powershell
@@ -180,19 +180,77 @@ Visual Studio Code is a powerful open-source text editor that works well with bo
 
 ## Install and Configure Git
 
-Git is the most popular distributed version control software. The following will guide you thorough installing Git on your computer and configuring it to be more convenient for you to use throughout the semester.
+Git is the most popular distributed version control software, originally developed by [Linus Trovalds](https://en.wikipedia.org/wiki/Linus_Torvalds) – the same [Finn](https://en.wikipedia.org/wiki/Finland) who created the Linux operating system (which pretty much runs half of the world). The following will guide you thorough installing Git on your computer and configuring it to be more convenient for you to use throughout the semester.
 ```{attention}
 You will need to create GitHub account before proceeding (unless you already have one): [**github.com/join**](https://github.com/join)
 ```
 
 ### Install and Git and Configure Basic Settings
 
-```{tabbed} Windows
-Windows instructions here
-```
-```{tabbed} macOS
-MacOS instructions here
-```
+````{tabbed} Windows
+**Install Git for Windows**
+
+1. Download the latest **Git for Windows** installer from [**git-scm.com/download/win**](https://git-scm.com/download/win)
+2. Run the downloaded installer and accept the default settings **until you reach _Choosing the default editor used by Git_**
+3. In the *Choosing the default editor used by Git* window, select **Use Visual Studio Code as Git's default editor**
+    - If have another text editor you use, feel free to select that one instead of Visual Studio Code
+    - Select ***Use the Nano editor by default*** if your preference is not listed
+4. Click *Next* and select **Override the default branch name for new repositories** (keep ***main*** as the default name)
+5. Click *Next* and ensure **Git from the command line and also from 3-rd party software** is selected *(should be the default)*
+6. Click *Next* and accept the default selection **Use the OpenSSL library**
+7. Click *Next* and ensure **Checkout Windows-style, commit Unix-style line endings** is selected *(should be the default)*
+8. Click *Next* and accept the default selection **Use MinTTY (the default terminal of MSYS2)**
+9. Click *Next* and ensure **Default (fast-forward or merge)** is selected *(this should be the default selection)*
+10. Click *Next* and accept the default selection **Git Credential Manager Core**
+11. Keep clicking though the installer and accepting the default settings until the installation has completed
+
+**Configure Git**
+1. Launch **Git Bash** from *Start > Git*
+2. Run the following command, replacing the example name with your own name (wrap it in quotes as in the example)
+    ```bash
+    git config --global user.name "John Doe"
+    ```
+3. Run the following command, replacing the example email with the email address linked to your GitHub account
+    ```bash
+    git config --global user.email johndoe@example.com
+    ```
+
+````
+````{tabbed} macOS
+**Install Git or Confirm your Installation**
+
+1. Open **Terminal** from *Applications* and run the following command
+    ```sh
+    git --version
+    ```
+- If an installer launches, walk through the installer and accept all default settings
+- If a version number is returned instead and no installer launches, you have Git installed
+
+**Configure Git**
+1. Close any open **Terminal** windows and open a new **Terminal** window from *Applications*
+2. Run the following command, replacing the example name with your own name (wrap it in quotes as in the example)
+    ```sh
+    git config --global user.name "John Doe"
+    ```
+3. Run the following command, replacing the example email with the email address linked to your GitHub account
+    ```sh
+    git config --global user.email johndoe@example.com
+    ```
+4. Run the following command
+    ```sh
+    git config --global init.defaultBranch main
+    ```
+5. Configure the text editor Git uses by default as follows
+    - If you installed **Visual Studio Code**, run the following
+        ```sh
+        git config --global core.editor "code --wait"
+        ```
+    - If you would like to use a different text editor, refer to the [Git documentation](https://git-scm.com/book/en/v2/Appendix-C%3A-Git-Commands-Setup-and-Config#ch_core_editor) for the appropriate command
+    - If you are unable to find a suitable command for your preference, default to **nano** as follows
+        ```sh
+        git config --global core.editor "nano -w"
+        ```
+````
 
 ### Configure an SSH Key for GitHub Authentication
 
