@@ -373,7 +373,7 @@ Always deactivate all Conda environments before using a different package manage
 Obviously, the following is for Windows users only. Others are welcome to [**skip ahead**](#install-the-visual-studio-code-python-extension) to the next section.
 ```
 
-For a long time, Windows had a bad reputation amongst developers for having a clunky and uncomfortable command-line interface. However, that has changed in recent years with the release of Windows Terminal and PowerShell Core – a new and improved cross-platform version of PowerShell. (Note that this is different and actually completely separate from the PowerShell included in Windows by default, also known as Windows PowerShell.) To guarantee that you will have the best and most comfortable possible command-line interface on your Windows computer, let us install Windows Terminal along with PowerShell Core and configure them to work well with both Conda and Git.
+Windows is often criticized amongst developers for having for having a clunky and uncomfortable command-line interface. However, that has changed in recent years with the release of Windows Terminal and PowerShell Core – a new and improved cross-platform version of PowerShell. (Note that this is different and actually completely separate from the PowerShell included in Windows by default, also known as Windows PowerShell.) To guarantee that you will have the best and most comfortable possible command-line interface on your Windows computer, let us install Windows Terminal along with PowerShell Core and configure them to work well with both Conda and Git.
 
 Both Windows Terminal and PowerShell Core are available from the [Microsoft Store](https://www.microsoft.com/en-us/store/apps/windows). Use the links below install them in the order specified – PowerShell Core **before** Windows Terminal.
 
@@ -395,7 +395,7 @@ Once you have installed both PowerShell Core and Windows Terminal, configure the
 6. *Right-click* on **Windows Terminal** in the Start menu and select *More > __Run as administrator__*
 7. Click **yes** when asked for confirmation, enter an **administrator** password if needed
 8. If the first line reads **`Windows Powershell`** instead of **`Powershell 7.X.X`**, **stop** and contact course staff
-9. Run the following commands to install and configure [`posh-git`](https://github.com/dahlbyk/posh-git) (a Git status module for PowerShell)
+9. Run the following commands to install and configure [**`posh-git`**](https://github.com/dahlbyk/posh-git) (a Git status module for PowerShell)
     ```powershell
     PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
     Add-PoshGitToProfile
@@ -420,8 +420,8 @@ Once you have installed both PowerShell Core and Windows Terminal, configure the
 14. Close Notepad
 15. Close **Windows Terminal** and restart it via ***Start > Windows Terminal***
 16. Confirm that the line where you enter your commands now begins with **`(base)`**
-    - If yes, you are all set should now use **Windows Terminal** for anything command-line related
-    - If not, contact the course staff for assistance
+    - **If yes**, you are all set and should now use **Windows Terminal** for anything command-line related
+    - **If not**, contact the course staff for assistance
 
 ## Install the Visual Studio Code Python Extension
 
