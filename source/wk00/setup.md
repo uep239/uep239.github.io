@@ -42,7 +42,7 @@ The following will make your system more vulnerable to malicious scripts and app
     - ***File name extensions***
     - ***Hidden items***
 
-**Set PowerShell as your default shell**
+**Set Windows PowerShell as your default shell**
 
 1. *Right-click* on your taskbar and click on **Taskbar settings**
 2. Ensure *Replace Command Prompt with Windows Powershell in the menu when...* is toggled **ON**
@@ -130,7 +130,7 @@ After completing this setup, your base environment will be configured and you sh
     ```sh
     curl -L -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
     ```
-3. Once the download has finisher, run the following command to start the installation process
+3. Once the download has finished, run the following command to start the installation process
     ```sh
     bash Miniconda3-latest-MacOSX-x86_64.sh
     ```
@@ -318,33 +318,9 @@ If you know that you already have a public-private SSH key pair that you would l
 8. If prompted, confirm your GitHub password
 ```
 
-### Add Git Status to your Terminal
-
-Although not exactly necessary, reconfiguring your Terminal or PowerShell to display the status of your Git repository whenever you are in one will make working with Git on the command line much easier, especially if you are just starting up.
-
-````{tabbed} Windows
-1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**
-2. Click **yes** when asked for confirmation, enter an **administrator** password if needed
-3. Run the following commands to configure the prerequisites needed to install modules from the  [PowerShell Gallery](https://www.powershellgallery.com/)
-    ```powershell
-    Install-PackageProvider -Name NuGet -Force
-    Install-Module PowerShellGet -Scope CurrentUser -Force -AllowClobber
-    ```
-4. Close PowerShell and restart it by *right-clicking* on the **Start** button and selecting **Windows PowerShell (Admin)**
-5. As before, click **yes** when asked for confirmation, enter an **administrator** password if needed
-3. Run the following commands to install and configure [`posh-git`](https://github.com/dahlbyk/posh-git) (a Git status module for PowerShell)
-    ```powershell
-    PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
-    Add-PoshGitToProfile
-    ```
-````
-```{tabbed} macOS
-MacOS instructions here
-```
-
 ### Install the GitHub CLI (Optional)
 
-The GitHub command-line interface (CLI) allows you to work with your GitHub repositories without having to type out long commands and gives you access to additional GitHub functionality not possible with the traditional `git` tool. Once you are more comfortable with Git and GitHub, it will simplify various workflows and make your life easier. However, right now you might not see much value in installing it, so feel free to skip this part.
+The GitHub command-line interface (CLI) allows you to work with your GitHub repositories without having to type out long commands and gives you access to additional GitHub functionality not possible with the traditional `git` tool. Once you are more comfortable with Git and GitHub, it will simplify various workflows and make your life easier. However, right now you might not see much value in installing it, so feel free to [**skip**](#install-windows-terminal-and-powershell-core) this part.
 
 ````{tabbed} Windows
 1. Go to [**github.com/cli/cli/releases/latest**](https://github.com/cli/cli/releases/latest)
@@ -357,21 +333,95 @@ The GitHub command-line interface (CLI) allows you to work with your GitHub repo
     ```
 6. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions
 ````
-````{tabbed} macOS
-```{tabbed} Homebrew
-Windows instructions here
+`````{tabbed} macOS
+You will need either [**Homebrew**](https://brew.sh/) or [**MacPorts**](https://www.macports.org/) to install the GitHub CLI. If you do not already have either of those set up, it is recommended you [**skip**](#install-windows-terminal-and-powershell-core) this section instead of trying to set up another package manager. We do not really need the GitHub CLI and it is not worth the hassle.
+```{caution}
+Always deactivate all Conda environments before using a different package manager like Homebrew or MacPorts. To avoid potential issues, it is advisable to refrain from using any other package manager alongside Conda.
 ```
-```{tabbed} MacPorts
-Windows instructions here
-```
-```{tabbed} Binary Installation
-Windows instructions here
-```
+````{tabbed} Homebrew
+1. Launch **Terminal** from *Applications*
+2. Install the GitHub CLI by running the following commands
+    ```sh
+    conda deactivate
+    brew install gh
+    ```
+2. Run the following command to configure the GitHub CLI
+    ```sh
+    gh auth login
+    ```
+3. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions
 ````
+````{tabbed} MacPorts
+1. Launch **Terminal** from *Applications*
+2. Install the GitHub CLI by running the following commands
+    ```sh
+    conda deactivate
+    sudo port install gh
+    ```
+2. Run the following command to configure the GitHub CLI
+    ```sh
+    gh auth login
+    ```
+3. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions
+````
+`````
 
 
 ## Install Windows Terminal and PowerShell Core
 
+```{note}
+Obviously, the following is for Windows users only. Others are welcome to [**skip ahead**](#install-the-visual-studio-code-python-extension) to the next section.
+```
+
+For a long time, Windows had a bad reputation amongst developers for having a clunky and uncomfortable command-line interface. However, that has changed in recent years with the release of Windows Terminal and PowerShell Core – a new and improved cross-platform version of PowerShell. (Note that this is different and actually completely separate from the PowerShell included in Windows by default, also known as Windows PowerShell.) To guarantee that you will have the best and most comfortable possible command-line interface on your Windows computer, let us install Windows Terminal along with PowerShell Core and configure them to work well with both Conda and Git.
+
+Both Windows Terminal and PowerShell Core are available from the [Microsoft Store](https://www.microsoft.com/en-us/store/apps/windows). Use the links below install them in the order specified – PowerShell Core **before** Windows Terminal.
+
+1. Install **PowerShell Core**: <https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d>
+2. Install **Windows Terminal**: <https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701>
+
+### Configure Windows Terminal and PowerShell Core
+Once you have installed both PowerShell Core and Windows Terminal, configure them to automatically initiate Conda and display Git repository status as follows.
+
+1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**
+2. Click **yes** when asked for confirmation, enter an **administrator** password if needed
+3. Run the following commands to configure the prerequisites needed to install modules from the  [PowerShell Gallery](https://www.powershellgallery.com/)
+    ```powershell
+    Install-PackageProvider -Name NuGet -Force
+    Install-Module PowerShellGet -Scope CurrentUser -Force -AllowClobber
+    ```
+4. After both commands have finished running, close Windows PowerShell
+5. Open the **Start** menu and scroll down until you see **Windows Terminal**
+6. *Right-click* on **Windows Terminal** in the Start menu and select *More > __Run as administrator__*
+7. Click **yes** when asked for confirmation, enter an **administrator** password if needed
+8. If the first line reads **`Windows Powershell`** instead of **`Powershell 7.X.X`**, **stop** and contact course staff
+9. Run the following commands to install and configure [`posh-git`](https://github.com/dahlbyk/posh-git) (a Git status module for PowerShell)
+    ```powershell
+    PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
+    Add-PoshGitToProfile
+    ```
+10. Run the following commands to open your PowerShell profile configuration file in Notepad
+    ```powershell
+    cd ~\Documents\PowerShell
+    notepad Microsoft.PowerShell_profile.ps1
+    ```
+11. Confirm that the file contents are as follows, **stop** and contact course staff if that is not the case
+    ```powershell
+    Import-Module posh-git
+    ```
+12. Modify the file so that it contains the following instead
+    ```powershell
+    Import-Module posh-git
+    Invoke-Expression (Resolve-Path "~\miniconda3\shell\condabin\conda-hook.ps1")
+    Invoke-Conda activate (Resolve-Path "~\miniconda3")
+    clear
+    ```
+13. Save the file via *File > Save* or by pressing **Ctrl+S**
+14. Close Notepad
+15. Close **Windows Terminal** and restart it via ***Start > Windows Terminal***
+16. Confirm that the line where you enter your commands now begins with **`(base)`**
+    - If yes, you are all set should now use **Windows Terminal** for anything command-line related
+    - If not, contact the course staff for assistance
 
 ## Install the Visual Studio Code Python Extension
 
