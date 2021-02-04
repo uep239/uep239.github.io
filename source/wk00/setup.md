@@ -6,15 +6,16 @@ In addition to configuring certain system settings, we will be installing the fo
 
 - [**Thonny**](https://thonny.org/) – a beginner-friendly integrated development environment (IDE) for Python
 - [**Google Chrome**](https://www.google.com/chrome/) or [**Mozilla Firefox**](https://www.mozilla.org/en-US/firefox/new/) – required to run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) without any issues
+- [**Miniconda**](https://docs.conda.io/en/latest/miniconda.html) – a lightweight Python distribution that comes bundled with the [Conda](https://docs.conda.io/en/latest/) package manager
 - [**Visual Studio Code**](https://code.visualstudio.com/) (also known as VS Code) – a powerful code-friendly text editor with many useful features
-- [**Miniconda**](https://docs.conda.io/en/latest/miniconda.html) – a lightweight data-science-focused Python distribution bundled with the [Conda](https://docs.conda.io/en/latest/) package manager
 - [**Git**](https://git-scm.com/) – the most widely used distributed version control software
 - [**Windows Terminal**](https://docs.microsoft.com/en-us/windows/terminal/) and [**PowerShell Core**](https://docs.microsoft.com/en-us/powershell/) – the next-generation command-line interface for Windows
 
 If you already happen to have any of the aforementioned software installed and configured, please carefully review the instructions below to see what configuration I recommend for this course and will assume you have. All course materials after this point will assume the following configuration and if yours differs, you want to make sure you are aware of the differences and are able to circumnavigate any potential issues that might result. Also note the following:
 
 - If you have worked with code before and already have a favorite Python-friendly text editor and/or IDE installed, feel free to skip the Thonny and/or Visual Studio Code installation and use your preferred application(s) instead.
-- If you arcady actively use Anaconda or Miniconda and/or have modified your base environment, you should carefully review the warnings included with the Miniconda installation instructions to avoid any potential future issues.
+- If you are an experienced Conda user with a preexisting Anaconda/Miniconda installation, there is no need to change your current configuration at this time. Just make sure you have `jupyterlab>=3` installed, as we will be using it soon.
+- If you are not too comfortable with Conda package manager, it is highly recommended that you completely uninstall any preexisting Anaconda or Miniconda installations and start over with a clean sheet.
 - It goes without saying, but the Windows Terminal and PowerShell Core section applies to Windows users only.
 
 Please perform all installations and configuration changes in the order they are listed. Toggle the tab corresponding to your operating system to view the appropriate instructions.
@@ -87,17 +88,56 @@ The following will make your system more vulnerable to malicious scripts and app
 
 If you do not already primarily use the [**Google Chrome**](https://www.google.com/chrome/) or [**Mozilla Firefox**](https://www.mozilla.org/en-US/firefox/new/) web browser, you should install one of them and set it as your default browser. Other browsers like Edge or Safari might not be compatible with the [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) interactive notebook interface or the interactive sections of the course website.
 
-## Install and Configure Visual Studio Code
-
-```{tabbed} Windows
-Windows instructions here
-```
-```{tabbed} macOS
-MacOS instructions here
-```
-
 
 ## Install and Configure Miniconda
+
+Miniconda is a lightweight Python distribution that comes bundled with the Conda package manager. You might have also heard of Anaconda, which is a beefier version of Miniconda that also ships with numerous data-science-related Python packages preinstalled. We will not need most of those packages and the packages included in Anaconda are likely to be incompatible with various geospatial packages, which will lead to problems later in the semester. Hence, we will install the lightweight Miniconda instead and manually add any packages we need along the way. The following will guide you through installing Miniconda and configuring your base environment. Do not worry if you do not fully understand what is going on at this point. We will talk about Conda and Python package management in the course, after which it will all make more sense.
+
+```{warning}
+You must completely uninstall any previous Anaconda or Miniconda installations before proceeding with these instructions to avoid any potential issues. Please contact the course staff if you are unsure how to do that.
+```
+
+```{caution}
+After completing this setup, your base environment will be configured and you should **not** install any additional packages into it. We will talk about the importance of that later in the course.
+```
+
+````{tabbed} Windows
+1. [**Click here**](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe) to download the latest 64-bit Minconda installer for Windows (exe)
+2. Run the downloaded installer and select the following options:
+    - Install for: **Just Me (recommended)**
+    - Accept the default destination folder
+    - **DO NOT** add Miniconda3 to PATH (keep this **unchecked**)
+    - **DO** register Miniconda3 as your default Python (keep this **checked**)
+3. Once the installer has finished, open **Anaconda PowerShell Prompt** from *Start > Anaconda3*
+4. Using **Anaconda PowerShell Prompt**, run the following commands:
+    ```powershell
+    conda config --add channels conda-forge
+    conda config --set channel_priority strict
+    conda update conda --yes
+    conda install mamba --yes
+    mamba update --all --yes
+    mamba install jupyterlab>=3 nb_conda_kernels --yes
+    ```
+    *Feel free to just copy all of the commands and paste them into the prompt. All but the last line should run automatically one after the other. You will need to press Enter to run the last command once all previous commands have finished.*
+````
+````{tabbed} macOS
+1. [**Click here**](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.pkg) to download the latest 64-bit Minconda installer for macOS (pkg)
+2. Run the downloaded installer and accept all default settings
+3. Once the installer has finished, open **Terminal** from *Applications*
+4. Using **Terminal**, run the following commands:
+    ```
+    conda config --add channels conda-forge
+    conda config --set channel_priority strict
+    conda update conda --yes
+    conda install mamba --yes
+    mamba update --all --yes
+    mamba install jupyterlab>=3 nb_conda_kernels --yes
+    ```
+    *Feel free to just copy all of the commands and paste them into the terminal. All but the last line should run automatically one after the other. You will need to press Return to run the last command once all previous commands have finished.*
+````
+
+
+## Install Visual Studio Code
 
 ```{tabbed} Windows
 Windows instructions here
@@ -109,9 +149,9 @@ MacOS instructions here
 
 ## Install and Configure Git
 
-
-###  Create a GitHub Account
-
+```{attention}
+You will need to create GitHub account before proceeding (unless you already have one): [**github.com/join**](https://github.com/join)
+```
 
 ### Install and Git and Configure Basic Settings
 
@@ -122,7 +162,6 @@ Windows instructions here
 MacOS instructions here
 ```
 
-
 ### Configure an SSH Key for GitHub Authentication
 
 ```{tabbed} Windows
@@ -131,7 +170,6 @@ Windows instructions here
 ```{tabbed} macOS
 MacOS instructions here
 ```
-
 
 ### Add Git Status to your Terminal
 
@@ -142,18 +180,28 @@ Windows instructions here
 MacOS instructions here
 ```
 
-
 ### Install the GitHub CLI (Optional)
 
 ```{tabbed} Windows
 Windows instructions here
 ```
-```{tabbed} macOS
-MacOS instructions here
+````{tabbed} macOS
+```{tabbed} Homebrew
+Windows instructions here
 ```
+```{tabbed} MacPorts
+Windows instructions here
+```
+```{tabbed} Binary
+Windows instructions here
+```
+````
 
 
 ## Install Windows Terminal and PowerShell Core
+
+
+## Install the Visual Studio Code Python Extension
 
 
 ## Jazz Up your Terminal (Optional)
