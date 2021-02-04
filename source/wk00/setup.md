@@ -194,7 +194,7 @@ You will need to create GitHub account before proceeding (unless you already hav
 2. Run the downloaded installer and accept the default settings **until you reach _Choosing the default editor used by Git_**
 3. In the *Choosing the default editor used by Git* window, select **Use Visual Studio Code as Git's default editor**
     - If have another text editor you use, feel free to select that one instead of Visual Studio Code
-    - Select ***Use the Nano editor by default*** if your preference is not listed
+    - Select ***Use Notepad as Git's default editor*** if your preference is not listed
 4. Click *Next* and select **Override the default branch name for new repositories** (keep ***main*** as the default name)
 5. Click *Next* and ensure **Git from the command line and also from 3-rd party software** is selected *(should be the default)*
 6. Click *Next* and accept the default selection **Use the OpenSSL library**
