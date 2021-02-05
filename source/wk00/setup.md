@@ -172,7 +172,7 @@ Visual Studio Code is a powerful open-source text editor that works well with bo
 3. Drag **Visual Studio Code.app** into the *Applications* folder
 4. (Optional) *Right-click* on Visual Studio Code icon and select ***Options > Keep in Dock***
 5. Launch Visual Studio Code
-6. Open the **Command Palette** by pressing **Ctrl+Shift+P**
+6. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
 7. Type ***shell command*** into the Command Palette
 8. Select **Shell Command: Install 'code' command in PATH**
 ```
@@ -370,7 +370,7 @@ Always deactivate all Conda environments before using a different package manage
 ## Install Windows Terminal and PowerShell Core
 
 ```{note}
-Obviously, the following is for Windows users only. Others are welcome to [**skip ahead**](#install-the-visual-studio-code-python-extension) to the next section.
+Obviously, the following is for Windows users only. Others are welcome to [**skip ahead**](#install-visual-studio-code-python-extensions) to the next section.
 ```
 
 Windows is often criticized amongst developers for having for having a clunky and uncomfortable command-line interface. However, that has changed in recent years with the release of Windows Terminal and PowerShell Core – a new and improved cross-platform version of PowerShell. (Note that this is different and actually completely separate from the PowerShell included in Windows by default, also known as Windows PowerShell.) To guarantee that you will have the best and most comfortable possible command-line interface on your Windows computer, let us install Windows Terminal along with PowerShell Core and configure them to work well with both Conda and Git.
@@ -381,7 +381,8 @@ Both Windows Terminal and PowerShell Core are available from the [Microsoft Stor
 2. Install **Windows Terminal**: <https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701>
 
 ### Configure Windows Terminal and PowerShell Core
-Once you have installed both PowerShell Core and Windows Terminal, configure them to automatically initiate Conda and display Git repository status as follows.
+
+Once you have installed both PowerShell Core and Windows Terminal, configure them to automatically initiate Conda and display Git repository status by doing the following.
 
 1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**
 2. Click **yes** when asked for confirmation, enter an **administrator** password if needed
@@ -423,8 +424,91 @@ Once you have installed both PowerShell Core and Windows Terminal, configure the
     - **If yes**, you are all set and should now use **Windows Terminal** for anything command-line related
     - **If not**, contact the course staff for assistance
 
-## Install the Visual Studio Code Python Extension
 
+## Install Visual Studio Code Python Extensions
+Visual Studio Code is a modular and extensible text editor, meaning that it has numerous extensions available that increase or improve its usability. The following will guide you though installing and configuring a couple Python-related extensions that ought to make your life easier in this course.
+
+````{tabbed} Windows
+1. Launch **Visual Studio Code** via *Start > Visual Studio Code*
+2. With Visual Studio Code open, press **Ctrl+P** to launch **Quick Open*
+3. Type **`ext install ms-python.python`** and press **Enter**
+4. Check on the status of the installation on the panel in the left side
+5. Once the extension has installed, launch **Quick Open** again by pressing **Ctrl+P**
+6. Type **`ext install ms-python.vscode-pylance`** and press **Enter**
+7. Check on the status of the installation on the panel in the left side and wait for it to install
+8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
+9. Type *terminal select default shell* into the Command Palette
+10. Select **Terminal: Select Default Shell** and then **PowerShell (store)**
+11. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
+12. Type *python select interpreter* into the Command Palette
+13. Select **Python: Select Interpreter** and wait for the Command Palette to reopen
+14. Once the Command Palette reopens, select **Python 3.X.X 64-bit (conda)**
+15. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
+16. Type *python select linter* into the Command Palette
+17. Select **Python: Select Linter** and then **Disable Linting**
+18. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
+19. Type *open settings json* into the Command Palette
+20. Select **Preferences: Open Settings (JSON)**
+21. Once the **`settings.json`** file opens, confirm that its contents resemble the following
+    ```json
+    {
+        "python.pythonPath": "C:\\Users\\...\\miniconda3\\python.exe",
+        "terminal.integrated.shell.windows": "C:\\Users\\...\\pwsh.exe",
+        "python.linting.enabled": false
+    }
+    ```
+22. After **`"python.linting.enabled": "false`** type a comma and then press **Enter**
+23. On the new line, type **`"python.languageServer": "Pylance"`**
+24. Now your **`settings.json`** file should resemble the following
+    ```json
+    {
+        "python.pythonPath": "C:\\Users\\...\\miniconda3\\python.exe",
+        "terminal.integrated.shell.windows": "C:\\Users\\...\\pwsh.exe",
+        "python.linting.enabled": false,
+        "python.languageServer": "Pylance"
+    }
+    ```
+25. Save the file via *File > Save* or by pressing **Ctrl+S**
+26. Close the **settings.json** tab, then close Visual Studio Code
+````
+````{tabbed} macOS
+1. Launch **Visual Studio Code**
+2. With Visual Studio Code open, press **Ctrl+P** to launch **Quick Open*
+3. Type **`ext install ms-python.python`** and press **Return**
+4. Check on the status of the installation on the panel in the left side
+5. Once the extension has installed, launch **Quick Open** again by pressing **Ctrl+P**
+6. Type **`ext install ms-python.vscode-pylance`** and press **Return**
+7. Check on the status of the installation on the panel in the left side and wait for it to install
+8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
+9. Type *python select interpreter* into the Command Palette
+10. Select **Python: Select Interpreter** and wait for the Command Palette to reopen
+11. Once the Command Palette reopens, select **Python 3.X.X 64-bit ('base':conda)**
+12. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
+13. Type *python select linter* into the Command Palette
+14. Select **Python: Select Linter** and then **Disable Linting**
+15. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
+16. Type *open settings json* into the Command Palette
+17. Select **Preferences: Open Settings (JSON)**
+18. Once the **`settings.json`** file opens, confirm that its contents resemble the following
+    ```json
+    {
+        "python.defaultInterpreterPath": "/users/.../miniconda3/bin/python",
+        "python.linting.enabled": false
+    }
+    ```
+19. After **`"python.linting.enabled": "false`** type a comma and then press **Return**
+20. On the new line, type **`"python.languageServer": "Pylance"`**
+21. Now your **`settings.json`** file should resemble the following
+    ```json
+    {
+        "python.defaultInterpreterPath": "/users/.../miniconda3/bin/python",
+        "python.linting.enabled": false,
+        "python.languageServer": "Pylance"
+    }
+    ```
+22. Save the file via *File > Save* or by pressing **Ctrl+S**
+23. Close the **settings.json** tab, then close Visual Studio Code
+````
 
 ## Jazz Up your Terminal (Optional)
 
