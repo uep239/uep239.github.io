@@ -88,7 +88,7 @@ The following will make your system more vulnerable to malicious scripts and app
 
 ## Install Thonny and a Suitable Web Browser
 
-**Thonny** is a beginner-friendly integrated development environment (IDE) for Python that is actually written in Python and comes bundled with its own self-contained Python environment. To install Thonny on your computer, download a suitable installer from [**tonny.org**](https://thonny.org/) and accept all default settings.
+**Thonny** is a beginner-friendly integrated development environment (IDE) for Python that is actually written in Python and comes bundled with its own self-contained Python environment. To install Thonny on your computer, download a suitable installer from [**thonny.org**](https://thonny.org/) and accept all default settings.
 
 If you do not already primarily use the [**Google Chrome**](https://www.google.com/chrome/) or [**Mozilla Firefox**](https://www.mozilla.org/en-US/firefox/new/) web browser, you should install one of them and set it as your default browser. Other browsers like Edge or Safari might not be compatible with the [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) interactive notebook interface or the interactive sections of the course website.
 
@@ -280,7 +280,7 @@ If you know that you already have a public-private SSH key pair that you would l
 **Link a new SSH key to your GitHub account**
 
 1. If not already open, launch **Git Bash** from *Start > Git*
-2. Copy the newly generated (or any toher desired) SSH **public** key to your clipboard *(modify the filename if needed)*
+2. Copy the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed)*
     ```bash
     clip < ~/.ssh/id_ed25519.pub
     ```
@@ -306,7 +306,7 @@ If you know that you already have a public-private SSH key pair that you would l
 **Link a new SSH key to your GitHub account**
 
 1. If not already open, launch **Terminal** from *Applications*
-2. Copy the newly generated (or any toher desired) SSH **public** key to your clipboard *(modify the filename if needed)*
+2. Copy the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed)*
     ```bash
     pbcopy < ~/.ssh/id_ed25519.pub
     ```
