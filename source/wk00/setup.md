@@ -97,7 +97,7 @@ If you do not already primarily use the [**Google Chrome**](https://www.google.c
 
 ## Install Visual Studio Code
 
-Visual Studio Code is a powerful open-source text editor that works well with both Python and Markdown, and is well suited for our purposes. It is cross-platform and has numerous extremely useful features, making it a robust coding environment for all operating systems. However, its functionality is unmatched on the Windows platform, making it a must-have for aspiring developers who also happen to be Windows users.
+Visual Studio Code (VS Code) is a powerful open-source text editor that works well with both Python and Markdown, and is well suited for our purposes. It is cross-platform and has numerous extremely useful features, making it a robust coding environment for all operating systems. However, its functionality is unmatched on the Windows platform, making it a must-have for aspiring developers who also happen to be Windows users.
 
 ```{tabbed} Windows
 1. Download a suitable Visual Studio Code installer: <https://code.visualstudio.com/download>
@@ -433,30 +433,30 @@ Once you have installed both PowerShell Core and Windows Terminal, configure the
 
 
 ## Install Visual Studio Code Python Extensions
-Visual Studio Code is a modular and extensible text editor, meaning that it has numerous extensions available that increase or improve its usability. The following will guide you though installing and configuring a couple Python-related extensions that ought to make your life easier in this course.
+Visual Studio Code is extremely modular and extensible, meaning that it has numerous extensions available that increase or improve its usability. The following will guide you through installing and configuring a couple Python-related extensions that ought to make your life easier in this course.
 
 ````{tabbed} Windows
-1. Launch **Visual Studio Code** via *Start > Visual Studio Code*
-2. With Visual Studio Code open, press **Ctrl+P** to launch **Quick Open*
-3. Type **`ext install ms-python.python`** and press **Enter**
-4. Check on the status of the installation on the panel in the left side
-5. Once the extension has installed, launch **Quick Open** again by pressing **Ctrl+P**
-6. Type **`ext install ms-python.vscode-pylance`** and press **Enter**
-7. Check on the status of the installation on the panel in the left side and wait for it to install
-8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
-9. Type *terminal select default shell* into the Command Palette
-10. Select **Terminal: Select Default Shell** and then **PowerShell (store)**
-11. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
-12. Type *python select interpreter* into the Command Palette
-13. Select **Python: Select Interpreter** and wait for the Command Palette to reopen
-14. Once the Command Palette reopens, select **Python 3.X.X 64-bit (conda)**
-15. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
-16. Type *python select linter* into the Command Palette
-17. Select **Python: Select Linter** and then **Disable Linting**
-18. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
-19. Type *open settings json* into the Command Palette
-20. Select **Preferences: Open Settings (JSON)**
-21. Once the **`settings.json`** file opens, confirm that its contents resemble the following
+1. Launch **Visual Studio Code** via *Start > Visual Studio Code*.
+2. With Visual Studio Code open, press **Ctrl+P** to launch **Quick Open**.
+3. Type **`ext install ms-python.python`** and press **Enter**.
+4. Check on the status of the installation on the panel in the left side.
+5. Once the extension has installed, launch **Quick Open** again by pressing **Ctrl+P**.
+6. Type **`ext install ms-python.vscode-pylance`** and press **Enter**.
+7. Check on the status of the installation on the panel in the left side and wait for the extension to install.
+8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+9. Type *terminal select default shell* into the Command Palette.
+10. Select **Terminal: Select Default Shell** and then **PowerShell (store)**.
+11. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+12. Type *python select interpreter* into the Command Palette.
+13. Select **Python: Select Interpreter** and wait for the Command Palette to reopen.
+14. Once the Command Palette reopens, select **Python 3.X.X 64-bit (conda)**.
+15. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+16. Type *python select linter* into the Command Palette.
+17. Select **Python: Select Linter** and then **Disable Linting**.
+18. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+19. Type *open settings json* into the Command Palette.
+20. Select **Preferences: Open Settings (JSON)**.
+21. Once the `settings.json` file opens, confirm that its contents **resemble** the following *(will not be exactly the same)*:
     ```json
     {
         "python.pythonPath": "C:\\Users\\...\\miniconda3\\python.exe",
@@ -464,9 +464,9 @@ Visual Studio Code is a modular and extensible text editor, meaning that it has 
         "python.linting.enabled": false
     }
     ```
-22. After **`"python.linting.enabled": "false`** type a comma and then press **Enter**
-23. On the new line, type **`"python.languageServer": "Pylance"`**
-24. Now your **`settings.json`** file should resemble the following
+22. After **`"python.linting.enabled": false`** type a comma and then press **Enter**.
+23. Type the following on the new line: **`"python.languageServer": "Pylance"`**
+24. Now your `settings.json` file should **resemble** the following:
     ```json
     {
         "python.pythonPath": "C:\\Users\\...\\miniconda3\\python.exe",
@@ -475,37 +475,37 @@ Visual Studio Code is a modular and extensible text editor, meaning that it has 
         "python.languageServer": "Pylance"
     }
     ```
-25. Save the file via *File > Save* or by pressing **Ctrl+S**
-26. Close the **settings.json** tab, then close Visual Studio Code
+25. Save the file via *File > Save* or by pressing **Ctrl+S**.
+26. Close the `settings.json` tab, then close Visual Studio Code.
 ````
 ````{tabbed} macOS
-1. Launch **Visual Studio Code**
-2. With Visual Studio Code open, press **Ctrl+P** to launch **Quick Open*
-3. Type **`ext install ms-python.python`** and press **Return**
-4. Check on the status of the installation on the panel in the left side
-5. Once the extension has installed, launch **Quick Open** again by pressing **Ctrl+P**
-6. Type **`ext install ms-python.vscode-pylance`** and press **Return**
-7. Check on the status of the installation on the panel in the left side and wait for it to install
-8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
-9. Type *python select interpreter* into the Command Palette
-10. Select **Python: Select Interpreter** and wait for the Command Palette to reopen
-11. Once the Command Palette reopens, select **Python 3.X.X 64-bit ('base':conda)**
-12. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
-13. Type *python select linter* into the Command Palette
-14. Select **Python: Select Linter** and then **Disable Linting**
-15. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
-16. Type *open settings json* into the Command Palette
-17. Select **Preferences: Open Settings (JSON)**
-18. Once the **`settings.json`** file opens, confirm that its contents resemble the following
+1. Launch **Visual Studio Code**.
+2. With Visual Studio Code open, press **Ctrl+P** to launch **Quick Open**.
+3. Type **`ext install ms-python.python`** and press **Return**.
+4. Check on the status of the installation on the panel in the left side.
+5. Once the extension has installed, launch **Quick Open** again by pressing **Ctrl+P**.
+6. Type **`ext install ms-python.vscode-pylance`** and press **Return**.
+7. Check on the status of the installation on the panel in the left side and wait for the extension to install.
+8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+9. Type *python select interpreter* into the Command Palette.
+10. Select **Python: Select Interpreter** and wait for the Command Palette to reopen.
+11. Once the Command Palette reopens, select **Python 3.X.X 64-bit ('base':conda)**.
+12. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+13. Type *python select linter* into the Command Palette.
+14. Select **Python: Select Linter** and then **Disable Linting**.
+15. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+16. Type *open settings json* into the Command Palette.
+17. Select **Preferences: Open Settings (JSON)**.
+18. Once the `settings.json` file opens, confirm that its contents **resemble** the following *(will not be exactly the same)*:
     ```json
     {
         "python.defaultInterpreterPath": "/users/.../miniconda3/bin/python",
         "python.linting.enabled": false
     }
     ```
-19. After **`"python.linting.enabled": "false`** type a comma and then press **Return**
-20. On the new line, type **`"python.languageServer": "Pylance"`**
-21. Now your **`settings.json`** file should resemble the following
+19. After **`"python.linting.enabled": false`** type a comma and then press **Return**.
+20. Type the following on the new line: **`"python.languageServer": "Pylance"`**
+21. Now your `settings.json` file should **resemble** the following:
     ```json
     {
         "python.defaultInterpreterPath": "/users/.../miniconda3/bin/python",
@@ -513,8 +513,8 @@ Visual Studio Code is a modular and extensible text editor, meaning that it has 
         "python.languageServer": "Pylance"
     }
     ```
-22. Save the file via *File > Save* or by pressing **Ctrl+S**
-23. Close the **settings.json** tab, then close Visual Studio Code
+22. Save the file via *File > Save* or by pressing **Ctrl+S**.
+23. Close the `settings.json` tab, then close Visual Studio Code.
 ````
 
 ## Jazz Up your Terminal (Optional)
