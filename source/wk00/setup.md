@@ -6,83 +6,85 @@ In addition to configuring certain system settings, we will be installing the fo
 
 - [**Thonny**](https://thonny.org/) – a beginner-friendly integrated development environment (IDE) for Python
 - [**Google Chrome**](https://www.google.com/chrome/) or [**Mozilla Firefox**](https://www.mozilla.org/en-US/firefox/new/) – required to run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) without any issues
-- [**Miniconda**](https://docs.conda.io/en/latest/miniconda.html) – a lightweight Python distribution that comes bundled with the [Conda](https://docs.conda.io/en/latest/) package manager
 - [**Visual Studio Code**](https://code.visualstudio.com/) (also known as VS Code) – a powerful code-friendly text editor with many useful features
 - [**Git**](https://git-scm.com/) – the most widely used distributed version control software
+- [**Miniconda**](https://docs.conda.io/en/latest/miniconda.html) – a lightweight Python distribution that comes bundled with the [Conda](https://docs.conda.io/en/latest/) package manager
 - [**Windows Terminal**](https://docs.microsoft.com/en-us/windows/terminal/) and [**PowerShell Core**](https://docs.microsoft.com/en-us/powershell/) – the next-generation command-line interface for Windows
 
-If you already happen to have any of the aforementioned software installed and configured, please carefully review the instructions below to see what configuration I recommend for this course and will assume you have. All course materials after this point will assume the following configuration and if yours differs, you want to make sure you are aware of the differences and are able to circumnavigate any potential issues that might result. Also note the following:
+If you already happen to have any of the aforementioned software installed and configured, please carefully review the instructions below to see what configuration is recommended for this course. All course materials after this point assume the following configuration and if yours differs, you want to make sure you are aware of the differences and are able to circumnavigate any potential issues that might result. Also note the following:
 
 - If you have worked with code before and already have a favorite Python-friendly text editor and/or IDE installed, feel free to skip the Thonny and/or Visual Studio Code installation and use your preferred application(s) instead.
 - If you are an experienced Conda user with a preexisting Anaconda/Miniconda installation, there is no need to change your current configuration at this time. Just make sure you have `jupyterlab>=3` installed, as we will be using it soon.
-- If you are not too comfortable with Conda package manager, it is highly recommended that you completely uninstall any preexisting Anaconda or Miniconda installations and start over with a clean sheet.
+- If you are not too comfortable with the Conda package manager, it is highly recommended that you completely uninstall any preexisting Anaconda or Miniconda installations and start over with a clean sheet.
 - It goes without saying, but the Windows Terminal and PowerShell Core section applies to Windows users only.
 
-Please perform all installations and configuration changes in the order they are listed. Toggle the tab corresponding to your operating system to view the appropriate instructions.
+Please perform all installations and configuration changes in the order they are listed, as subsequent steps rely on all previous ones. Toggle the tab corresponding to your operating system to view the appropriate instructions.
 
 ```{note}
-Instead of manually typing the commands in the instructions into Terminal or PowerShell, you can just copy and paste the command, and then press **Enter/Return** to run it.
+Instead of manually typing the commands in the instructions into Terminal or PowerShell, you can just copy and paste the command, and then press **Enter/Return** to run it. You can easily copy a whole command block by clicking the copy icon in the upper-right corner of the block.
 ```
-
+```{attention}
+When copying and pasting multiline command blocks into Terminal or PowerShell, all commands (lines) but the last will automatically run one after another. However, to execute the last command, you **must press Enter/Return once all previous commands have finished!**
+```
 
 ## Configure System Preferences
 
-Both the Windows and macOS operating systems are configured for the average user by default, with many useful advanced features either disabled or hidden. Please follow the instructions below to show hidden files and filename extensions, and allow the installation and execution of various third-party applications and scripts.
+Both the Windows and macOS operating systems are configured for the average user by default, with many useful advanced features either disabled or hidden. The average users does not care for these features, but for us, they are extremely useful and perhaps even vital. Please follow the instructions below to show hidden files and filename extensions, and allow the installation and execution of various third-party applications and scripts.
 
 ```{danger}
 The following will make your system more vulnerable to malicious scripts and applications. Only install applications and execute scripts that you received from a trustworthy source. **Do not execute scripts you do not understand!**
 ```
 
 ````{tabbed} Windows
-**Show hidden files and filename extensions**
+**Show hidden files and filename extensions:**
 
-1. Open **File Explorer**
-2. Select the **View** tab
-3. In the *Show/Hide* section, ensure the following boxes are **checked**
+1. Open **File Explorer**.
+2. Select the **View** tab.
+3. In the *Show/Hide* section, ensure the following boxes are **checked**:
     - ***File name extensions***
     - ***Hidden items***
 
-**Set Windows PowerShell as your default shell**
+**Set Windows PowerShell as your default shell:**
 
-1. *Right-click* on your taskbar and click on **Taskbar settings**
-2. Ensure *Replace Command Prompt with Windows Powershell in the menu when...* is toggled **ON**
+1. *Right-click* on your taskbar and click on **Taskbar settings**.
+2. Ensure *Replace Command Prompt with Windows Powershell in the menu when...* is toggled **ON**.
 
-**Allow the execution of third-party scripts**
+**Allow the execution of third-party scripts:**
 
-1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**
-2. Click **yes** when asked for confirmation, enter an **administrator** password if needed
-3. Run the following command (*either type or copy and paste, then press __Enter__ to run*)
+1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**.
+2. Click **yes** when asked for confirmation, enter an **administrator** password if needed.
+3. Run the following command (*either type or copy and paste, then press __Enter__ to run*):
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
     ```
 ````
 ````{tabbed} macOS
-**Show filename extensions and configure Finder**
+**Show filename extensions and configure Finder:**
 
-1. Open **Finder** and ensure that *View > Show Path Bar* is **checked**
+1. Open **Finder** and ensure that *View > Show Path Bar* is **checked**.
 2. Then go to *Finder > Preferences...*
-2. In the *General* section, ensure all items under ***Show these items on the desktop*** are **checked**
-3. In the *Advanced* section, ensure ***Show all filename extensions*** is **checked**
+2. In the *General* section, ensure all items under ***Show these items on the desktop*** are **checked**.
+3. In the *Advanced* section, ensure ***Show all filename extensions*** is **checked**.
 
-**Show hidden files**
+**Show hidden files:**
 
-1. Open **Terminal** from *Applications*
-2. Run the following command (*either type or copy and paste, then press __Return__ to run*)
-    ```sh
+1. Open **Terminal** from *Applications*.
+2. Run the following command (*either type or copy and paste, then press __Return__ to run*):
+    ```bash
     defaults write com.apple.finder AppleShowAllFiles YES
     ```
 
-**Allow the installation of third-party applications**
+**Allow the installation of third-party applications:**
 
-1. Open **Terminal** from *Applications*
-2. Run the following command (*either type or copy and paste, then press __Return__ to run*)
-    ```sh
+1. Open **Terminal** from *Applications*.
+2. Run the following command (*either type or copy and paste, then press __Return__ to run*):
+    ```bash
     sudo spctl --master-disable
     ```
-3. When prompted, enter your **administrator** password
-4. Go to *System Preferences > Security and Privacy*
-4. Click the ***padlock*** in the bottom, enter your **administrator** password again if needed
-5. Near the bottom of the *General* tab, select **Anywhere** under ***Allow apps downloaded from***
+3. When prompted, enter your **administrator** password.
+4. Go to *System Preferences > Security and Privacy*.
+4. Click the ***padlock*** in the bottom, enter your **administrator** password again if needed.
+5. Near the bottom of the *General* tab, select **Anywhere** under ***Allow apps downloaded from***.
 ````
 
 
