@@ -100,24 +100,24 @@ If you do not already primarily use the [**Google Chrome**](https://www.google.c
 Visual Studio Code is a powerful open-source text editor that works well with both Python and Markdown, and is well suited for our purposes. It is cross-platform and has numerous extremely useful features, making it a robust coding environment for all operating systems. However, its functionality is unmatched on the Windows platform, making it a must-have for aspiring developers who also happen to be Windows users.
 
 ```{tabbed} Windows
-1. Download a suitable Visual Studio Code installer from [**code.visualstudio.com/download**](https://code.visualstudio.com/download)
-2. Run the downloaded installer and accept the default settings **until you reach _Select Additional Tasks_**
-3. In the *Select Additional Tasks* window, ensure the following options are **selected**
+1. Download a suitable Visual Studio Code installer: <https://code.visualstudio.com/download>
+2. Run the downloaded installer and accept the default settings **until you reach _Select Additional Tasks_**.
+3. In the *Select Additional Tasks* window, ensure the following options are **selected**:
     - Add *Open with Code* action to Windows Explorer file context menu
     - Add *Open with Code* action to Windows Explorer directory context menu
     - **Register Code as an editor for supported file types**
     - **Add to PATH (requires shell restart)** *(this should be selected by default, __do not unselect__)*
-4. Click **Next** and then **Install** to confirm the installation
+4. Click **Next** and then **Install** to confirm the installation.
 ```
 ```{tabbed} macOS
-1. Download a suitable Visual Studio Code installer from [**code.visualstudio.com/download**](https://code.visualstudio.com/download)
-2. Locate the downloaded archive and select the *magnifying glass* icon to open it in **Finder**
-3. Drag **Visual Studio Code.app** into the *Applications* folder
-4. (Optional) *Right-click* on Visual Studio Code icon and select ***Options > Keep in Dock***
-5. Launch Visual Studio Code
-6. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**
-7. Type ***shell command*** into the Command Palette
-8. Select **Shell Command: Install 'code' command in PATH**
+1. Download a suitable Visual Studio Code installer: <https://code.visualstudio.com/download>
+2. Locate the downloaded archive and select the *magnifying glass* icon to open it in **Finder**.
+3. Drag **Visual Studio Code.app** into the *Applications* folder.
+4. *Right-click* on Visual Studio Code icon and select ***Options > Keep in Dock***.
+5. Launch Visual Studio Code.
+6. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+7. Type ***shell command*** into the Command Palette.
+8. Select **Shell Command: Install 'code' command in PATH**.
 ```
 
 
