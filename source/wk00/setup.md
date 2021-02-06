@@ -230,7 +230,7 @@ If you know that you already have a public-private SSH key pair that you would l
     ```
 3. Go to **<https://github.com/settings/keys>** and log in with your GitHub account if needed.
 4. Click on **New SSH key**.
-5. The **Title** field should contain a descriptive label that will allow you to identify this key later (as the key is linked to your computer, the name or description of the computer would be a good choice, for example *ThinkPad X1*).
+5. The **Title** field should contain a descriptive label that will allow you to identify this key later. (As the key is linked to your computer, the name or description of the computer would be a good choice, for example *ThinkPad X1* or similar.)
 6. Paste the copied **public** key into the **Key** field.
 7. Click on **Add SSH key**.
 8. If prompted, confirm your GitHub password.
@@ -256,7 +256,7 @@ If you know that you already have a public-private SSH key pair that you would l
     ```
 3. Go to **<https://github.com/settings/keys>** and log in with your GitHub account if needed.
 4. Click on **New SSH key**.
-5. The **Title** field should contain a descriptive label that will allow you to identify this key later (as the key is linked to your computer, the name or description of the computer would be a good choice, for example *MacBook Air*).
+5. The **Title** field should contain a descriptive label that will allow you to identify this key later. (As the key is linked to your computer, the name or description of the computer would be a good choice, for example *MacBook Air* or similar.)
 6. Paste the copied **public** key into the **Key** field.
 7. Click on **Add SSH key**.
 8. If prompted, confirm your GitHub password.
@@ -264,49 +264,50 @@ If you know that you already have a public-private SSH key pair that you would l
 
 ### Install the GitHub CLI (Optional)
 
-The GitHub command-line interface (CLI) allows you to work with your GitHub repositories without having to type out long commands and gives you access to additional GitHub functionality not possible with the traditional `git` tool. Once you are more comfortable with Git and GitHub, it will simplify various workflows and make your life easier. However, right now you might not see much value in installing it, so feel free to [**skip**](#install-windows-terminal-and-powershell-core) this part.
+The GitHub command-line interface (CLI) allows you to work with your GitHub repositories without having to type out long commands and gives you access to additional GitHub functionality not possible with the traditional `git` tool. Once you are more comfortable with Git and GitHub, it will simplify various workflows and make your life easier. However, right now you might not see much value in installing it, so feel free to [**skip**](#install-and-configure-miniconda) this part.
 
 ````{tabbed} Windows
-1. Go to [**github.com/cli/cli/releases/latest**](https://github.com/cli/cli/releases/latest)
-2. Scroll down to **Assets** and download the MSI installer (the filename should be similar to `gh_X.X.X_windows_amd64.msi`)
-3. Run the downloaded installer and accept all default settings
-4. *Right-click* on the **Start** button and select **Windows PowerShell**
-5. Configure the GitHub CLI by running the following command
+1. Navigate to: <https://github.com/cli/cli/releases/latest>
+2. Scroll down to **Assets** and download the **MSI** installer.
+    - *The filename should be similar to `gh_X.X.X_windows_amd64.msi` with `X.X.X` replaced with the latest version number.*
+3. Run the downloaded installer and accept all default settings.
+4. *Right-click* on the **Start** button and select **Windows PowerShell**.
+5. Configure the GitHub CLI by running the following command:
     ```powershell
     gh auth login
     ```
-6. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions
+6. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions.
 ````
 `````{tabbed} macOS
-You will need either [**Homebrew**](https://brew.sh/) or [**MacPorts**](https://www.macports.org/) to install the GitHub CLI. If you do not already have either of those set up, it is recommended you [**skip**](#install-windows-terminal-and-powershell-core) this section instead of trying to set up another package manager. We do not really need the GitHub CLI and it is not worth the hassle.
+You will need either [**Homebrew**](https://brew.sh/) or [**MacPorts**](https://www.macports.org/) to install the GitHub CLI. If you do not already have either of those set up, it is recommended you [**skip**](#install-and-configure-miniconda) this section instead of trying to set up another package manager. We do not really need the GitHub CLI and it is not worth the hassle.
+
 ```{caution}
-Always deactivate all Conda environments before using a different package manager like Homebrew or MacPorts. To avoid potential issues, it is advisable to refrain from using any other package manager alongside Conda.
+If you already have Anaconda or Miniconda installed, you should always deactivate all active Conda environments using `conda deactivate` before installing anything using a different package manager like Homebrew or MacPorts.
 ```
+
 ````{tabbed} Homebrew
-1. Launch **Terminal** from *Applications*
-2. Install the GitHub CLI by running the following commands
-    ```sh
-    conda deactivate
+1. Launch **Terminal** from *Applications*.
+2. Install the GitHub CLI by running the following commands:
+    ```bash
     brew install gh
     ```
-2. Run the following command to configure the GitHub CLI
-    ```sh
+2. Run the following command to configure the GitHub CLI:
+    ```bash
     gh auth login
     ```
-3. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions
+3. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions.
 ````
 ````{tabbed} MacPorts
-1. Launch **Terminal** from *Applications*
-2. Install the GitHub CLI by running the following commands
-    ```sh
-    conda deactivate
+1. Launch **Terminal** from *Applications*.
+2. Install the GitHub CLI by running the following commands:
+    ```bash
     sudo port install gh
     ```
-2. Run the following command to configure the GitHub CLI
-    ```sh
+2. Run the following command to configure the GitHub CLI:
+    ```bash
     gh auth login
     ```
-3. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions
+3. Select **GitHub.com** and **Login with a web browser**, then follow all subsequent instructions.
 ````
 `````
 
