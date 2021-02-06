@@ -381,7 +381,7 @@ After completing this setup, your base environment will be configured and you sh
 Obviously, the following is for Windows users only. Others are welcome to [**skip ahead**](#install-visual-studio-code-python-extensions) to the next section.
 ```
 
-Windows is often criticized amongst developers for having for having a clunky and uncomfortable command-line interface. However, that has changed in recent years with the release of Windows Terminal and PowerShell Core – a new and improved cross-platform version of PowerShell. (Note that this is different and actually completely separate from the PowerShell included in Windows by default, also known as Windows PowerShell.) To guarantee that you will have the best and most comfortable possible command-line interface on your Windows computer, let us install Windows Terminal along with PowerShell Core and configure them to work well with both Conda and Git.
+Windows is often criticized amongst developers for having a clunky and uncomfortable command-line interface. However, that has changed in recent years with the release of Windows Terminal and PowerShell Core – a new and improved cross-platform version of PowerShell. (Note that this is different and actually completely separate from the PowerShell included in Windows by default, also known as Windows PowerShell.) To guarantee that you will have the best and most comfortable possible command-line interface on your Windows computer, let us install Windows Terminal along with PowerShell Core and configure them to work well with both Conda and Git.
 
 Both Windows Terminal and PowerShell Core are available from the [Microsoft Store](https://www.microsoft.com/en-us/store/apps/windows). Use the links below install them in the order specified – PowerShell Core **before** Windows Terminal.
 
@@ -392,45 +392,44 @@ Both Windows Terminal and PowerShell Core are available from the [Microsoft Stor
 
 Once you have installed both PowerShell Core and Windows Terminal, configure them to automatically initiate Conda and display Git repository status by doing the following.
 
-1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**
-2. Click **yes** when asked for confirmation, enter an **administrator** password if needed
-3. Run the following commands to configure the prerequisites needed to install modules from the  [PowerShell Gallery](https://www.powershellgallery.com/)
+1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**.
+2. Click **yes** when asked for confirmation, enter an **administrator** password if needed.
+3. Run the following commands to configure the prerequisites needed to install modules from the  [PowerShell Gallery](https://www.powershellgallery.com/):
     ```powershell
     Install-PackageProvider -Name NuGet -Force
     Install-Module PowerShellGet -Scope CurrentUser -Force -AllowClobber
     ```
-4. After both commands have finished running, close Windows PowerShell
-5. Open the **Start** menu and scroll down until you see **Windows Terminal**
-6. *Right-click* on **Windows Terminal** in the Start menu and select *More > __Run as administrator__*
-7. Click **yes** when asked for confirmation, enter an **administrator** password if needed
-8. If the first line reads **`Windows Powershell`** instead of **`Powershell 7.X.X`**, **stop** and contact course staff
-9. Run the following commands to install and configure [**`posh-git`**](https://github.com/dahlbyk/posh-git) (a Git status module for PowerShell)
+4. After both commands have finished running, close Windows PowerShell.
+5. Open the **Start** menu and scroll down until you see **Windows Terminal**.
+6. *Right-click* on **Windows Terminal** in the Start menu and select *More > __Run as administrator__*.
+7. Click **yes** when asked for confirmation, enter an **administrator** password if needed.
+8. If the first line reads **`Windows Powershell`** instead of **`Powershell 7.X.X`**, **STOP** and contact course staff.
+9. Run the following commands to install and configure [`posh-git`](https://github.com/dahlbyk/posh-git) (a Git status module for PowerShell):
     ```powershell
     PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
     Add-PoshGitToProfile
     ```
-10. Run the following commands to open your PowerShell profile configuration file in Notepad
+10. Run the following command to open your PowerShell profile configuration file in Notepad:
     ```powershell
-    cd ~\Documents\PowerShell
-    notepad Microsoft.PowerShell_profile.ps1
+    notepad (Resolve-Path ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1)
     ```
-11. Confirm that the file contents are as follows, **stop** and contact course staff if that is not the case
+11. Confirm that the file contents are as follows, **STOP** and contact course staff if that is not the case:
     ```powershell
     Import-Module posh-git
     ```
-12. Modify the file so that it contains the following instead
+12. Modify the file so that it contains the following instead:
     ```powershell
     Import-Module posh-git
     Invoke-Expression (Resolve-Path "~\miniconda3\shell\condabin\conda-hook.ps1")
     Invoke-Conda activate (Resolve-Path "~\miniconda3")
     clear
     ```
-13. Save the file via *File > Save* or by pressing **Ctrl+S**
-14. Close Notepad
-15. Close **Windows Terminal** and restart it via ***Start > Windows Terminal***
-16. Confirm that the line where you enter your commands now begins with **`(base)`**
-    - **If yes**, you are all set and should now use **Windows Terminal** for anything command-line related
-    - **If not**, contact the course staff for assistance
+13. Save the file via *File > Save* or by pressing **Ctrl+S**.
+14. Close Notepad.
+15. Close **Windows Terminal** and restart it via ***Start > Windows Terminal***.
+16. Confirm that the line where you enter your commands now begins with **`(base)`**.
+    - **IF YES**, you are all set and should now use **Windows Terminal** for anything command-line related.
+    - **IF NOT**, contact the course staff for assistance.
 
 
 ## Install Visual Studio Code Python Extensions
