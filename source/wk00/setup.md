@@ -53,7 +53,7 @@ The following will make your system more vulnerable to malicious scripts and app
 
 1. *Right-click* on the **Start** button and select **Windows PowerShell (Admin)**.
 2. Click **yes** when asked for confirmation, enter an **administrator** password if needed.
-3. Run the following command (*either type or copy and paste, then press __Enter__ to run*):
+3. Run the following command *(either type or copy and paste, then press __Enter__ to run)*:
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
     ```
@@ -69,7 +69,7 @@ The following will make your system more vulnerable to malicious scripts and app
 **Show hidden files:**
 
 1. Open **Terminal** from *Applications*.
-2. Run the following command (*either type or copy and paste, then press __Return__ to run*):
+2. Run the following command *(either type or copy and paste, then press __Return__ to run)*:
     ```bash
     defaults write com.apple.finder AppleShowAllFiles YES
     ```
@@ -77,7 +77,7 @@ The following will make your system more vulnerable to malicious scripts and app
 **Allow the installation of third-party applications:**
 
 1. Open **Terminal** from *Applications*.
-2. Run the following command (*either type or copy and paste, then press __Return__ to run*):
+2. Run the following command *(either type or copy and paste, then press __Return__ to run)*:
     ```bash
     sudo spctl --master-disable
     ```
@@ -314,25 +314,25 @@ If you already have Anaconda or Miniconda installed, you should always deactivat
 
 ## Install and Configure Miniconda
 
-Miniconda is a lightweight Python distribution that comes bundled with the Conda package manager. You might have also heard of Anaconda, which is a beefier version of Miniconda that also ships with numerous data-science-related Python packages preinstalled. We will not need most of those packages and the packages included in Anaconda are likely to be incompatible with various geospatial packages, which will lead to problems later in the semester. Hence, we will install the lightweight Miniconda instead and manually add any packages we need along the way. The following will guide you through installing Miniconda and configuring your base environment. Do not worry if you do not fully understand what is going on at this point. We will talk about Conda and Python package management in the course, after which it will all make more sense.
+Miniconda is a lightweight Python distribution that comes bundled with the Conda package manager. You might have also heard of Anaconda, which is a beefier version of Miniconda that also ships with numerous data-science-related Python packages preinstalled. We will not need most of those packages and the packages included in Anaconda are likely to be incompatible with various geospatial packages, which will lead to problems later in the semester. Hence, we will install the lightweight Miniconda instead and manually add any packages we need along the way. The following will guide you through installing Miniconda and configuring your base environment. Do not worry if you do not fully understand what is going on at this point. We will talk about Conda and Python package management later in the course, after which it will all make more sense.
 
 ```{warning}
 You must completely uninstall any previous Anaconda or Miniconda installations before proceeding with these instructions to avoid any potential issues. Please contact the course staff if you are unsure how to do that.
 ```
 
 ```{caution}
-After completing this setup, your base environment will be configured and you should **not** install any additional packages into it. We will talk about the importance of that later in the course.
+After completing this setup, your base environment will be configured and you should **NOT** install any additional packages into it. We will talk about the importance of that later in the course.
 ```
 
 ````{tabbed} Windows
-1. [**Click here**](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe) to download the latest 64-bit Minconda installer for Windows (exe)
-2. Run the downloaded installer and select the following options
+1. [**Click here**](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe) to download the latest 64-bit Minconda installer for Windows.
+2. Run the downloaded installer and select the following options:
     - Install for **Just Me (recommended)**
     - Accept the default destination folder
-    - **DO NOT** add Miniconda3 to PATH (keep this **unchecked**)
-    - **DO** register Miniconda3 as your default Python (keep this **checked**)
-3. Once the installer has finished, open **Anaconda PowerShell Prompt** from *Start > Anaconda3*
-4. Using **Anaconda PowerShell Prompt**, run the following commands to configure your base environment
+    - **DO NOT** add Miniconda3 to PATH *(keep this __unchecked__)*
+    - **DO** register Miniconda3 as your default Python *(keep this __checked__)*
+3. Once the installer has finished, open **Anaconda PowerShell Prompt** from *Start > Anaconda3*.
+4. Using **Anaconda PowerShell Prompt**, run the following commands to configure your base environment:
     ```powershell
     conda config --add channels conda-forge
     conda config --set channel_priority strict
@@ -341,25 +341,29 @@ After completing this setup, your base environment will be configured and you sh
     mamba update --all --yes
     mamba install jupyterlab>=3 nb_conda_kernels --yes
     ```
-    *Feel free to just copy all of the commands and paste them into the prompt. All but the last line should automatically run one after the other. You will need to press Enter to run the last command once all previous commands have finished.*
+    *Feel free to just copy all of the commands and paste them into the prompt. All but the last line should automatically run one after the other. __You will need to press Enter to run the last command once all previous commands have finished.__*
 ````
 ````{tabbed} macOS
-1. Open **Terminal** from *Applications*
-2. Download the latest Miniconda install script for macOS by running the following command
-    ```sh
+1. Open **Terminal** from *Applications*.
+2. Download the latest Miniconda install script for macOS by running the following command:
+    ```bash
     curl -L -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
     ```
-3. Once the download has finished, run the following command to start the installation process
-    ```sh
+    If that does not work, try this alternative download command:
+    ```bash
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+    ```
+3. Once the download has finished, run the following command to start the installation process:
+    ```bash
     bash Miniconda3-latest-MacOSX-x86_64.sh
     ```
-4. Follow the installation prompts and accept all default settings
+4. Follow the installation prompts and accept all default settings.
 5. Answer **YES** to *Do you wish the installer to initialize Miniconda3 by running conda init?*
-6. Once the installer has finished, close your terminal and restart it via *Applications > Terminal*
-7. The line where you enter your commands should now begin with **`(base)`**
-    - *__STOP__ and contact course staff if this is not the case*
-8. Run the following commands to configure your base environment
-    ```sh
+6. Once the installer has finished, close your terminal and restart it via *Applications > Terminal*.
+7. The line where you enter your commands should now begin with **`(base)`**.
+    - *__STOP__ and contact course staff if that is not the case*.
+8. Run the following commands to configure your base environment:
+    ```bash
     conda config --add channels conda-forge
     conda config --set channel_priority strict
     conda update conda --yes
@@ -367,7 +371,7 @@ After completing this setup, your base environment will be configured and you sh
     mamba update --all --yes
     mamba install jupyterlab>=3 nb_conda_kernels --yes
     ```
-    *Feel free to just copy all of the commands and paste them into the terminal. All but the last line should automatically run one after the other. You will need to press Return to run the last command once all previous commands have finished.*
+    *Feel free to just copy all of the commands and paste them into the terminal. All but the last line should automatically run one after the other. __You will need to press Return to run the last command once all previous commands have finished.__*
 ````
 
 
