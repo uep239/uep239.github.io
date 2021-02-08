@@ -589,8 +589,8 @@ Making your terminal window more beautiful and colorful like this will not add a
     ```powershell
     Install-Module PSReadLine -AllowPrerelease -Scope CurrentUser -Force
     Install-Module oh-my-posh -Scope CurrentUser -MaximumVersion 2.1 -Force
-    New-Item "~\Documents\PowerShell\PoshThemes\paradox-cascadia.psm1" -Force
-    curl -L "https://raw.githubusercontent.com/ukukas/paradox-cascadia/main/paradox-cascadia.psm1" -o (Resolve-Path "~\Documents\PowerShell\PoshThemes\paradox-cascadia.psm1")
+    New-Item -Path "~\Documents\PowerShell\PoshThemes" -ItemType "directory" -Force
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ukukas/paradox-cascadia/main/paradox-cascadia.psm1" -OutFile "~\Documents\PowerShell\PoshThemes\paradox-cascadia.psm1"
     ```
 3. Run the following command to open your PowerShell profile configuration file in Notepad:
     ```powershell
