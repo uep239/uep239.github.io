@@ -404,14 +404,14 @@ Once you have installed both PowerShell Core and Windows Terminal, configure the
 6. *Right-click* on **Windows Terminal** in the Start menu and select *More > __Run as administrator__*.
 7. Click **yes** when asked for confirmation, enter an **administrator** password if needed.
 8. If the first line reads **`Windows Powershell`** instead of **`Powershell 7.X.X`**, **STOP** and contact course staff.
-9. Run the following commands to install and configure [`posh-git`](https://github.com/dahlbyk/posh-git) (a Git status module for PowerShell):
+9. Run the following commands to install and configure [PoSh-Git](https://github.com/dahlbyk/posh-git) (a Git status module for PowerShell):
     ```powershell
     PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
     Add-PoshGitToProfile
     ```
 10. Run the following command to open your PowerShell profile configuration file in Notepad:
     ```powershell
-    notepad (Resolve-Path ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1)
+    notepad (Resolve-Path "~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1")
     ```
 11. Confirm that the file contents are as follows, **STOP** and contact course staff if that is not the case:
     ```powershell
@@ -422,7 +422,7 @@ Once you have installed both PowerShell Core and Windows Terminal, configure the
     Import-Module posh-git
     Invoke-Expression (Resolve-Path "~\miniconda3\shell\condabin\conda-hook.ps1")
     Invoke-Conda activate (Resolve-Path "~\miniconda3")
-    clear
+    Clear-Host
     ```
 13. Save the file via *File > Save* or by pressing **Ctrl+S**.
 14. Close Notepad.
@@ -517,11 +517,120 @@ Visual Studio Code is extremely modular and extensible, meaning that it has nume
 23. Close the `settings.json` tab, then close Visual Studio Code.
 ````
 
+
 ## Jazz Up your Terminal (Optional)
 
-```{tabbed} Windows
-Windows instructions here
-```
+You will be spending a lot of time working on the command line in this course and you will quickly realize that your terminal is one of the most powerful tools in your disposal. However, right now it looks kind of dull...
+
+![old school terminal](/img/posh-git.png)
+
+Depending on your operating system and particular configuration, it might look even more bland than that. But it does not have to be this way! Your terminal window does not need to look like it is perpetually stuck in the 1980s. Instead, it could look like this...
+
+![beautiful colorful terminal](/img/powerline.png)
+
+Making your terminal window more beautiful and colorful like this will not add any additional functionality. Nor will it make you a better programmer. However, it will make you feel like a better programmer and make the time spent staring at your terminal window at least somewhat more enjoyable. (And that might just make you a better programmer in the long run.)
+
+````{tabbed} Windows
+**Install the Cascadia Code PL font:**
+1. Navigate to: <https://github.com/microsoft/cascadia-code/releases/latest>
+2. Download the **`CascadiaCode-XXXX.XX.zip`** file located under **Assets**.
+3. Extract the contents of the downloaded ZIP-file to a suitable location.
+4. Open the extracted folder, then open the **`ttf`** folder.
+5. *Right-click* on **`CascadiaCodePL.ttf`** and select **Install*.
+
+**Configure Windows Terminal to use the Cascadia Code PL font:**
+1. Launch **Windows Terminal** via *Start > Windows Terminal*.
+2. Click on the down arrow to the right of the plus sign and select **Settings** from the drop-down menu.
+3. A `settings.json` file for will open in a text editor. *(If prompted to select a text editor, choose Visual Studio Code.)*
+4. Find the line **`// Put settings here that you want to apply to all profiles.`** in the **"`defaults"`** section.
+5. Place the line **`"fontFace": "Cascadia Code PL"`** into the **`"defaults"`** section so that it looks like this:
+    ```
+    "defaults":
+    {
+        // Put settings here that you want to apply to all profiles.
+        "fontFace": "Cascadia Code PL"
+    },
+    ```
+7. Save the file via *File > Save* or by pressing **Ctrl+S**.
+8. Close the `settings.json` file or tab (depending on your text editor).
+
+**Configure the Visual Studio Code terminal to use the Cascadia Code PL font:**
+1. If not already open, launch **Visual Studio Code** via *Start > Visual Studio Code*.
+2. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+3. Type *open settings json* into the Command Palette.
+4. Select **Preferences: Open Settings (JSON)**.
+5. A `settings.json` file resembling the following will open:
+    ```json
+    {
+        "python.pythonPath": "C:\\Users\\...\\miniconda3\\python.exe",
+        "terminal.integrated.shell.windows": "C:\\Users\\...\\pwsh.exe",
+        "python.linting.enabled": false,
+        "python.languageServer": "Pylance"
+    }
+    ```
+6. After **`"python.languageServer": "Pylance"`** type a comma and then press **Enter**.
+7. Type the following on the new line: **`""terminal.integrated.fontFamily": "Cascadia Code PL"`**
+8. Now your `settings.json` file should look like this:
+    ```json
+    {
+        "python.pythonPath": "C:\\Users\\...\\miniconda3\\python.exe",
+        "terminal.integrated.shell.windows": "C:\\Users\\...\\pwsh.exe",
+        "python.linting.enabled": false,
+        "python.languageServer": "Pylance",
+        "terminal.integrated.fontFamily": "Cascadia Code PL"
+    }
+    ```
+9. Save the file via *File > Save* or by pressing **Ctrl+S**.
+10. Close the `settings.json` tab, then close Visual Studio Code.
+
+**Install and configure Oh-My-PoSh:**
+1. Launch **Windows Terminal** via *Start > Windows Terminal*.
+2. Run the following commands to install Oh-My-PoSh and download a suitable theme:
+    ```powershell
+    Install-Module PSReadLine -AllowPrerelease -Scope CurrentUser -Force
+    Install-Module oh-my-posh -Scope CurrentUser -MaximumVersion 2.1 -Force
+    New-Item "~\Documents\PowerShell\PoshThemes\paradox-cascadia.psm1" -Force
+    curl -L "https://raw.githubusercontent.com/ukukas/paradox-cascadia/main/paradox-cascadia.psm1" -o (Resolve-Path "~\Documents\PowerShell\PoshThemes\paradox-cascadia.psm1")
+    ```
+3. Run the following command to open your PowerShell profile configuration file in Notepad:
+    ```powershell
+    notepad (Resolve-Path "~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1")
+    ```
+4. Modify the file so that it contains the following:
+    ```powershell
+    Import-Module posh-git
+    Import-Module oh-my-posh
+    Set-Theme paradox-cascadia
+    Invoke-Expression (Resolve-Path "~\miniconda3\shell\condabin\conda-hook.ps1")
+    Invoke-Conda activate (Resolve-Path "~\miniconda3")
+    Clear-Host
+    ```
+5. Save the file via *File > Save* or by pressing **Ctrl+S**.
+6. Close Notepad.
+7. Close **Windows Terminal** and restart it via ***Start > Windows Terminal***.
+8. Confirm that your terminal now looks like the following. Contact the course staff for assistance if not.
+    ![beautiful colorful terminal](/img/paradox-cascadia.png)
+
+Note that there are numerous other themes available for Oh-My-PoSh as well. However, most of them require additional configuration or a specialized [Nerd Font](https://www.nerdfonts.com/) to display properly. Right now we configured Oh-My-PoSh to use a custom theme that works well with the Cascadia Code PL font, which is an official Microsoft font designed for use with Windows Terminal. Once you are more comfortable with PowerShell and its configuration, feel free to explore the [Oh-My-PoSh documentation ](https://github.com/JanDeDobbeleer/oh-my-posh) and set up a different theme of your liking.
+````
 ```{tabbed} macOS
-MacOS instructions here
+There are two frameworks available for you to customize and beautify your terminal – [**Oh-My-Zsh**](https://ohmyz.sh/) and [**Oh-My-Bash**](https://ohmybash.nntoan.com/). Which you should use depends on your default shell. If you are using macOS 10.15 Catalina or newer and the line where you enter your commands in Terminal ends with a percent sign (`%`), then you are likely using Zsh. And if you are using macOS 10.14 Mojave or older and the line where you enter your commands in Terminal ends with a dollar sign (`$`), then you are probably using Bash. However, various configuration changes can alter both your default shell and its appearance. Hence, to make sure you know which is your default shell, do the following:
+
+1. Launch **Terminal** from *Applications*.
+2. Run the following command and take note of the response:
+    ```bash
+    echo $0
+    ```
+
+- If the response is **`zsh`**, then you are running **Zsh** and should check out [**Oh-My-Zsh**](https://ohmyz.sh/).
+- If the response is **`bash`**, then you are running **Bash** and should check out [**Oh-My-Bash**](https://ohmybash.nntoan.com/).
+
+Use the links above and follow the instructions corresponding to your default shell to customize your terminal to your liking. Note that some themes might require you to install a custom font. Once you have finalized the configuration, you might need to do the following in order to be able to see your Conda environment in your Terminal again.
+
+1. Launch **Terminal** from *Applications*.
+2. Run the following commands:
+    ```bash
+    source miniconda3/bin/activate
+    conda init
+    ```
 ```
