@@ -45,6 +45,8 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -246,8 +248,8 @@
 <li><p>Using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command, navigate to a directory where you would like to place assignments for this course.</p></li>
 <li><p><strong>Clone</strong> the repository as follows (refer to the tab corresponding to the method you are using):</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f52907a1-c17a-4fbf-b480-d94b3da9833f" name="e146279e-b1d9-4a72-93e7-55060718fcf3" type="radio">
-</input><label class="tabbed-label" for="f52907a1-c17a-4fbf-b480-d94b3da9833f">
+<input checked="checked" id="e1329dbb-fd3c-46ae-aee3-2d33d761193e" name="ab98ff8b-5ee3-4b57-8443-13f502f7d09f" type="radio">
+</input><label class="tabbed-label" for="e1329dbb-fd3c-46ae-aee3-2d33d761193e">
 SSH</label><div class="tabbed-content docutils">
 <p>Assuming you have copied the SSH address for your Github repo, you can construct the <strong>clone</strong> command as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="n">SSH</span> <span class="n">address</span><span class="p">]</span>
@@ -258,8 +260,8 @@ SSH</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="c11b764d-4e7c-4c3e-b472-66354457ea40" name="e146279e-b1d9-4a72-93e7-55060718fcf3" type="radio">
-</input><label class="tabbed-label" for="c11b764d-4e7c-4c3e-b472-66354457ea40">
+<input id="90c6b743-a9d2-4f13-bcaa-db7e33ca64dc" name="ab98ff8b-5ee3-4b57-8443-13f502f7d09f" type="radio">
+</input><label class="tabbed-label" for="90c6b743-a9d2-4f13-bcaa-db7e33ca64dc">
 GitHub CLI</label><div class="tabbed-content docutils">
 <p>If you copied the GitHub CLI command, feel free to just paste and run it. Otherwise, you can construct the <strong>clone</strong> command as follows, replacing your GitHub username with the placeholder:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gh</span> <span class="n">repo</span> <span class="n">clone</span> <span class="n">uep239</span><span class="o">/</span><span class="n">hw00</span><span class="o">-</span><span class="n">USERNAME</span>
@@ -287,7 +289,7 @@ GitHub CLI</label><div class="tabbed-content docutils">
 </li>
 <li><p>Open the included README template <code class="docutils literal notranslate"><span class="pre">README.md</span></code> using Visual Studio Code or your other favorite text editor. If using Visual Studio Code, you can run <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">README.md</span></code> to launch the editor and open the file.</p></li>
 <li><p>Update the README with your name and save the changes.</p></li>
-<li><p>Create a new file called <code class="docutils literal notranslate"><span class="pre">os.txt</span></code> into your repository. The contents of the file should be either <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">macOS</span></code>, or <code class="docutils literal notranslate"><span class="pre">Linux</span></code>, depending on your operating system.</p></li>
+<li><p>Create a new file called <code class="docutils literal notranslate"><span class="pre">os.txt</span></code> into your repository. Feel free to do this via the command line or using a text editor. The contents of the file should be a single word denoting your operating system. Acceptable values are <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">macOS</span></code>, and <code class="docutils literal notranslate"><span class="pre">Linux</span></code>.</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to see the current status of your Git repository.</p></li>
 <li><p>Instead of using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">[filename]</span></code> to add specific files to the staging area, you can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-A</span></code> to add all changes in your repository to the staging area. Use this to add <code class="docutils literal notranslate"><span class="pre">os.txt</span></code> and the changes done to <code class="docutils literal notranslate"><span class="pre">README.md</span></code> to the staging area:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
@@ -318,8 +320,8 @@ GitHub CLI</label><div class="tabbed-content docutils">
 <h2>Formal Pseudocode<a class="headerlink" href="#formal-pseudocode" title="Permalink to this headline">¶</a></h2>
 <p>Assume a language that only has the following mathematical commands:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">X</span> <span class="pre">to</span> <span class="pre">Y</span></code> that returns the result of <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">+</span> <span class="pre">Y</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">X</span></code> that is the same as <code class="docutils literal notranslate"><span class="pre">-X</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">X</span> <span class="pre">to</span> <span class="pre">Y</span></code> that returns the result of <span class="math notranslate nohighlight">\(X + Y\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">X</span></code> that is the same as <span class="math notranslate nohighlight">\(-X\)</span></p></li>
 </ul>
 <p>Knowing this, we could define a new command <code class="docutils literal notranslate"><span class="pre">subtract</span> <span class="pre">X</span> <span class="pre">from</span> <span class="pre">Y</span></code> as follows:</p>
 <ol class="simple">
@@ -336,23 +338,45 @@ GitHub CLI</label><div class="tabbed-content docutils">
 </ol>
 </li>
 </ol>
+<p>Additionally, assume this language has a concept of conditionals – you can use words like <em>if</em> and <em>else</em> to perform certain actions when certain conditions are met (or not). Conditions can also be combined using words like <em>and</em> and <em>or</em>, and negated using words like <em>not</em>. That allows use to create a new command <code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">X</span></code> as follows:</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">X</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p>Return the value of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">X</span></code></p></li>
+</ul>
+</li>
+<li><p>Else:</p>
+<ul>
+<li><p>Return the value of <code class="docutils literal notranslate"><span class="pre">X</span></code></p></li>
+</ul>
+</li>
+</ul>
 <p>Knowing this, do the following:</p>
 <ol class="simple">
-<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">multiply.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">X</span> <span class="pre">by</span> <span class="pre">Y</span></code> that returns the result of <code class="docutils literal notranslate"><span class="pre">X</span></code> multiplied by <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p></li>
-<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">square.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">X</span></code> that returns the value of <code class="docutils literal notranslate"><span class="pre">X</span></code> multiplied by <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p></li>
-<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">power.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">Y</span></code> that returns the value of <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">^</span> <span class="pre">Y</span></code>.</p></li>
-<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">divide.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">X</span> <span class="pre">by</span> <span class="pre">Y</span></code> that returns the <strong>floored</strong> result of <code class="docutils literal notranslate"> <span class="pre">X</span> <span class="pre">/</span> <span class="pre">Y</span></code>.</p></li>
-<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">modulo.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">modulo</span> <span class="pre">Y</span></code> that returns the remainder of <code class="docutils literal notranslate"><span class="pre">X</span></code> divided by <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">multiply.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">X</span> <span class="pre">by</span> <span class="pre">Y</span></code> that returns the result of <span class="math notranslate nohighlight">\(X \times Y\)</span>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">square.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">X</span></code> that returns the value of <span class="math notranslate nohighlight">\(X^2\)</span>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">power.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">Y</span></code> that returns the value of <span class="math notranslate nohighlight">\(floor(X^Y)\)</span>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">divide.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">X</span> <span class="pre">by</span> <span class="pre">Y</span></code> that returns the value of <span class="math notranslate nohighlight">\(floor(X \div Y)\)</span>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">modulo.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">modulo</span> <span class="pre">Y</span></code> that returns the value of <span class="math notranslate nohighlight">\(|X| \bmod |Y|\)</span>.</p></li>
 </ol>
+<p>All of your commands should work with positive integers, negative integers, and zero. To avoid having to deal with odd situations involving floating-point numbers and ambiguous signs, note that some operations involve <a class="reference external" href="https://en.wikipedia.org/wiki/Floor_and_ceiling_functions"><strong>floor</strong></a> operations and others involve <a class="reference external" href="https://en.wikipedia.org/wiki/Absolute_value">absolute values</a>. Division by zero, modulo zero, zero to the power of zero, and zero to a negative power are all undefined in real life and can be undefined in your commands, meaning that your commands can return whatever and behave however when attempting to perform these operations.</p>
 <p>Here are some test cases for your commands:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">5</span> <span class="pre">by</span> <span class="pre">2</span></code> should return <code class="docutils literal notranslate"><span class="pre">10</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">5</span></code> should return <code class="docutils literal notranslate"><span class="pre">25</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">5</span></code> should return <code class="docutils literal notranslate"><span class="pre">32</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">5</span> <span class="pre">by</span> <span class="pre">2</span></code> should return <code class="docutils literal notranslate"><span class="pre">2</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">modulo</span> <span class="pre">2</span></code> should return <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">5</span> <span class="pre">by</span> <span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">-5</span> <span class="pre">by</span> <span class="pre">-2</span></code> should both return <code class="docutils literal notranslate"><span class="pre">10</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">5</span> <span class="pre">by</span> <span class="pre">-2</span></code> and <code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">-5</span> <span class="pre">by</span> <span class="pre">2</span></code> should both return <code class="docutils literal notranslate"><span class="pre">-10</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">0</span> <span class="pre">by</span> <span class="pre">2</span></code> should return <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">-5</span></code> should both should return <code class="docutils literal notranslate"><span class="pre">25</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">0</span></code> should return <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">6</span></code>  and <code class="docutils literal notranslate"><span class="pre">-2</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">6</span></code> should both return <code class="docutils literal notranslate"><span class="pre">64</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-2</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">5</span></code> should return <code class="docutils literal notranslate"><span class="pre">-32</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">-5</span></code> should return <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-2</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">-5</span></code> should return <code class="docutils literal notranslate"><span class="pre">-1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">-2</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">0</span></code> should both return <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">5</span> <span class="pre">by</span> <span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">-5</span> <span class="pre">by</span> <span class="pre">-2</span></code> should both return <code class="docutils literal notranslate"><span class="pre">2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">-5</span> <span class="pre">by</span> <span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">5</span> <span class="pre">by</span> <span class="pre">-2</span></code> should both return <code class="docutils literal notranslate"><span class="pre">-3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">modulo</span> <span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">modulo</span> <span class="pre">-2</span></code> should both return <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
 </ul>
-<p>Feel free to reference previously defined commands when defining a new command.</p>
+<p>Feel free to reference any other commands in a command definition, as long as you do not create a circular dependency (where one command refers to another command that in turn refers back to the first command). You are also free to use any commands defined in this assignment specification. If you are struggling, define all commands first assuming only positive inputs. Then figure out what changes when using negative inputs or zero. Generous partial credit is available for commands that only work using positive inputs.</p>
 </div>
 <div class="section" id="abstract-pseudocode">
 <h2>Abstract Pseudocode<a class="headerlink" href="#abstract-pseudocode" title="Permalink to this headline">¶</a></h2>
@@ -394,6 +418,7 @@ GitHub CLI</label><div class="tabbed-content docutils">
 <h2>Submission Details<a class="headerlink" href="#submission-details" title="Permalink to this headline">¶</a></h2>
 <p>Make sure to use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to push any commits to the GitHub server before the end of the grace period. Any changes not reflected on GitHub by the end of the grace period will not be considered. If you feel like you need more time, reach out the the instructor and we will work something out.</p>
 <p>Please include the approximate number of hours spent on this assignment in your README (including time spent on setting up your computer). Also use the README to outline the details of your submission, cite any references, and note anyone you received help from or discussed the assignment with. Additionally, feel free to utilize the README to provide feedback and share your thoughts. For an additional two (2) points, include a funny image in your README using Markdown syntax. If you <em>jazzed up</em> your terminal when configuring your computer for the course, include a screenshot of your <em>jazzed up</em> terminal for an extra three (3) points. The screenshot should be present in your repository and mentioned in your README.</p>
+<p>All of your Markdown files should be nearly formatted and pleasant to read both as raw and rendered Markdown text. Check the Visual Studio Code or GitHub Markdown preview before submitting to ensure your files look as you expect.</p>
 <p>Points will be awarded as follows:</p>
 <ul class="simple">
 <li><p>Getting Started (15)</p>
@@ -402,23 +427,23 @@ GitHub CLI</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">os.txt</span></code> (1)</p></li>
 </ul>
 </li>
-<li><p>Formal Pseudocode (50)</p>
+<li><p>Formal Pseudocode (60)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">multiply.md</span></code> (10)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">square.md</span></code> (10)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">power.md</span></code> (10)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">divide.md</span></code> (10)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modulo.md</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiply.md</span></code> (12)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">square.md</span></code> (12)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">power.md</span></code> (12)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divide.md</span></code> (12)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modulo.md</span></code> (12)</p></li>
 </ul>
 </li>
-<li><p>Abstract Pseudocode (30)</p>
+<li><p>Abstract Pseudocode (20)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">nutella.md</span></code> (1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">peanut.md</span></code> (1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">turkey.md</span></code> (1)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cheese.md</span></code> (1)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sweet.md</span></code> (10)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">savory.md</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sweet.md</span></code> (5)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">savory.md</span></code> (5)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">universal.md</span></code> (6)</p></li>
 </ul>
 </li>
