@@ -223,15 +223,15 @@ If you know that you already have a public-private SSH key pair that you would l
 
 **Link a new SSH key to your GitHub account:**
 
-1. If you do not already have **Windows PowerShell** open, *Right-click* on the **Start** button and select *Windows PowerShell*.
-2. Copy the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed)*:
+1. If you do not already have **Windows PowerShell** open, *right-click* on the **Start** button and select *Windows PowerShell*.
+2. Run the following command to **copy** the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed, note that the filename should end with `.pub`)*:
     ```powershell
     Get-Content (Resolve-Path ~\.ssh\id_ed25519.pub) | clip
     ```
 3. Go to **<https://github.com/settings/keys>** and log in with your GitHub account if needed.
 4. Click on **New SSH key**.
 5. The **Title** field should contain a descriptive label that will allow you to identify this key later. (As the key is linked to your computer, the name or description of the computer would be a good choice, for example *ThinkPad X1* or similar.)
-6. Paste the copied **public** key into the **Key** field.
+6. **Paste** the copied **public** key into the **Key** field.
 7. Click on **Add SSH key**.
 8. If prompted, confirm your GitHub password.
 ```
@@ -250,14 +250,14 @@ If you know that you already have a public-private SSH key pair that you would l
 **Link a new SSH key to your GitHub account:**
 
 1. If not already open, launch **Terminal** from *Applications*.
-2. Copy the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed)*
+2. Run the following command to **copy** the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed, note that the filename should end with `.pub`)*:
     ```bash
     pbcopy < ~/.ssh/id_ed25519.pub
     ```
 3. Go to **<https://github.com/settings/keys>** and log in with your GitHub account if needed.
 4. Click on **New SSH key**.
 5. The **Title** field should contain a descriptive label that will allow you to identify this key later. (As the key is linked to your computer, the name or description of the computer would be a good choice, for example *MacBook Air* or similar.)
-6. Paste the copied **public** key into the **Key** field.
+6. **Paste** the copied **public** key into the **Key** field.
 7. Click on **Add SSH key**.
 8. If prompted, confirm your GitHub password.
 ```
