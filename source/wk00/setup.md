@@ -115,7 +115,7 @@ Visual Studio Code (VS Code) is a powerful open-source text editor that works we
 3. Drag **Visual Studio Code.app** into the *Applications* folder.
 4. *Right-click* on Visual Studio Code icon and select ***Options > Keep in Dock***.
 5. Launch Visual Studio Code.
-6. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+6. Open the **Command Palette** via *View > Command Palette* or by pressing **Cmd+Shift+P**.
 7. Type ***shell command*** into the Command Palette.
 8. Select **Shell Command: Install 'code' command in PATH**.
 ```
@@ -223,15 +223,15 @@ If you know that you already have a public-private SSH key pair that you would l
 
 **Link a new SSH key to your GitHub account:**
 
-1. If you do not already have **Windows PowerShell** open, *Right-click* on the **Start** button and select *Windows PowerShell*.
-2. Copy the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed)*:
+1. If you do not already have **Windows PowerShell** open, *right-click* on the **Start** button and select *Windows PowerShell*.
+2. Run the following command to **copy** the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed, note that the filename should end with `.pub`)*:
     ```powershell
     Get-Content (Resolve-Path ~\.ssh\id_ed25519.pub) | clip
     ```
 3. Go to **<https://github.com/settings/keys>** and log in with your GitHub account if needed.
 4. Click on **New SSH key**.
 5. The **Title** field should contain a descriptive label that will allow you to identify this key later. (As the key is linked to your computer, the name or description of the computer would be a good choice, for example *ThinkPad X1* or similar.)
-6. Paste the copied **public** key into the **Key** field.
+6. **Paste** the copied **public** key into the **Key** field.
 7. Click on **Add SSH key**.
 8. If prompted, confirm your GitHub password.
 ```
@@ -250,14 +250,14 @@ If you know that you already have a public-private SSH key pair that you would l
 **Link a new SSH key to your GitHub account:**
 
 1. If not already open, launch **Terminal** from *Applications*.
-2. Copy the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed)*
+2. Run the following command to **copy** the newly generated (or any other desired) SSH **public** key to your clipboard *(modify the filename if needed, note that the filename should end with `.pub`)*:
     ```bash
     pbcopy < ~/.ssh/id_ed25519.pub
     ```
 3. Go to **<https://github.com/settings/keys>** and log in with your GitHub account if needed.
 4. Click on **New SSH key**.
 5. The **Title** field should contain a descriptive label that will allow you to identify this key later. (As the key is linked to your computer, the name or description of the computer would be a good choice, for example *MacBook Air* or similar.)
-6. Paste the copied **public** key into the **Key** field.
+6. **Paste** the copied **public** key into the **Key** field.
 7. Click on **Add SSH key**.
 8. If prompted, confirm your GitHub password.
 ```
@@ -480,20 +480,20 @@ Visual Studio Code is extremely modular and extensible, meaning that it has nume
 ````
 ````{tabbed} macOS
 1. Launch **Visual Studio Code**.
-2. With Visual Studio Code open, press **Ctrl+P** to launch **Quick Open**.
+2. With Visual Studio Code open, press **Cmd+P** to launch **Quick Open**.
 3. Type **`ext install ms-python.python`** and press **Return**.
 4. Check on the status of the installation on the panel in the left side.
-5. Once the extension has installed, launch **Quick Open** again by pressing **Ctrl+P**.
+5. Once the extension has installed, launch **Quick Open** again by pressing **Cmd+P**.
 6. Type **`ext install ms-python.vscode-pylance`** and press **Return**.
 7. Check on the status of the installation on the panel in the left side and wait for the extension to install.
-8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Cmd+Shift+P**.
 9. Type *python select interpreter* into the Command Palette.
 10. Select **Python: Select Interpreter** and wait for the Command Palette to reopen.
 11. Once the Command Palette reopens, select **Python 3.X.X 64-bit ('base':conda)**.
-12. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+12. Launch the **Command Palette** via *View > Command Palette* or by pressing **Cmd+Shift+P**.
 13. Type *python select linter* into the Command Palette.
 14. Select **Python: Select Linter** and then **Disable Linting**.
-15. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+15. Launch the **Command Palette** via *View > Command Palette* or by pressing **Cmd+Shift+P**.
 16. Type *open settings json* into the Command Palette.
 17. Select **Preferences: Open Settings (JSON)**.
 18. Once the `settings.json` file opens, confirm that its contents **resemble** the following *(will not be exactly the same)*:
@@ -513,7 +513,7 @@ Visual Studio Code is extremely modular and extensible, meaning that it has nume
         "python.languageServer": "Pylance"
     }
     ```
-22. Save the file via *File > Save* or by pressing **Ctrl+S**.
+22. Save the file via *File > Save* or by pressing **Cmd+S**.
 23. Close the `settings.json` tab, then close Visual Studio Code.
 ````
 
@@ -589,8 +589,8 @@ Making your terminal window more beautiful and colorful like this will not add a
     ```powershell
     Install-Module PSReadLine -AllowPrerelease -Scope CurrentUser -Force
     Install-Module oh-my-posh -Scope CurrentUser -MaximumVersion 2.1 -Force
-    New-Item "~\Documents\PowerShell\PoshThemes\paradox-cascadia.psm1" -Force
-    curl -L "https://raw.githubusercontent.com/ukukas/paradox-cascadia/main/paradox-cascadia.psm1" -o (Resolve-Path "~\Documents\PowerShell\PoshThemes\paradox-cascadia.psm1")
+    New-Item -Path "~\Documents\PowerShell\PoshThemes" -ItemType "directory" -Force
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ukukas/paradox-cascadia/main/paradox-cascadia.psm1" -OutFile "~\Documents\PowerShell\PoshThemes\paradox-cascadia.psm1"
     ```
 3. Run the following command to open your PowerShell profile configuration file in Notepad:
     ```powershell
