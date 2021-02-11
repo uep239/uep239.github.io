@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Assignment 0 &#8212; UEP-0239: Geospatial Programming with Python</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://uep239.github.io/assignments/hw00.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Configuring the Course Environment" href="../wk00/setup.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://uep239.github.io/assignments/hw00.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Homework Assignment 0" />
+<meta property="og:description" content="Homework Assignment 0  Due: Tuesday, February 16 at 11:59 pm EST&lt;br /&gt; Total available points: 105&lt;br /&gt; Maximum points: 100  Getting Started  Follow the Course" />
+<meta property="og:image"       content="https://uep239.github.io/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UEP-0239: Geospatial Programming with Python</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Week 0
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk00/setup.html">
+   Configuring the Course Environment
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Homework Assignment 0
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/assignments/hw00.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/uep239/uep239.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/uep239/uep239.github.io/issues/new?title=Issue%20on%20page%20%2Fassignments/hw00.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/uep239/uep239.github.io/edit/main/source/assignments/hw00.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formal-pseudocode">
+   Formal Pseudocode
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstract-pseudocode">
+   Abstract Pseudocode
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submission-details">
+   Submission Details
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="homework-assignment-0">
+<h1>Homework Assignment 0<a class="headerlink" href="#homework-assignment-0" title="Permalink to this headline">¶</a></h1>
+<p><strong>Due:</strong> Tuesday, February 16 at 11:59 pm EST<br />
+<strong>Total available points:</strong> 105<br />
+<strong>Maximum points:</strong> 100</p>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>Follow the <a class="reference internal" href="../wk00/setup.html"><span class="doc std std-doc">Course Environment Configuration Guide</span></a> to and set up your computer for the course.</p></li>
+<li><p>Tell us what your GitHub username is: <a class="reference external" href="https://tufts.qualtrics.com/jfe/form/SV_cHY84bISwR0om0e">https://tufts.qualtrics.com/jfe/form/SV_cHY84bISwR0om0e</a></p></li>
+<li><p>Go to <a class="reference external" href="https://canvas.tufts.edu/courses/27438/assignments">Canvas</a> or <a class="reference external" href="https://piazza.com/tufts/spring2021/uep239/resources">Piazza</a> and follow the <strong>GitHub Classroom</strong> link for this assignment.</p></li>
+<li><p>When prompted, log in with your GitHub account (use the same username you submitted in step #2).</p></li>
+<li><p>Select your Tufts UTLN from the list. This will link your GitHub account to your UTLN for the remainder of the course. <strong>If your UTLN does not appear on the list <em>and</em> you are taking this course for credit, notify course staff immediately.</strong></p></li>
+<li><p>Confirm your selection and then accept the assignment.</p></li>
+<li><p>Wait a little and then refresh the page. Repeat until the creation of your assignment repository is confirmed.</p></li>
+<li><p>Navigate to your assignment repository. You should also be able to get to it via the <a class="reference external" href="https://github.com/uep239">course GitHub profile</a>.</p></li>
+<li><p>Click on the green button labelled <strong>Code</strong> in the upper-right and copy either the <strong>SSH address</strong> for your repository or the <strong>GitHub CLI command</strong> to clone your repository (if you have set that up).</p></li>
+<li><p>Open Terminal or Windows Terminal (both will be referred to as <em>Terminal</em> going forward).</p></li>
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command, navigate to a directory where you would like to place assignments for this course.</p></li>
+<li><p><strong>Clone</strong> the repository as follows (refer to the tab corresponding to the method you are using):</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="602b49ab-3201-4fe8-b943-b835986e5e9e" name="d7933004-7682-4bdb-967b-e18669a45b1f" type="radio">
+</input><label class="tabbed-label" for="602b49ab-3201-4fe8-b943-b835986e5e9e">
+SSH</label><div class="tabbed-content docutils">
+<p>Assuming you have copied the SSH address for your Github repo, you can construct the <strong>clone</strong> command as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="n">SSH</span> <span class="n">address</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The whole command should look like the following, with your GitHub username instead of the placeholder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">uep239</span><span class="o">/</span><span class="n">hw00</span><span class="o">-</span><span class="n">USERNAME</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div>
+<input id="33b41f7e-dbd1-4c1a-a5df-bd5c2019e630" name="d7933004-7682-4bdb-967b-e18669a45b1f" type="radio">
+</input><label class="tabbed-label" for="33b41f7e-dbd1-4c1a-a5df-bd5c2019e630">
+GitHub CLI</label><div class="tabbed-content docutils">
+<p>If you copied the GitHub CLI command, feel free to just paste and run it. Otherwise, you can construct the <strong>clone</strong> command as follows, replacing your GitHub username with the placeholder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gh</span> <span class="n">repo</span> <span class="n">clone</span> <span class="n">uep239</span><span class="o">/</span><span class="n">hw00</span><span class="o">-</span><span class="n">USERNAME</span>
+</pre></div>
+</div>
+</div>
+</div>
+</li>
+<li><p>A new folder called <code class="docutils literal notranslate"><span class="pre">hw00-USERNAME</span></code> (with your GitHub username instead of the placeholder) gets created in your current working directory. This folder is your assignment repository.</p></li>
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command, navigate into your assignment repository. If you have configured your terminal to display Git status, you should see it now. Otherwise, run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to confirm you are in a Git repository.</p></li>
+<li><p>To confirm you have properly set up conda on your computer, run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">&gt;</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+</li>
+<li><p>This will create a new file called <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> in your repository. Now add it to your staging area as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+</li>
+<li><p>Commit this change by running the following command (note the descriptive commit message):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;created environment.yml&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Open the included README template <code class="docutils literal notranslate"><span class="pre">README.md</span></code> using Visual Studio Code or your other favorite text editor. If using Visual Studio Code, you can run <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">README.md</span></code> to launch the editor and open the file.</p></li>
+<li><p>Update the README with your name and save the changes.</p></li>
+<li><p>Create a new file called <code class="docutils literal notranslate"><span class="pre">os.txt</span></code> into your repository. The contents of the file should be either <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">macOS</span></code>, or <code class="docutils literal notranslate"><span class="pre">Linux</span></code>, depending on your operating system.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to see the current status of your Git repository.</p></li>
+<li><p>Instead of using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">[filename]</span></code> to add specific files to the staging area, you can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-A</span></code> to add all changes in your repository to the staging area. Use this to add <code class="docutils literal notranslate"><span class="pre">os.txt</span></code> and the changes done to <code class="docutils literal notranslate"><span class="pre">README.md</span></code> to the staging area:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> again and see what has changed. Then commit the stages changes using an appropriate message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;created os.txt and updated README with my name&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> again and see what has changed. Then push all committed changes to the GitHub server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+</li>
+<li><p>Navigate to your assignment repository on GitHub and see how all changes are now reflected there.</p></li>
+</ol>
+<p>As you keep working on this assignment, keep track of your work by taking snapshots using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> where appropriate. Make sure to use helpful and descriptive commit messages to help future you understand what each snapshot corresponds to. Feel free to use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> anytime to gain a better understanding of what is going on in your repository and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--help</span></code> if you ever forget a command or would like to learn additional commands. Do not forget to push your changes to GitHub using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. You do not have to run this after <em>every</em> commit, but keep in mind that commits that are not pushed are not backed up on GitHub servers. Remember to run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> after finishing the assignment to make sure all of your work is uploaded to GitHub and available for grading!</p>
+<p>Also keep in mind the following useful commands when working on the assignment:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ii</span> <span class="pre">.</span></code> or <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">.</span></code> to open the current directory in File Explorer or Finder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">.</span></code>  or <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">[filename]</span></code> to open the current directory or a specific file in Visual Studio Code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">New-Item</span> <span class="pre">[filename]</span></code> or <code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">[filename]</span></code> to create a new file</p></li>
+</ul>
+</div>
+<div class="section" id="formal-pseudocode">
+<h2>Formal Pseudocode<a class="headerlink" href="#formal-pseudocode" title="Permalink to this headline">¶</a></h2>
+<p>Assume a language that only has the following mathematical commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">X</span> <span class="pre">to</span> <span class="pre">Y</span></code> that returns the result of <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">+</span> <span class="pre">Y</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">X</span></code> that is the same as <code class="docutils literal notranslate"><span class="pre">-X</span></code></p></li>
+</ul>
+<p>Knowing this, we could define a new command <code class="docutils literal notranslate"><span class="pre">subtract</span> <span class="pre">X</span> <span class="pre">from</span> <span class="pre">Y</span></code> as follows:</p>
+<ol class="simple">
+<li><p>Let <code class="docutils literal notranslate"><span class="pre">Z</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">X</span></code></p></li>
+<li><p>Return the result of <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">Y</span> <span class="pre">to</span> <span class="pre">Z</span></code></p></li>
+</ol>
+<p>Furthermore, assume this language has a concept of repeating actions until a certain condition is met using words like <em>while</em> or <em>until</em> and that we are able to compare numbers using instructions like <em>greater than</em>, <em>less than</em>, <em>equal to</em>, and combinations of those. Like this, we could create a new command <code class="docutils literal notranslate"><span class="pre">count</span> <span class="pre">from</span> <span class="pre">one</span> <span class="pre">to</span> <span class="pre">ten</span></code> as follows:</p>
+<ol class="simple">
+<li><p>Let <code class="docutils literal notranslate"><span class="pre">X</span></code> be <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p>While <code class="docutils literal notranslate"><span class="pre">X</span></code> is less than or equal to <code class="docutils literal notranslate"><span class="pre">10</span></code>:</p>
+<ol class="simple">
+<li><p>Announce the value of <code class="docutils literal notranslate"><span class="pre">X</span></code></p></li>
+<li><p>Let <code class="docutils literal notranslate"><span class="pre">X</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">X</span></code></p></li>
+</ol>
+</li>
+</ol>
+<p>Knowing this, do the following:</p>
+<ol class="simple">
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">multiply.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">X</span> <span class="pre">by</span> <span class="pre">Y</span></code> that returns the result of <code class="docutils literal notranslate"><span class="pre">X</span></code> multiplied by <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">square.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">X</span></code> that returns the value of <code class="docutils literal notranslate"><span class="pre">X</span></code> multiplied by <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">power.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">Y</span></code> that returns the value of <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">^</span> <span class="pre">Y</span></code>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">divide.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">X</span> <span class="pre">by</span> <span class="pre">Y</span></code> that returns the <strong>floored</strong> result of <code class="docutils literal notranslate"> <span class="pre">X</span> <span class="pre">/</span> <span class="pre">Y</span></code>.</p></li>
+<li><p>Create a file <code class="docutils literal notranslate"><span class="pre">modulo.md</span></code> that defines a new command <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">modulo</span> <span class="pre">Y</span></code> that returns the remainder of <code class="docutils literal notranslate"><span class="pre">X</span></code> divided by <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p></li>
+</ol>
+<p>Here are some test cases for your commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">5</span> <span class="pre">by</span> <span class="pre">2</span></code> should return <code class="docutils literal notranslate"><span class="pre">10</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">5</span></code> should return <code class="docutils literal notranslate"><span class="pre">25</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">5</span></code> should return <code class="docutils literal notranslate"><span class="pre">32</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">5</span> <span class="pre">by</span> <span class="pre">2</span></code> should return <code class="docutils literal notranslate"><span class="pre">2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">modulo</span> <span class="pre">2</span></code> should return <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+</ul>
+<p>Feel free to reference previously defined commands when defining a new command.</p>
+</div>
+<div class="section" id="abstract-pseudocode">
+<h2>Abstract Pseudocode<a class="headerlink" href="#abstract-pseudocode" title="Permalink to this headline">¶</a></h2>
+<p>Assume this is a valid recipe for a peanut butter and jelly sandwich:</p>
+<ol class="simple">
+<li><p>Take a piece of bread and spread peanut butter on it.</p></li>
+<li><p>Take another piece of bread and spread jelly on it.</p></li>
+<li><p>Combine the two pieces of bread, peanut butter and jelly sides touching.</p></li>
+</ol>
+<p>Assume this is a valid recipe for a ham sandwich:</p>
+<ol class="simple">
+<li><p>Take a piece of bread and spread mayo on it.</p></li>
+<li><p>Place the piece of bread with mayo on a plate, mayo side facing up.</p></li>
+<li><p>Place a slice of cheese on top of the bread.</p></li>
+<li><p>Place a slice of ham on top of the cheese.</p></li>
+<li><p>Place sliced pickles on top of the ham.</p></li>
+<li><p>Place slices of tomato on top of the pickles.</p></li>
+<li><p>Place lettuce on top of the tomato.</p></li>
+<li><p>Take a piece of bread and spread mustard on it.</p></li>
+<li><p>Place the pice of bread with mustard on top of the lettuce, mustard side facing down.</p></li>
+</ol>
+<p>Furthermore, assume the following:</p>
+<ul class="simple">
+<li><p>A peanut butter and Nutella sandwich is similar to a peanut butter and jelly sandwich, but with Nutella instead of jelly.</p></li>
+<li><p>A peanut butter sandwich is similar to a peanut butter and jelly sandwich, but with peanut butter on both slices.</p></li>
+<li><p>A turkey sandwich is similar to a ham sandwich, except the slice of ham is replaced with a slice of turkey.</p></li>
+<li><p>A cheese sandwich is similar to a ham sandwich, except it has another slice of cheese instead of the slice of ham.</p></li>
+</ul>
+<p>Knowing this, do the following:</p>
+<ol class="simple">
+<li><p>Write a recipe for making a peanut butter and Nutella sandwich and save it to a file called <code class="docutils literal notranslate"><span class="pre">nutella.md</span></code>. Then write another recipe for making a peanut butter sandwich and save it to a file <code class="docutils literal notranslate"><span class="pre">peanut.md</span></code>. Use Markdown formatting to highlight any differences between these recipes and the original peanut butter and jelly recipe.</p></li>
+<li><p>Write a recipe for making a turkey sandwich and save it to a file called <code class="docutils literal notranslate"><span class="pre">turkey.md</span></code>. Then write another recipe for making a cheese sandwich and save it to a file <code class="docutils literal notranslate"><span class="pre">cheese.md</span></code>. Use Markdown formatting to highlight any differences between these recipes and the original ham sandwich recipe.</p></li>
+<li><p>Can you come up with a single universal recipe that can be used to create any sweet sandwich involving spreads? At a minimum, this recipe should allow for the creation of a peanut butter and jelly sandwich, a peanut butter and Nutella sandwich, and a peanut butter sandwich. The recipe itself should be as compact as possible, but it is okay if the sandwich maker has to do boring and repetitive tasks. Write this recipe to a file called <code class="docutils literal notranslate"><span class="pre">sweet.md</span></code>.</p></li>
+<li><p>Now do the same for savory sandwiches and come up with a single universal recipe that can be used to create any sandwich involving meat and cheese slices. At a minimum, this recipe should allow for the creation of a ham sandwich, a turkey sandwich, and a cheese sandwich. Write this recipe to a file called <code class="docutils literal notranslate"><span class="pre">savory.md</span></code>.</p></li>
+<li><p>Can you come up with a single universal sandwich recipe that can be used to make both sweet and savory sandwiches? Do you think it makes sense to have a recipe like this? Write your recipe or your arguments against creating an universal sandwich recipe into a file called <code class="docutils literal notranslate"><span class="pre">universal.md</span></code>.</p></li>
+</ol>
+</div>
+<div class="section" id="submission-details">
+<h2>Submission Details<a class="headerlink" href="#submission-details" title="Permalink to this headline">¶</a></h2>
+<p>Make sure to use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to push any commits to the GitHub server before the end of the grace period. Any changes not reflected on GitHub by the end of the grace period will not be considered. If you feel like you need more time, reach out the the instructor and we will work something out.</p>
+<p>Please include the approximate number of hours spent on this assignment in your README (including time spent on setting up your computer). Also use the README to outline the details of your submission, cite any references, and note anyone you received help from or discussed the assignment with. Additionally, feel free to utilize the README to provide feedback and share your thoughts. For an additional two (2) points, include a funny image in your README using Markdown syntax. If you <em>jazzed up</em> your terminal when configuring your computer for the course, include a screenshot of your <em>jazzed up</em> terminal for an extra three (3) points. The screenshot should be present in your repository and mentioned in your README.</p>
+<p>Points will be awarded as follows:</p>
+<ul class="simple">
+<li><p>Getting Started (15)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enironment.yml</span></code> (14)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os.txt</span></code> (1)</p></li>
+</ul>
+</li>
+<li><p>Formal Pseudocode (50)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mutiply.md</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">square.md</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">power.md</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divide.md</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modulo.md</span></code> (10)</p></li>
+</ul>
+</li>
+<li><p>Abstract Pseudocode (30)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">nutella.md</span></code> (1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peanut.md</span></code> (1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">turkey.md</span></code> (1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cheese.md</span></code> (1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sweet.md</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">savory.md</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">universal.md</span></code> (6)</p></li>
+</ul>
+</li>
+<li><p>Other (10)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">README.md</span></code> (3 + 2)</p></li>
+<li><p>Repository activity (1)</p></li>
+<li><p>Good commit messages (1)</p></li>
+<li><p>Screenshot of <em>jazzed up</em> terminal (3)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./assignments"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../wk00/setup.html" title="previous page">Configuring the Course Environment</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Uku-Kaspar Uustalu<br/>
+        
+            &copy; Copyright 2021.<br/>
+          Last updated on Feb 11, 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-188456160-2', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
