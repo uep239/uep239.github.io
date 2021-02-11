@@ -115,7 +115,7 @@ Visual Studio Code (VS Code) is a powerful open-source text editor that works we
 3. Drag **Visual Studio Code.app** into the *Applications* folder.
 4. *Right-click* on Visual Studio Code icon and select ***Options > Keep in Dock***.
 5. Launch Visual Studio Code.
-6. Open the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+6. Open the **Command Palette** via *View > Command Palette* or by pressing **Cmd+Shift+P**.
 7. Type ***shell command*** into the Command Palette.
 8. Select **Shell Command: Install 'code' command in PATH**.
 ```
@@ -480,20 +480,20 @@ Visual Studio Code is extremely modular and extensible, meaning that it has nume
 ````
 ````{tabbed} macOS
 1. Launch **Visual Studio Code**.
-2. With Visual Studio Code open, press **Ctrl+P** to launch **Quick Open**.
+2. With Visual Studio Code open, press **Cmd+P** to launch **Quick Open**.
 3. Type **`ext install ms-python.python`** and press **Return**.
 4. Check on the status of the installation on the panel in the left side.
-5. Once the extension has installed, launch **Quick Open** again by pressing **Ctrl+P**.
+5. Once the extension has installed, launch **Quick Open** again by pressing **Cmd+P**.
 6. Type **`ext install ms-python.vscode-pylance`** and press **Return**.
 7. Check on the status of the installation on the panel in the left side and wait for the extension to install.
-8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+8. Launch the **Command Palette** via *View > Command Palette* or by pressing **Cmd+Shift+P**.
 9. Type *python select interpreter* into the Command Palette.
 10. Select **Python: Select Interpreter** and wait for the Command Palette to reopen.
 11. Once the Command Palette reopens, select **Python 3.X.X 64-bit ('base':conda)**.
-12. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+12. Launch the **Command Palette** via *View > Command Palette* or by pressing **Cmd+Shift+P**.
 13. Type *python select linter* into the Command Palette.
 14. Select **Python: Select Linter** and then **Disable Linting**.
-15. Launch the **Command Palette** via *View > Command Palette* or by pressing **Ctrl+Shift+P**.
+15. Launch the **Command Palette** via *View > Command Palette* or by pressing **Cmd+Shift+P**.
 16. Type *open settings json* into the Command Palette.
 17. Select **Preferences: Open Settings (JSON)**.
 18. Once the `settings.json` file opens, confirm that its contents **resemble** the following *(will not be exactly the same)*:
@@ -513,7 +513,7 @@ Visual Studio Code is extremely modular and extensible, meaning that it has nume
         "python.languageServer": "Pylance"
     }
     ```
-22. Save the file via *File > Save* or by pressing **Ctrl+S**.
+22. Save the file via *File > Save* or by pressing **Cmd+S**.
 23. Close the `settings.json` tab, then close Visual Studio Code.
 ````
 
