@@ -248,8 +248,8 @@
 <li><p>Using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command, navigate to a directory where you would like to place assignments for this course.</p></li>
 <li><p><strong>Clone</strong> the repository as follows (refer to the tab corresponding to the method you are using):</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="64123465-4065-4e70-90c3-7fdae9a4c8cd" name="284e0e4c-c3ca-46ee-9be2-4f078e0d35cd" type="radio">
-</input><label class="tabbed-label" for="64123465-4065-4e70-90c3-7fdae9a4c8cd">
+<input checked="checked" id="d90a951b-fc83-437e-a132-9755bec7a932" name="389bb676-33ea-482a-b9d3-e14e93455b4e" type="radio">
+</input><label class="tabbed-label" for="d90a951b-fc83-437e-a132-9755bec7a932">
 SSH</label><div class="tabbed-content docutils">
 <p>Assuming you have copied the SSH address for your Github repo, you can construct the <strong>clone</strong> command as follows:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone <span class="o">[</span>SSH address<span class="o">]</span>
@@ -260,8 +260,8 @@ SSH</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="0c28ae01-2f8b-436d-ac09-77e462bac57c" name="284e0e4c-c3ca-46ee-9be2-4f078e0d35cd" type="radio">
-</input><label class="tabbed-label" for="0c28ae01-2f8b-436d-ac09-77e462bac57c">
+<input id="c1864a7e-6955-4dc6-b867-0e38f9539cd2" name="389bb676-33ea-482a-b9d3-e14e93455b4e" type="radio">
+</input><label class="tabbed-label" for="c1864a7e-6955-4dc6-b867-0e38f9539cd2">
 GitHub CLI</label><div class="tabbed-content docutils">
 <p>If you copied the GitHub CLI command, feel free to just paste and run it. Otherwise, you can construct the <strong>clone</strong> command as follows, replacing your GitHub username with the placeholder:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gh repo clone uep239/hw00-USERNAME
@@ -277,7 +277,7 @@ GitHub CLI</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </li>
-<li><p>This will create a new file called <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> in your repository. Now add it to your staging area as follows:</p>
+<li><p>This will create a new file called <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> in your repository. This is a Conda environment specification file and we will talk about it later in the course. Right now it will allow us to assess whether your Conda environment is set up properly. Add this file to your staging area as follows:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git add environment.yml
 </pre></div>
 </div>
@@ -288,8 +288,8 @@ GitHub CLI</label><div class="tabbed-content docutils">
 </div>
 </li>
 <li><p>Open the included README template <code class="docutils literal notranslate"><span class="pre">README.md</span></code> using Visual Studio Code or your other favorite text editor. If using Visual Studio Code, you can run <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">README.md</span></code> to launch the editor and open the file.</p></li>
-<li><p>Update the README with your name and save the changes.</p></li>
-<li><p>Create a new file called <code class="docutils literal notranslate"><span class="pre">os.txt</span></code> into your repository. Feel free to do this via the command line or using a text editor. The contents of the file should be a single word denoting your operating system. Acceptable values are <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">macOS</span></code>, and <code class="docutils literal notranslate"><span class="pre">Linux</span></code>.</p></li>
+<li><p>Update the README with your name and save the changes. Take a moment to investigate how line and paragraph breaks work in Markdown while updating your README.</p></li>
+<li><p>Create a new file called <code class="docutils literal notranslate"><span class="pre">os.txt</span></code> into your repository. Feel free to do this via the command line or by using a text editor. The file should contain a single word denoting your operating system. Acceptable values are <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">macOS</span></code>, and <code class="docutils literal notranslate"><span class="pre">Linux</span></code>.</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to see the current status of your Git repository.</p></li>
 <li><p>Instead of using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">[filename]</span></code> to add specific files to the staging area, you can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-A</span></code> to add all changes in your repository to the staging area. Use this to add <code class="docutils literal notranslate"><span class="pre">os.txt</span></code> and the changes done to <code class="docutils literal notranslate"><span class="pre">README.md</span></code> to the staging area:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git add -A
@@ -498,7 +498,7 @@ GitHub CLI</label><div class="tabbed-content docutils">
           By Uku-Kaspar Uustalu<br/>
         
             &copy; Copyright 2021.<br/>
-          Last updated on Feb 11, 2021.<br/>
+          Last updated on Feb 12, 2021.<br/>
       </p>
     </div>
   </footer>
