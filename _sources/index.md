@@ -38,20 +38,95 @@ Office Hours
 
 ## Tentative Schedule
 
-Week | Date | Main Topic | Assignments Out | Assignments Due
---- | --- | --- | --- | ---
-0 | February 1 | What is programming? | HW 0 |
-1 | February 8 | Introduction to Python | HW 1 | HW 0
-2 | **February 16** <br/> **Tuesday** | Intermediate and Advanced Python | HW 2 | HW 1
-3 | February 22 | Package Management and Scientific Computing | HW 3 <br/> **Midterm Project**| HW 2
-4 | March 1 | Python for Data Analysis and Visualization | HW 4 | HW 3
-5 | March 8 | The Spatial Data Model | HW 5 | HW 4
-6 | March 15 | Visualizing Spatial Data | HW 6 | HW 5 <br/> **Midterm Project**
-7 | March 22 | Vector Analysis | HW 7 <br/> **Final Project** | HW 6
-8 | March 29 | Raster Analysis | HW 8 | HW 7
-9 | April 5 | Network Analysis | HW 9 | HW 8
-10 | April 12 | Remote Sensing and Machine Learning | HW 10 | HW 9 <br/> *Project Proposal*
-11 | **April 19** | ***No Class***
-12 | April 26 | Integrating Python with Desktop GIS | | HW 10
-13 | May 3 | Project Presentations and Course Wrap-Up
-14 | May 10 | *No Class* | | **Final Project**
+```{list-table}
+:header-rows: 1
+:widths: 5 15 50 20 20
+
+* - Week
+  - Date
+  - Main Topic
+  - Assignments Out
+  - Assignments Due
+* - 0
+  - February 1
+  - What is Programming?
+  -
+  -
+* - 1
+  - February 8
+  - Working on the Command-Line
+  - HW 0
+  -
+* - 2
+  - **February 16**\
+    **Tuesday**
+  - Introduction to Python
+  - HW 1
+  - HW 0
+* - 3
+  - February 22
+  - Intermediate and Advanced Python
+  - HW 2\
+    HW 3
+  - HW 1
+* - 4
+  - March 1
+  - Python for Data Analysis and Visualization
+  - HW 4\
+    **Midterm Project**
+  - HW 2\
+    HW 3
+* - 5
+  - March 8
+  - The Spatial Data Model
+  - HW 5
+  - HW 4
+* - 6
+  - March 15
+  - Visualizing Spatial Data
+  - HW 6
+  - HW 5
+* - 7
+  - March 22
+  - Vector Analysis
+  - HW 7\
+    **Final Project**
+  - HW 6\
+    **Midterm Project**
+* - 8
+  - March 29
+  - Raster Analysis
+  - HW 8
+  - HW 7
+* - 9
+  - April 5
+  - Network Analysis
+  - HW 9
+  - HW 8
+* - 10
+  - April 12
+  - Remote Sensing and Machine Learning
+  - HW 10
+  - HW 9\
+    *Project Proposal*
+* - 11
+  - **April 19**
+  - ***No Class***
+  -
+  -
+* - 12
+  - April 26
+  - Integrating Python with Desktop GIS
+  -
+  - HW 10
+* - 13
+  - May 3
+  - Project Presentations and Course Wrap-Up
+  -
+  -
+* - 14
+  - May 10
+  - *No Class*
+  -
+  - **Final Project**
+```
