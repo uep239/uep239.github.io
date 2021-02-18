@@ -7,7 +7,7 @@ UEP-0239 | Tufts University | Urban and Environmental Policy and Planning | Spri
 
 ```{admonition} Attention
 :class: caution
-Course information will be added to the course website throughout the first two weeks of classes. Please refer to the the PDF version of the course syllabus available at <https://tufts.box.com/v/uep239-syllabus> in the meantime.
+Please refer to the the PDF version of the course syllabus available at <https://tufts.box.com/v/uep239-syllabus> for any information not included on the course website. The course website will be updated throughout the semester.
 ```
 
 ```{panels}
