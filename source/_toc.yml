@@ -1,6 +1,10 @@
 - file: index
 
-- part: Week 0
+- part: Front Matter
   chapters:
   - file: wk00/setup
+
+- part: Assignments
+  chapters:
   - file: assignments/hw00
+  - file: assignments/hw01
