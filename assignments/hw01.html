@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Assignment 1 &#8212; UEP-0239: Geospatial Programming with Python</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://uep239.github.io/assignments/hw01.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Homework Assignment 0" href="hw00.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://uep239.github.io/assignments/hw01.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Homework Assignment 1" />
+<meta property="og:description" content="Homework Assignment 1  Due: Tuesday, February 23 at 11:59 pm EST&lt;br /&gt; Total available points: 120&lt;br /&gt; Maximum points: 100  As with the previous assignment, y" />
+<meta property="og:image"       content="https://uep239.github.io/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UEP-0239: Geospatial Programming with Python</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Front Matter
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk00/setup.html">
+   Configuring the Course Environment
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="hw00.html">
+   Homework Assignment 0
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Homework Assignment 1
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/assignments/hw01.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/uep239/uep239.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/uep239/uep239.github.io/issues/new?title=Issue%20on%20page%20%2Fassignments/hw01.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/uep239/uep239.github.io/edit/main/source/assignments/hw01.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-on-the-command-line">
+   Working on the Command-Line
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-simple-shell-script">
+     A Simple Shell Script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-more-advanced-shell-script">
+     A More Advanced Shell Script
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started-with-python">
+   Getting Started with Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hello-world">
+     Hello World
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mathematical-equations">
+     Mathematical Equations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-calculator">
+     Simple Calculator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#triangle">
+     Triangle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#square">
+     Square
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#another-square">
+     Another Square
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-in-a-box">
+     Text in a Box
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#word-analyzer">
+     Word Analyzer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submission-details">
+   Submission Details
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="homework-assignment-1">
+<h1>Homework Assignment 1<a class="headerlink" href="#homework-assignment-1" title="Permalink to this headline">¶</a></h1>
+<p><strong>Due:</strong> Tuesday, February 23 at 11:59 pm EST<br />
+<strong>Total available points:</strong> 120<br />
+<strong>Maximum points:</strong> 100</p>
+<p>As with the previous assignment, you should follow the <strong>GitHub Classroom</strong> link on <a class="reference external" href="https://canvas.tufts.edu/courses/27438/assignments">Canvas</a> or <a class="reference external" href="https://piazza.com/tufts/spring2021/uep239/resources">Piazza</a> to have an assignment repository generated for you. Then you should clone the assignment repository to your computer and do all work there. Keep track of your work using consistent commits and remember to push your work to the GitHub server to back it up.</p>
+<div class="section" id="working-on-the-command-line">
+<h2>Working on the Command-Line<a class="headerlink" href="#working-on-the-command-line" title="Permalink to this headline">¶</a></h2>
+<p>For this section, please complete the assignments as specified for your operating system. Windows users are expected to submit PowerShell (<code class="docutils literal notranslate"><span class="pre">.ps1</span></code>) scripts and macOS users should submit Bash scripts with the appropriate shebang operator (<code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>) on the first line. For extra credit, submit both a PowerShell script and a Bash script for each assignment. Windows users can use <strong>Git Bash</strong> (<em>Start &gt; Git &gt; Git Bash</em>) to test Bash scripts and macOS users are welcome to install <a class="reference external" href="https://github.com/PowerShell/PowerShell/releases/latest"><strong>PowerShell Core</strong></a> if they would like to experiment with PowerShell scripts.</p>
+<div class="section" id="a-simple-shell-script">
+<h3>A Simple Shell Script<a class="headerlink" href="#a-simple-shell-script" title="Permalink to this headline">¶</a></h3>
+<p>Each script is worth five (5) points. Submit both a PowerShell and a Bash script for a total of ten (10) points.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="99fa8c5c-bffe-4e09-99ee-51096843d1c5" name="f8669894-8118-4be0-9474-c655f0f2bc05" type="radio">
+</input><label class="tabbed-label" for="99fa8c5c-bffe-4e09-99ee-51096843d1c5">
+Windows</label><div class="tabbed-content docutils">
+<ol>
+<li><p>Create a file named <code class="docutils literal notranslate"><span class="pre">hello.ps1</span></code> into your assignment repository with the following contents:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">echo </span><span class="s2">&quot;Hello, world!&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Using <strong>Windows Terminal</strong> (or any other PowerShell interface) navigate to your assignment repository and run the following command to execute the script:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">.\</span><span class="n">hello</span><span class="p">.</span><span class="n">ps1</span>
+</pre></div>
+</div>
+</li>
+<li><p>Confirm that the output is as you would expect:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+</li>
+<li><p>Remember to commit this file to your repository and push it to the server!</p></li>
+</ol>
+</div>
+<input id="7c536396-1754-4d23-8e62-a98a04a75db4" name="f8669894-8118-4be0-9474-c655f0f2bc05" type="radio">
+</input><label class="tabbed-label" for="7c536396-1754-4d23-8e62-a98a04a75db4">
+macOS</label><div class="tabbed-content docutils">
+<ol>
+<li><p>Create a file named <code class="docutils literal notranslate"><span class="pre">hello</span></code> into your assignment repository with the following contents:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s2">&quot;Hello, world!&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Using <strong>Terminal</strong> (or any other Bash interface) navigate to your assignment repository and run the following command to allow the script to be executed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">755</span> hello
+</pre></div>
+</div>
+</li>
+<li><p>Now run the following command to execute the script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./hello
+</pre></div>
+</div>
+</li>
+<li><p>Confirm that the output is as you would expect:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+</li>
+<li><p>Remember to commit this file to your repository and push it to the server!</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="a-more-advanced-shell-script">
+<h3>A More Advanced Shell Script<a class="headerlink" href="#a-more-advanced-shell-script" title="Permalink to this headline">¶</a></h3>
+<p>Create a PowerShell script called <code class="docutils literal notranslate"><span class="pre">kingarthur.ps1</span></code> or a Bash script called <code class="docutils literal notranslate"><span class="pre">kingarthur</span></code> that creates a directory called <code class="docutils literal notranslate"><span class="pre">holygrail</span></code> into whichever directory the script is run from. The contents and structure of the <code class="docutils literal notranslate"><span class="pre">holygrail</span></code> directory should be as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>📂holygrail
+ ┣ 📄question.txt
+ ┣ 📄answer.txt
+ ┗ 📂meta
+    ┣ 📄dir.txt
+    ┗ 📄time.txt
+</pre></div>
+</div>
+<p>The contents of the text files should be as follows:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">question.txt</span></code> should contain <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">airspeed</span> <span class="pre">velocity</span> <span class="pre">of</span> <span class="pre">an</span> <span class="pre">unladen</span> <span class="pre">swallow?</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">answer.txt</span></code> should contain <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">do</span> <span class="pre">you</span> <span class="pre">mean?</span> <span class="pre">An</span> <span class="pre">African</span> <span class="pre">or</span> <span class="pre">European</span> <span class="pre">swallow?</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dir.txt</span></code> should contain the <strong>full path</strong> of the created <code class="docutils literal notranslate"><span class="pre">holygrail</span></code> directory (not the <code class="docutils literal notranslate"><span class="pre">meta</span></code> directory) in any format</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time.txt</span></code> should contain the date and time the script was executed in any format</p></li>
+</ul>
+<p>Hints and suggestions:</p>
+<ul class="simple">
+<li><p>You might want to search the web for a command that gives you the current date and time, or just try some potnetial command names until you find one that works.</p></li>
+<li><p>If you are writing a Bash script, do not forget to include the the shebang operator (<code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>) and remember that you have to use <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">755</span></code> to allow the script to be executed in order to test it.</p></li>
+</ul>
+<p>A working PowerShell <strong>or</strong> Bash implementation is worth 20 points. Extra credit will be awarded as follows:</p>
+<ul class="simple">
+<li><p>For an additional five (5) points, make sure the date and time in <code class="docutils literal notranslate"><span class="pre">time.txt</span></code> is in <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span> <span class="pre">HH:MM:SS</span></code> 24-hour format.</p></li>
+<li><p>For an additional ten (10) points, submit <strong>both</strong> a PowerShell <strong>and</strong> a Bash script.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="getting-started-with-python">
+<h2>Getting Started with Python<a class="headerlink" href="#getting-started-with-python" title="Permalink to this headline">¶</a></h2>
+<p>All Python programs should be submitted as <code class="docutils literal notranslate"><span class="pre">.py</span></code> files and work as described when executed using the <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">filename.py</span></code> command. These exercises are all fairly simple and do not require the use of any data structures like lists or advanced control flow statements like loops and conditionals. All you need are basic arithmetic, string arithmetic, the <code class="docutils literal notranslate"><span class="pre">math</span></code> module, the <code class="docutils literal notranslate"><span class="pre">turtle</span></code> module, string methods, and the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function always returns a string. You can use <code class="docutils literal notranslate"><span class="pre">int()</span></code> or <code class="docutils literal notranslate"><span class="pre">float()</span></code> to convert a suitable string into a desired numeric datatype.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to import any module you would like to use. For example, to use functions from the <code class="docutils literal notranslate"><span class="pre">math</span></code> module, you should use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">*</span></code> to import all the functions included in the module. You can also import the whole module using <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">math</span></code>, but then you need to type <code class="docutils literal notranslate"><span class="pre">math.sqrt()</span></code> instead of <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code> to use the square root function.</p>
+</div>
+<p>Here are some resources that might be helpful:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">input()</span></code> function reference: <a class="reference external" href="https://docs.python.org/3/library/functions.html#input">https://docs.python.org/3/library/functions.html#input</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">math</span></code> module reference: <a class="reference external" href="https://docs.python.org/3/library/math.html">https://docs.python.org/3/library/math.html</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">turtle</span></code> module reference: <a class="reference external" href="https://docs.python.org/3/library/turtle.html">https://docs.python.org/3/library/turtle.html</a></p></li>
+<li><p>Brief overview of Python string methods: <a class="reference external" href="https://www.w3schools.com/python/python_ref_string.asp">https://www.w3schools.com/python/python_ref_string.asp</a></p></li>
+<li><p>Official Python string methods reference: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#string-methods">https://docs.python.org/3/library/stdtypes.html#string-methods</a></p></li>
+</ul>
+<div class="section" id="hello-world">
+<h3>Hello World<a class="headerlink" href="#hello-world" title="Permalink to this headline">¶</a></h3>
+<p>Write a Python program called <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> that outputs the following when executed:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+</div>
+<div class="section" id="mathematical-equations">
+<h3>Mathematical Equations<a class="headerlink" href="#mathematical-equations" title="Permalink to this headline">¶</a></h3>
+<p>Write a Python program called <code class="docutils literal notranslate"><span class="pre">equations.py</span></code> that outputs the results of the following mathematical equations. The results of the equations should be outputted in order, one per line.</p>
+<div class="math notranslate nohighlight">
+\[
+    (2^{89} + 5^{70})^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+    6 + \sqrt[4]{6 \times 5 + 12}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+    \sqrt{16^2 + 43^2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+    \ln(e^{27} + 2^{30}) + \sin(\arccos(\pi \div 4))
+\]</div>
+<p>The result of the second equation should be <code class="docutils literal notranslate"><span class="pre">8.54572989502183</span></code>. Knowing this, your program should output something that resembles the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-999
+8.54572989502183
+-999
+-999
+</pre></div>
+</div>
+<p>Obviously, <code class="docutils literal notranslate"><span class="pre">-999</span></code> should be replaced with the actual value of the corresponding equation. And no, you cannot just use <code class="docutils literal notranslate"><span class="pre">print(8.54572989502183)</span></code> for the second equation instead of typing it out in Python.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You might want to use the <code class="docutils literal notranslate"><span class="pre">math</span></code> module for this. Make sure your script begins with some kind of <code class="docutils literal notranslate"><span class="pre">import</span></code> statement.</p>
+</div>
+</div>
+<div class="section" id="simple-calculator">
+<h3>Simple Calculator<a class="headerlink" href="#simple-calculator" title="Permalink to this headline">¶</a></h3>
+<p>Write a Python program called <code class="docutils literal notranslate"><span class="pre">calculator.py</span></code> that asks the user for two integers <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> and then outputs the following:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(X + Y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(X - Y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(X \times Y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(X \div Y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(X ^ Y\)</span></p></li>
+</ul>
+<p>You can assume both inputs will always be integers. This is an example of what execution of your program should look like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter integer X: 5
+Enter integer Y: 2
+X + Y = 7
+X - Y = 3
+X * Y = 10
+X / Y = 2.5
+X ^ Y = 25
+</pre></div>
+</div>
+</div>
+<div class="section" id="triangle">
+<h3>Triangle<a class="headerlink" href="#triangle" title="Permalink to this headline">¶</a></h3>
+<p>Modify the <code class="docutils literal notranslate"><span class="pre">triangle.py</span></code> script included in your assignment repository to ask the end user the length of the triangle side instead of using a predetermined number. You can assume that the end user will always enter a positive integer as input.</p>
+</div>
+<div class="section" id="square">
+<h3>Square<a class="headerlink" href="#square" title="Permalink to this headline">¶</a></h3>
+<p>Create a Python program called <code class="docutils literal notranslate"><span class="pre">square.py</span></code> that asks the end user for their desired square side length and then uses <code class="docutils literal notranslate"><span class="pre">turtle</span></code> to draw a square with the specified side length. Feel free to use <code class="docutils literal notranslate"><span class="pre">triangle.py</span></code> as an inspiration. Again, you can assume input will always be a positive integer.</p>
+</div>
+<div class="section" id="another-square">
+<h3>Another Square<a class="headerlink" href="#another-square" title="Permalink to this headline">¶</a></h3>
+<p>Create a Python program called <code class="docutils literal notranslate"><span class="pre">shape.py</span></code> that asks the end user for a number and then constructs a square using <code class="docutils literal notranslate"><span class="pre">#</span></code> symbols with each side of the square consisting of the specified number of <code class="docutils literal notranslate"><span class="pre">#</span></code> symbols. Yor program is only expected to work with inputs that are positive integers greater than or equal to two (2).</p>
+<p>Here are some examples of how your program should behave:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter a number greater than or equal to two: 2
+##
+##
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter a number greater than or equal to two: 3
+###
+# #
+###
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter a number greater than or equal to two: 7
+#######
+#     #
+#     #
+#     #
+#     #
+#     #
+#######
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You should not feel the need to use loops or anything like that. All you need for this is string arithmetic.</p>
+</div>
+</div>
+<div class="section" id="text-in-a-box">
+<h3>Text in a Box<a class="headerlink" href="#text-in-a-box" title="Permalink to this headline">¶</a></h3>
+<p>Write a Python program called <code class="docutils literal notranslate"><span class="pre">box.py</span></code> that draws a box around any input it takes. Here is what it should look like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter some text: test
++----+
+|test|
++----+
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter some text: This is just a test.
++--------------------+
+|This is just a test.|
++--------------------+
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Do you know how the get the length of a string? A quick web search should reveal a function that does just that.</p>
+</div>
+</div>
+<div class="section" id="word-analyzer">
+<h3>Word Analyzer<a class="headerlink" href="#word-analyzer" title="Permalink to this headline">¶</a></h3>
+<p>Write a Python program <code class="docutils literal notranslate"><span class="pre">ratio.py</span></code> that asks the end user to input a word and then outputs the vowel to consonant ratio for said word. You can assume that all inputs will be single words composed using only the 26 letters of the English alphabet. While you can assume that the input will not contain any characters that are not letters, the letters themselves may be either uppercase or lowercase. The vowels of the English alphabet are <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">e</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">o</span></code>, and <code class="docutils literal notranslate"><span class="pre">u</span></code>. All other letters are consonants. The vowel to consonant ratio for any word is the number of vowels in the word divided by the number of consonants.</p>
+<p>Here are some examples of what execution of your program should look like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter a word: test
+The vowel to consonant ratio for the word &quot;test&quot; is 0.3333333333333333
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter a word: Dog
+The vowel to consonant ratio for the word &quot;dog&quot; is 0.5
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter a word: CODE
+The vowel to consonant ratio for the word &quot;code&quot; is 1.0
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter a word: aMeBOa
+The vowel to consonant ratio for the word &quot;ameboa&quot; is 2.0
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>There are two string methods that are highly useful here. You also need to know how to get the length of a string.</p>
+</div>
+</div>
+</div>
+<div class="section" id="submission-details">
+<h2>Submission Details<a class="headerlink" href="#submission-details" title="Permalink to this headline">¶</a></h2>
+<p>Make sure to use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to push any commits to the GitHub server before the end of the grace period. Any changes not reflected on GitHub by the end of the grace period will not be considered. If you feel like you need more time, reach out the the instructor and we will work something out.</p>
+<p>Your README should document all scripts and programs in your repository. A good documentation outlines the inputs and outputs, instructs the end user how to run your program, and outlines any limitations of your implementation. Remember to also include the number of hours you spent working on this assignment, cite any references, and note anyone you received help from or discussed the assignment with. Additionally, feel free to utilize the README to provide feedback and share your thoughts. As before, your README should be neatly formatted and pleasant to read both as raw and rendered text.</p>
+<p>Your script files do not need to conform to any standard. However, they should be easy to read and understand. Feel free to use comments in your Python scripts wherever appropriate.</p>
+<p>Points will be awarded as follows:</p>
+<ul class="simple">
+<li><p>Working on the Command Line (25 + 20)</p>
+<ul>
+<li><p>Simple Shell Script (5 + 5)</p></li>
+<li><p>Advanced Shell Script (20 + 15)</p></li>
+</ul>
+</li>
+<li><p>Getting Started with Python (70)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hello.py</span></code> (5)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">equations.py</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calculator.py</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">triangle.py</span></code> (5)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">square.py</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shape.py</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">box.py</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ratio.py</span></code> (10)</p></li>
+</ul>
+</li>
+<li><p>Other (5)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">README.md</span></code> (3)</p></li>
+<li><p>Repository activity (1)</p></li>
+<li><p>Good commit messages (1)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./assignments"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="hw00.html" title="previous page">Homework Assignment 0</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Uku-Kaspar Uustalu<br/>
+        
+            &copy; Copyright 2021.<br/>
+          Last updated on Feb 18, 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-188456160-2', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
