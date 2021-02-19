@@ -301,8 +301,8 @@
 <h3>A Simple Shell Script<a class="headerlink" href="#a-simple-shell-script" title="Permalink to this headline">¶</a></h3>
 <p>Each script is worth five (5) points. Submit both a PowerShell and a Bash script for a total of ten (10) points.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="89005171-19c0-4cff-b956-e1ffde253264" name="afe3d961-d0e9-42ed-b718-eed59a1eed73" type="radio">
-</input><label class="tabbed-label" for="89005171-19c0-4cff-b956-e1ffde253264">
+<input checked="checked" id="7abf6157-acc3-4ae2-856a-7c39040f316c" name="932ad2ab-86c8-440c-8601-e618c9f0e920" type="radio">
+</input><label class="tabbed-label" for="7abf6157-acc3-4ae2-856a-7c39040f316c">
 Windows</label><div class="tabbed-content docutils">
 <ol>
 <li><p>Create a file named <code class="docutils literal notranslate"><span class="pre">hello.ps1</span></code> into your assignment repository with the following contents:</p>
@@ -323,8 +323,8 @@ Windows</label><div class="tabbed-content docutils">
 <li><p>Remember to commit this file to your repository and push it to the server!</p></li>
 </ol>
 </div>
-<input id="32588131-35b9-468f-a890-bde95dc77087" name="afe3d961-d0e9-42ed-b718-eed59a1eed73" type="radio">
-</input><label class="tabbed-label" for="32588131-35b9-468f-a890-bde95dc77087">
+<input id="24804f80-872a-4ad5-9462-cb5203664181" name="932ad2ab-86c8-440c-8601-e618c9f0e920" type="radio">
+</input><label class="tabbed-label" for="24804f80-872a-4ad5-9462-cb5203664181">
 macOS</label><div class="tabbed-content docutils">
 <ol>
 <li><p>Create a file named <code class="docutils literal notranslate"><span class="pre">hello</span></code> into your assignment repository with the following contents:</p>
@@ -374,6 +374,7 @@ macOS</label><div class="tabbed-content docutils">
 <p>Hints and suggestions:</p>
 <ul class="simple">
 <li><p>You might want to search the web for a command that gives you the current date and time, or just try some potnetial command names until you find one that works.</p></li>
+<li><p>To run a PowerShell or Bash script from a directory different from the one the script is located in, you need to use the full path of the script instead of <code class="docutils literal notranslate"><span class="pre">.\kingartur.ps1</span></code> or <code class="docutils literal notranslate"><span class="pre">./kingartur</span></code>.</p></li>
 <li><p>If you are writing a Bash script, do not forget to include the the shebang operator (<code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>) and remember that you have to use <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">755</span></code> to allow the script to be executed in order to test it.</p></li>
 </ul>
 <p>A working PowerShell <strong>or</strong> Bash implementation is worth 20 points. Extra credit will be awarded as follows:</p>
@@ -381,6 +382,10 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>For an additional five (5) points, make sure the date and time in <code class="docutils literal notranslate"><span class="pre">time.txt</span></code> is in <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span> <span class="pre">HH:MM:SS</span></code> 24-hour format.</p></li>
 <li><p>For an additional ten (10) points, submit <strong>both</strong> a PowerShell <strong>and</strong> a Bash script.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is best practice not to include the outputs of your scripts or programs in version control. These outputs are created by the script, so we should always be able to reproduce them using an appropriate version of the script. Because we are already keeping track of any changes to the script, it is redundant to also keep track of whatever the script outputs. That is why you might notice that your assignment repository contains a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file, which tells Git to ignore the <code class="docutils literal notranslate"><span class="pre">holygrail</span></code> directory along with its contents and not track any changes to them. We will talk more about <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files and the benefits of using them later in the semester.</p>
+</div>
 </div>
 </div>
 <div class="section" id="getting-started-with-python">
@@ -560,7 +565,7 @@ The vowel to consonant ratio for the word &quot;ameboa&quot; is 2.0
 <li><p>Advanced Shell Script (20 + 15)</p></li>
 </ul>
 </li>
-<li><p>Getting Started with Python (70)</p>
+<li><p>Getting Started with Python (70 + 5)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">hello.py</span></code> (5)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">equations.py</span></code> (10)</p></li>
