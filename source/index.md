@@ -65,25 +65,25 @@ Office Hours
   - HW 0
 * - 3
   - February 22
-  - Intermediate and Advanced Python
-  - HW 2\
-    HW 3
+  - Data Structures and Control Flow
+  - HW 2
   - HW 1
 * - 4
   - March 1
-  - Python for Data Analysis and Visualization
-  - HW 4\
-    **Midterm Project**
-  - HW 2\
-    HW 3
+  - Advanced Python and Package Management
+  - HW 3\
+    HW 4
+  - HW 2
 * - 5
   - March 8
-  - The Spatial Data Model
-  - HW 5
-  - HW 4
+  - Python for Data Analysis and Visualization
+  - HW 5\
+    **Midterm Project**
+  - HW 3\
+    HW 4
 * - 6
   - March 15
-  - Visualizing Spatial Data
+  - Introduction to Spatial Data in Python
   - HW 6
   - HW 5
 * - 7
