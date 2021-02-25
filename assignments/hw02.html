@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Assignment 2 &#8212; UEP-0239: Geospatial Programming with Python</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://uep239.github.io/assignments/hw02.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Homework Assignment 1" href="hw01.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://uep239.github.io/assignments/hw02.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Homework Assignment 2" />
+<meta property="og:description" content="Homework Assignment 2  Due: Thursday, March 4 at 11:59 pm EST&lt;br /&gt; Total available points: 120 Maximum points: 100  As with the previous assignment, you should" />
+<meta property="og:image"       content="https://uep239.github.io/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">UEP-0239: Geospatial Programming with Python</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Front Matter
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk00/setup.html">
+   Configuring the Course Environment
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="hw00.html">
+   Homework Assignment 0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hw01.html">
+   Homework Assignment 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Homework Assignment 2
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/assignments/hw02.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/uep239/uep239.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/uep239/uep239.github.io/issues/new?title=Issue%20on%20page%20%2Fassignments/hw02.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/uep239/uep239.github.io/edit/main/source/assignments/hw02.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#personalized-greeting">
+   Personalized Greeting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drawing-polygons">
+   Drawing Polygons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-list-functions">
+   Simple List Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-indexing">
+   Boolean Indexing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text-analyzer">
+   Text Analyzer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#closest-points">
+   Closest Points
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reinventing-math">
+   Reinventing Math
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#guessing-games">
+   Guessing Games
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#user-vs-computer">
+     User vs Computer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computer-vs-user">
+     Computer vs User
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submission-details">
+   Submission Details
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="homework-assignment-2">
+<h1>Homework Assignment 2<a class="headerlink" href="#homework-assignment-2" title="Permalink to this headline">¶</a></h1>
+<p><strong>Due:</strong> Thursday, March 4 at 11:59 pm EST<br />
+<strong>Total available points:</strong> 120
+<strong>Maximum points:</strong> 100</p>
+<p>As with the previous assignment, you should follow the <strong>GitHub Classroom</strong> link on <a class="reference external" href="https://canvas.tufts.edu/courses/27438/assignments">Canvas</a> or <a class="reference external" href="https://piazza.com/tufts/spring2021/uep239/resources">Piazza</a> to have an assignment repository generated for you. Then you should clone the assignment repository to your computer and do all work there. Keep track of your work using consistent commits and remember to push your work to the GitHub server to back it up.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To use a function defined in another <code class="docutils literal notranslate"><span class="pre">.py</span></code> file in the same directory, you can import it just like you would import a function from a built-in Python module or external library. For example, to use the function <code class="docutils literal notranslate"><span class="pre">function()</span></code> from the file  <code class="docutils literal notranslate"><span class="pre">filename.py</span></code> that is located in the same directory as your script, you can use <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">filename</span> <span class="pre">import</span> <span class="pre">*</span></code> to import all functions defined in <code class="docutils literal notranslate"><span class="pre">filename.py</span></code> or <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">filename</span> <span class="pre">import</span> <span class="pre">function</span></code> to only import the desired function. You can also use <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">filename</span></code>, but then you have to refer to the function as <code class="docutils literal notranslate"><span class="pre">filename.function()</span></code> within your script.</p>
+</div>
+<div class="section" id="personalized-greeting">
+<h2>Personalized Greeting<a class="headerlink" href="#personalized-greeting" title="Permalink to this headline">¶</a></h2>
+<p>Write a program <code class="docutils literal notranslate"><span class="pre">greeting.py</span></code> that asks the user for their name and then greets the user using the inputted name. Regardless of the capitalization of the input, the name displayed in the greeting should be properly capitalized (each part of the name should begin with a capital letter, followed by lowercase letters). In addition to working with a single word like a first name, your program should also work with and properly capitalize both multipart names (like full names) and hyphenated names. You can assume that the user always inputs something that resembles a name.</p>
+<p>Here is an example of what execution of your program should look like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Please enter your name: uku-KASPAR uUUsTaLu
+Greetings, Uku-Kaspar Uustalu!
+</pre></div>
+</div>
+</div>
+<div class="section" id="drawing-polygons">
+<h2>Drawing Polygons<a class="headerlink" href="#drawing-polygons" title="Permalink to this headline">¶</a></h2>
+<p>Create a file <code class="docutils literal notranslate"><span class="pre">polygon_function.py</span></code> that contains the definition for a function <code class="docutils literal notranslate"><span class="pre">polygon(sides,</span> <span class="pre">length)</span></code>. The function does not return anything, but instead launches <code class="docutils literal notranslate"><span class="pre">turtle</span></code> and draws an equilateral polygon with the specified number of sides and the specified side length (in pixels). Both inputs to the function should be positive integers, but you should not check for that within the function definition. Instead, this should be noted in the docstring for the function It is up to the end user of the function to ensure they use the function with the correct datatypes.</p>
+<p>Once you have completed the function definition, use the <code class="docutils literal notranslate"><span class="pre">polygon()</span></code> function to create the following programs:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">triangle.py</span></code> draws an equilateral triangle with the side length specified by the user</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">square.py</span></code> draws a square with the the side length specified by the user</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">polygon_sides.py</span></code> asks the user for the desired number of sides, then asks the user for the desired side length, and finally draws the corresponding equilateral polygon</p></li>
+</ul>
+<p>Your programs should validate user input and reject any input that does not correspond to a positive integer. <code class="docutils literal notranslate"><span class="pre">polygon_sides.py</span></code> should only accept integers <code class="docutils literal notranslate"><span class="pre">3</span></code> or higher as the number of sides.</p>
+<p>For extra credit, define a new function that takes as input the number of sides in a polygon and the <a class="reference external" href="https://en.wikipedia.org/wiki/Circumscribed_circle">circumradius</a> of the polygon and then uses <code class="docutils literal notranslate"><span class="pre">turtle</span></code> to draw the corresponding equilateral polygon. Use this function in a program called <code class="docutils literal notranslate"><span class="pre">polygon_radius.py</span></code> that behaves just like <code class="docutils literal notranslate"><span class="pre">polygon_sides.py</span></code> but asks the user for the circumradius instead of the side length.</p>
+</div>
+<div class="section" id="simple-list-functions">
+<h2>Simple List Functions<a class="headerlink" href="#simple-list-functions" title="Permalink to this headline">¶</a></h2>
+<p>Create a file <code class="docutils literal notranslate"><span class="pre">list_functions.py</span></code> that contains the definitions for the following functions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">count_even()</span></code> takes a list of integers and returns the number of even integers in the list</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">absolute_list()</span></code> takes a list of numbers and returns a list containing the absolute values of said numbers, in order</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string_lengths()</span></code> takes a list of strings and returns a new list containing the lengths of said strings, in order</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">select_between()</span></code> takes a list of numbers and two numbers, returns a new list containing only the elements from the provided list that are greater than the first specified number and less than the second specified number</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">median_value()</span></code> takes a list of numbers and returns the <a class="reference external" href="https://en.wikipedia.org/wiki/Median">median value</a> of said list</p></li>
+</ul>
+<p>Here are some very simple examples:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">count_even([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4])</span></code> should return <code class="docutils literal notranslate"><span class="pre">2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">absolute_list([-1,</span> <span class="pre">0,</span> <span class="pre">1])</span></code> should return <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string_lengths(['a',</span> <span class="pre">'aa',</span> <span class="pre">'aaa'])</span></code> should return <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">select_between([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8],</span> <span class="pre">2,</span> <span class="pre">7)</span></code> should return <code class="docutils literal notranslate"><span class="pre">[3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">median_value([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5])</span></code> should return <code class="docutils literal notranslate"><span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">median_value([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4])</span></code> should return <code class="docutils literal notranslate"><span class="pre">2.5</span></code></p></li>
+</ul>
+<p>Make sure to thoroughly test your functions. Remember that it is up to the end user to ensure they use your functions as specified in your documentation. Your functions are allowed to err or behave unexpectedly when used incorrectly or with inappropriate datatypes. Your <code class="docutils literal notranslate"><span class="pre">list_functions.py</span></code> file should contain only the function definitions and no test code.</p>
+</div>
+<div class="section" id="boolean-indexing">
+<h2>Boolean Indexing<a class="headerlink" href="#boolean-indexing" title="Permalink to this headline">¶</a></h2>
+<p>Create a file <code class="docutils literal notranslate"><span class="pre">boolean_indexing.py</span></code> that contains a function <code class="docutils literal notranslate"><span class="pre">filter()</span></code> which takes two lists as inputs. The first is a list of any length with elements of any datatypes. The second is a list of booleans (<code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> values) equal in length to the first list. The function returns a new list containing elements of the first list that had a corresponding <code class="docutils literal notranslate"><span class="pre">True</span></code> in the second list.</p>
+<p>For example <code class="docutils literal notranslate"><span class="pre">filter([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">[True,</span> <span class="pre">False,</span> <span class="pre">False,</span> <span class="pre">True,</span> <span class="pre">False,</span> <span class="pre">True])</span></code> should return <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">4,</span> <span class="pre">6]</span></code>.</p>
+<p>To earn extra credit, modify your function such that the length of the second (boolean) list can be equal to or less then the length of the first list. If the length of the second (boolean) list is less than the length of the first list, the second (boolean) list gets repeated over until each element in the first list as a corresponding boolean value. For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">filter([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">[True])</span></code> should return <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">[False])</span></code> should return <code class="docutils literal notranslate"><span class="pre">[]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">[True,</span> <span class="pre">False])</span></code> should return <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">5]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filter([1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6],</span> <span class="pre">[False,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">False])</span></code> should return <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3,</span> <span class="pre">6]</span></code></p></li>
+</ul>
+<p>Test your function thoroughly. Your <code class="docutils literal notranslate"><span class="pre">boolean_indexing.py</span></code> file should contain only the function definition and no test code.</p>
+</div>
+<div class="section" id="text-analyzer">
+<h2>Text Analyzer<a class="headerlink" href="#text-analyzer" title="Permalink to this headline">¶</a></h2>
+<p>Write a program <code class="docutils literal notranslate"><span class="pre">analyzer.py</span></code> that accepts any string as input and outputs the counts of all characters present in the string in <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> sort order as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Enter some text: This is just a test.
+&#39; &#39;: 4
+&#39;.&#39;: 1
+&#39;T&#39;: 1
+&#39;a&#39;: 1
+&#39;e&#39;: 1
+&#39;h&#39;: 1
+&#39;i&#39;: 2
+&#39;j&#39;: 1
+&#39;s&#39;: 4
+&#39;t&#39;: 3
+&#39;u&#39;: 1
+</pre></div>
+</div>
+</div>
+<div class="section" id="closest-points">
+<h2>Closest Points<a class="headerlink" href="#closest-points" title="Permalink to this headline">¶</a></h2>
+<p>Define a function <code class="docutils literal notranslate"><span class="pre">euclidean_distance()</span></code> that accepts as input two tuples in the format <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> representing points on a two-dimensional plain (with <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinates) and returns the <a class="reference external" href="https://en.wikipedia.org/wiki/Euclidean_distance">euclidean distance</a> between those two points.</p>
+<p>Then define a new function <code class="docutils literal notranslate"><span class="pre">closest_points()</span></code> that takes a list of points as input, where each point is a <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> coordinate tuple, and utilizes the <code class="docutils literal notranslate"><span class="pre">euclidean_distance()</span></code> function to return a tuple containing the two points in the list of points that are closest to each other, in the format <code class="docutils literal notranslate"><span class="pre">((x1,</span> <span class="pre">y1),</span> <span class="pre">(x2,</span> <span class="pre">y2))</span></code>. The order of the points in the returned tuple does not matter. If more than one pair of closest points exists, the function should return only one pairing, but it does not matter which one.</p>
+<p>Here are some simple test cases for your functions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">euclidean_distance((0,</span> <span class="pre">0),</span> <span class="pre">(1,</span> <span class="pre">1))</span></code> should return <code class="docutils literal notranslate"><span class="pre">1.4142135623730951</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">closest_points([(0,</span> <span class="pre">0),</span> <span class="pre">(1,</span> <span class="pre">1),</span> <span class="pre">(3,</span> <span class="pre">3)])</span></code> should return <code class="docutils literal notranslate"><span class="pre">((0,</span> <span class="pre">0),</span> <span class="pre">(1,</span> <span class="pre">1))</span></code> or <code class="docutils literal notranslate"><span class="pre">((1,</span> <span class="pre">1),</span> <span class="pre">(0,</span> <span class="pre">0))</span></code></p></li>
+</ul>
+<p>Make sure to test your functions thoroughly. Both functions should be defined in the file <code class="docutils literal notranslate"><span class="pre">points.py</span></code>, which should only contain the function definitions and no test code.</p>
+</div>
+<div class="section" id="reinventing-math">
+<h2>Reinventing Math<a class="headerlink" href="#reinventing-math" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">reinventing_math.py</span></code> file in your assignment repository contains the following function definitions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">add(x,</span> <span class="pre">y)</span></code> returns the equivalent of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate(x)</span></code> returns the equivalent of <code class="docutils literal notranslate"><span class="pre">-x</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subtract(x,</span> <span class="pre">y)</span></code> returns the equivalent of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">y</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">absolute(x)</span></code> returns the equivalent of <code class="docutils literal notranslate"><span class="pre">abs(x)</span></code></p></li>
+</ul>
+<p>Using <strong>only</strong> the aforementioned <code class="docutils literal notranslate"><span class="pre">add()</span></code>, <code class="docutils literal notranslate"><span class="pre">negate()</span></code> and <code class="docutils literal notranslate"><span class="pre">absolute()</span></code> functions along with loops and conditionals, add the following function definitions to the <code class="docutils literal notranslate"><span class="pre">reinventing_math.py</span></code> file:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">multiply(x,</span> <span class="pre">y)</span></code> should return the equivalent of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">y</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">square(x)</span></code> should return the equivalent of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">2</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">power(x,</span> <span class="pre">y)</span></code> should return the equivalent of <code class="docutils literal notranslate"><span class="pre">math.floor(x</span> <span class="pre">**</span> <span class="pre">y)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divide(x,</span> <span class="pre">y)</span></code> should return the equivalent of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">//</span> <span class="pre">y</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modulo(x,</span> <span class="pre">y)</span></code> should return the equivalent of <code class="docutils literal notranslate"><span class="pre">abs(x)</span> <span class="pre">%</span> <span class="pre">abs(y)</span></code></p></li>
+</ul>
+<p>Feel free to define helper functions where appropriate and reference any previously defined functions when defining a new function. Just note that you are not allowed to use standard Python arithmetic anywhere. All arithmetic must use only the <code class="docutils literal notranslate"><span class="pre">add()</span></code>, <code class="docutils literal notranslate"><span class="pre">negate()</span></code>, <code class="docutils literal notranslate"><span class="pre">subtract()</span></code>, and <code class="docutils literal notranslate"><span class="pre">absolute()</span></code> functions and their derivatives. Division and modulo by zero are not defined in Python and can be undefined in your functions, meaning they can behave however and return whatever when attempting to perform these operations. Note that <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">**</span> <span class="pre">0</span></code> is defined as <code class="docutils literal notranslate"><span class="pre">1</span></code> in Python, hence <code class="docutils literal notranslate"><span class="pre">power(0,</span> <span class="pre">0)</span></code> should also return <code class="docutils literal notranslate"><span class="pre">1</span></code> (even though zero to the power of zero is actually undefined in formal mathematics).</p>
+<p>You can assume all inputs to your functions will be integers (including positive integers, negative integers, and zero). When supplied with any other input (like a floating-point number or a string), your functions can behave unexpectedly and err.</p>
+<p>You should thoroughly test your defined functions and ensure they behave exactly as their equivalent Python expressions. Include a file <code class="docutils literal notranslate"><span class="pre">testing_math.py</span></code> in your assignment repository that outlines your testing procedure. If you somehow automate your testing procedure, you will receive generous extra credit.</p>
+</div>
+<div class="section" id="guessing-games">
+<h2>Guessing Games<a class="headerlink" href="#guessing-games" title="Permalink to this headline">¶</a></h2>
+<p>Here are some tips that might be useful when working on the following programs:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements can be used within loops. A <code class="docutils literal notranslate"><span class="pre">break</span></code> statement stops execution of the loop and exits the loop, continuing the execution of any code that appears after the loop. A <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement stops execution of the current iteration of the loop and starts execution of the following iteration from the start of the loop. Refer to the <a class="reference external" href="https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops">Control Flow section of the Python Documentation</a> for more information about the <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">random</span></code> module can be used to generate pseudo-random numbers. It also includes a function for generating random integers. Refer to the <a class="reference external" href="https://docs.python.org/3/library/random.html"><code class="docutils literal notranslate"><span class="pre">random</span></code> module documentation</a> for additional information.</p></li>
+</ul>
+<div class="section" id="user-vs-computer">
+<h3>User vs Computer<a class="headerlink" href="#user-vs-computer" title="Permalink to this headline">¶</a></h3>
+<p>Write a program <code class="docutils literal notranslate"><span class="pre">game_user.py</span></code> where the computer randomly generates an integer between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code> (inclusive) and the player has to guess the number in ten attempts. After each incorrect guess, the computer tells the player whether their guess was too high or too low. A correct guess results in a congratulatory message. If the player runs out of guesses, the computer reveals the number and notifies the player of their loss.</p>
+<p>Here is an example gameplay where the number generated by the computer is <code class="docutils literal notranslate"><span class="pre">375</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>I have thought of an integer between zero and one thousand. You have 10 attempts to guess it.
+Please enter your guess: 500
+That guess is too high. You have 9 attempts left.
+Please enter your guess: 250
+That guess is too low. You have 8 attempts left.
+Please enter your guess: 375
+That guess is correct! Congratulations! You have won the game in 3 attempts.
+</pre></div>
+</div>
+<p>Here is the end of an example gameplay where the user fails to guess the number:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>That guess is too high. You have 2 attempts left.
+Please enter your guess: 13
+That guess is too low. This is your last attempt.
+Please enter your guess: 66
+That guess is too high. You are out of attempts. The correct number was 42. Game over!
+</pre></div>
+</div>
+<p>If the user enters anything that is not an integer, the computer should ask the user to try again:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>I have thought of an integer between zero and one thousand. You have 10 attempts to guess it.
+Please enter your guess: gibberish
+That does not appear to be an integer. Please try again. You have 10 attempts left.
+Please enter your guess:
+</pre></div>
+</div>
+<p>The user can end the game anytime by typing <code class="docutils literal notranslate"><span class="pre">exit</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>I have thought of an integer between zero and one thousand. You have 10 attempts to guess it.
+Please enter your guess: exit
+The correct number was 42. Goodbye!
+</pre></div>
+</div>
+<p>Be mindful of whether you should be using singular or plural versions of nous. For example, let’s say the number generated by the computer is <code class="docutils literal notranslate"><span class="pre">500</span></code> and the user guesses it in one attempt:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>I have thought of an integer between zero and one thousand. You have 10 attempts to guess it.
+Please enter your guess: 500
+That guess is correct! Congratulations! You have won the game in one attempt.
+</pre></div>
+</div>
+</div>
+<div class="section" id="computer-vs-user">
+<h3>Computer vs User<a class="headerlink" href="#computer-vs-user" title="Permalink to this headline">¶</a></h3>
+<p>Write a program <code class="docutils literal notranslate"><span class="pre">game_computer.py</span></code> where the user thinks of an integer between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code> (inclusive) and the computer attempts to guess it. After each guess, the user tells the computer whether the guess was <code class="docutils literal notranslate"><span class="pre">too</span> <span class="pre">high</span></code>, <code class="docutils literal notranslate"><span class="pre">too</span> <span class="pre">low</span></code>, or <code class="docutils literal notranslate"><span class="pre">correct</span></code>. Assuming the user does not cheat, your program should need at most ten attempts to guess any integer between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>. The user can end the game anytime by typing <code class="docutils literal notranslate"><span class="pre">exit</span></code>. If the user enters input the computer does not understand, the computer should notify the user and ask for input again.</p>
+<p>Here is an example gameplay where the number the user thought of was <code class="docutils literal notranslate"><span class="pre">625</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Please think of a number between zero and one thousand. I will try to guess it.
+My guess is 500. How is it?
+Please enter &quot;too high&quot;, &quot;too low&quot;, &quot;correct&quot;, or &quot;exit&quot;: too low
+My guess is 750. How is it?
+Please enter &quot;too high&quot;, &quot;too low&quot;, &quot;correct&quot;, or &quot;exit&quot;: gibberish
+Sorry, I did not understand that. My guess is 750. How is it?
+Please enter &quot;too high&quot;, &quot;too low&quot;, &quot;correct&quot;, or &quot;exit&quot;: too high
+My guess is 625. How is it?
+Please enter &quot;too high&quot;, &quot;too low&quot;, &quot;correct&quot;, or &quot;exit&quot;: correct
+Yay! Thank your for playing!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="submission-details">
+<h2>Submission Details<a class="headerlink" href="#submission-details" title="Permalink to this headline">¶</a></h2>
+<p>Make sure to use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to push any commits to the GitHub server before the end of the grace period. Any changes not reflected on GitHub by the end of the grace period will not be considered. If you feel like you need more time, reach out the the instructor and we will work something out.</p>
+<p>Your README should document all scripts and programs in your repository. A good documentation outlines the inputs and outputs, instructs the end user how to run your program, and outlines any limitations of your implementation. Remember to also include the number of hours you spent working on this assignment, cite any references, and note anyone you received help from or discussed the assignment with. Additionally, feel free to utilize the README to provide feedback and share your thoughts. As before, your README should be neatly formatted and pleasant to read both as raw and rendered text.</p>
+<p>Your code should include comments and <a class="reference external" href="https://www.python.org/dev/peps/pep-0257/">docstrings</a> where appropriate and adhere to the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> standard within reason. Make sure to thoroughly test your scripts before submitting!</p>
+<p>Points will be awarded as follows:</p>
+<ul class="simple">
+<li><p>Personalized Greeting (10)</p></li>
+<li><p>Drawing Polygons (10 + 5)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">polygon_function.py</span></code> (5)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">triangle.py</span></code> (1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">square.py</span></code> (1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">polygon_sides.py</span></code> (3)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">polygon_radius.py</span></code> (5)</p></li>
+</ul>
+</li>
+<li><p>Simple List Functions (10)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">count_even</span></code> (2)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">absolute_list</span></code> (2)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string_lengths</span></code> (2)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">select_between</span></code> (2)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">median_value</span></code> (2)</p></li>
+</ul>
+</li>
+<li><p>Boolean Indexing (5 + 5)</p></li>
+<li><p>Text Analyzer (10)</p></li>
+<li><p>Closest Points (15)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">euclidean_distance</span></code> (5)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">closest_points</span></code> (10)</p></li>
+</ul>
+</li>
+<li><p>Reinventing Math (15 + 10)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">reinventing_math.py</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">testing_math.py</span></code> (5 + 10)</p></li>
+</ul>
+</li>
+<li><p>Guessing Games (20)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">game_user.py</span></code> (10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">game_computer.py</span></code> (10)</p></li>
+</ul>
+</li>
+<li><p>Other (5)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">README.md</span></code> (3)</p></li>
+<li><p>Repository activity (1)</p></li>
+<li><p>Good commit messages (1)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./assignments"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="hw01.html" title="previous page">Homework Assignment 1</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Uku-Kaspar Uustalu<br/>
+        
+            &copy; Copyright 2021.<br/>
+          Last updated on Feb 25, 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-188456160-2', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
