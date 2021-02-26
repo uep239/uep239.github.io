@@ -65,7 +65,7 @@
 <meta property="og:url"         content="https://uep239.github.io/assignments/hw02.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Homework Assignment 2" />
-<meta property="og:description" content="Homework Assignment 2  Due: Thursday, March 4 at 11:59 pm EST&lt;br /&gt; Total available points: 120&lt;br /&gt; Maximum points: 100  As with the previous assignment, you " />
+<meta property="og:description" content="Homework Assignment 2  Due: Thursday, March 4 at 11:59 pm EST&lt;br /&gt; Total available points: 125&lt;br /&gt; Maximum points: 100  As with the previous assignment, you " />
 <meta property="og:image"       content="https://uep239.github.io/_static/logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -282,7 +282,7 @@
   <div class="section" id="homework-assignment-2">
 <h1>Homework Assignment 2<a class="headerlink" href="#homework-assignment-2" title="Permalink to this headline">¶</a></h1>
 <p><strong>Due:</strong> Thursday, March 4 at 11:59 pm EST<br />
-<strong>Total available points:</strong> 120<br />
+<strong>Total available points:</strong> 125<br />
 <strong>Maximum points:</strong> 100</p>
 <p>As with the previous assignment, you should follow the <strong>GitHub Classroom</strong> link on <a class="reference external" href="https://canvas.tufts.edu/courses/27438/assignments">Canvas</a> or <a class="reference external" href="https://piazza.com/tufts/spring2021/uep239/resources">Piazza</a> to have an assignment repository generated for you. Then you should clone the assignment repository to your computer and do all work there. Keep track of your work using consistent commits and remember to push your work to the GitHub server to back it up.</p>
 <div class="admonition tip">
@@ -390,10 +390,204 @@ Greetings, Uku-Kaspar Uustalu!
 <li><p><code class="docutils literal notranslate"><span class="pre">divide(x,</span> <span class="pre">y)</span></code> should return the equivalent of <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">//</span> <span class="pre">y</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">modulo(x,</span> <span class="pre">y)</span></code> should return the equivalent of <code class="docutils literal notranslate"><span class="pre">abs(x)</span> <span class="pre">%</span> <span class="pre">abs(y)</span></code></p></li>
 </ul>
-<p>Feel free to define helper functions where appropriate and reference any previously defined functions when defining a new function. Just note that you are not allowed to use standard Python arithmetic anywhere. All arithmetic must use only the <code class="docutils literal notranslate"><span class="pre">add()</span></code>, <code class="docutils literal notranslate"><span class="pre">negate()</span></code>, <code class="docutils literal notranslate"><span class="pre">subtract()</span></code>, and <code class="docutils literal notranslate"><span class="pre">absolute()</span></code> functions and their derivatives. Division and modulo by zero are not defined in Python and can be undefined in your functions, meaning they can behave however and return whatever when attempting to perform these operations. Note that <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">**</span> <span class="pre">0</span></code> is defined as <code class="docutils literal notranslate"><span class="pre">1</span></code> in Python, hence <code class="docutils literal notranslate"><span class="pre">power(0,</span> <span class="pre">0)</span></code> should also return <code class="docutils literal notranslate"><span class="pre">1</span></code> (even though zero to the power of zero is actually undefined in formal mathematics).</p>
+<p>Feel free to define helper functions where appropriate and reference any previously defined functions when defining a new function. Just note that you are not allowed to use standard Python arithmetic anywhere. All arithmetic must use only the <code class="docutils literal notranslate"><span class="pre">add()</span></code>, <code class="docutils literal notranslate"><span class="pre">negate()</span></code>, <code class="docutils literal notranslate"><span class="pre">subtract()</span></code>, and <code class="docutils literal notranslate"><span class="pre">absolute()</span></code> functions and their derivatives. Division by zero, modulo zero, and zero to a negative power are not defined in Python and can be undefined in your functions, meaning that your functions can behave however and return whatever when attempting to perform these operations. Note that <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">**</span> <span class="pre">0</span></code> is defined as <code class="docutils literal notranslate"><span class="pre">1</span></code> in Python, hence <code class="docutils literal notranslate"><span class="pre">power(0,</span> <span class="pre">0)</span></code> should also return <code class="docutils literal notranslate"><span class="pre">1</span></code> (even though zero to the power of zero is actually undefined in formal mathematics).</p>
 <p>You can assume all inputs to your functions will be integers (including positive integers, negative integers, and zero). When supplied with any other input (like a floating-point number or a string), your functions can behave unexpectedly and err.</p>
 <p>You should thoroughly test your defined functions and ensure they behave exactly as their equivalent Python expressions. Include a file <code class="docutils literal notranslate"><span class="pre">testing_math.py</span></code> in your assignment repository that outlines your testing procedure. If you somehow automate your testing procedure, you will receive generous extra credit.</p>
+<p>When testing your functions you might notice an oddity in <code class="docutils literal notranslate"><span class="pre">math.floor(x</span> <span class="pre">**</span> <span class="pre">y)</span></code>. For example <code class="docutils literal notranslate"><span class="pre">math.floor((-2)</span> <span class="pre">**</span> <span class="pre">(-5))</span></code> returns <code class="docutils literal notranslate"><span class="pre">-1</span></code> as expected, because a negative number to an odd negative power always results in a number less than <code class="docutils literal notranslate"><span class="pre">0</span></code> but greater than <code class="docutils literal notranslate"><span class="pre">-1</span></code>, meaning that its floor should always be <code class="docutils literal notranslate"><span class="pre">-1</span></code>. However, you might notice that when you try something like <code class="docutils literal notranslate"><span class="pre">math.floor((-2)</span> <span class="pre">**</span> <span class="pre">(-5555))</span></code> the returned value is actually <code class="docutils literal notranslate"><span class="pre">0</span></code>, not <code class="docutils literal notranslate"><span class="pre">-1</span></code> as expected. This has to do with the limitations of computing. For extra credit, submit a file called <code class="docutils literal notranslate"><span class="pre">odd_math.md</span></code> where you explain why this happens. Note that your <code class="docutils literal notranslate"><span class="pre">power()</span></code> function does not have to mimic this behavior and should always return <code class="docutils literal notranslate"><span class="pre">-1</span></code> when used with a negative base and an odd negative exponent.</p>
+<p>Ideally you would define these functions by translating your pseudocode from HW 0 into actual Python code. However, most of you have yet to receive feedback on HW 0 and many of you had difficulties writing the pseudocode. Hence, if you are not confident in the pseudocode you wrote for HW 0, you will find some sample pseudocode below. However, note that there is more than one way to define these functions and write pseudocode that corresponds to these operations. If you feel good about the pseudocode you wrote for HW 0, you are strongly encouraged not to take a look at the pseudocode below and instead translate your own pseudocode into Python code. That will allow you to assess how well your pseudocode actually works and give you the opportunity to find and fix any logical errors that might be present.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Sample Pseudocode from Homework Assignment 0<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">X</span> <span class="pre">to</span> <span class="pre">Y</span></code>:</p>
+<ul class="simple">
+<li><p class="card-text">return <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">+</span> <span class="pre">Y</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">X</span></code>:</p>
+<ul class="simple">
+<li><p class="card-text">return <code class="docutils literal notranslate"><span class="pre">-X</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">subtract</span> <span class="pre">Y</span> <span class="pre">from</span> <span class="pre">X</span></code>:</p>
+<ul class="simple">
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">Z</span></code> be the result of negate <code class="docutils literal notranslate"><span class="pre">X</span></code></p></li>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">X</span> <span class="pre">to</span> <span class="pre">Z</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">X</span></code>:</p>
+<ul class="simple">
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">X</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return the value of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">X</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">else:</p>
+<ul>
+<li><p class="card-text">return the value of <code class="docutils literal notranslate"><span class="pre">X</span></code></p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">X</span> <span class="pre">by</span> <span class="pre">Y</span></code>:</p>
+<ul class="simple">
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">X</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">0</span></code> <strong>OR</strong> <code class="docutils literal notranslate"><span class="pre">Y</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return 0</p></li>
+</ul>
+</li>
+<li><p class="card-text">else:</p>
+<ul>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">A</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">X</span></code></p></li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">B</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">Y</span></code></p></li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">C</span></code> be <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p class="card-text">while <code class="docutils literal notranslate"><span class="pre">B</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">C</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">A</span> <span class="pre">to</span> <span class="pre">C</span></code></p></li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">B</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">subtract</span> <span class="pre">1</span> <span class="pre">from</span> <span class="pre">B</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">X</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">Y</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">C</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">else if <code class="docutils literal notranslate"><span class="pre">X</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">Y</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">C</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">else:</p>
+<ul>
+<li><p class="card-text">return the value of <code class="docutils literal notranslate"><span class="pre">C</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">square</span> <span class="pre">X</span></code>:</p>
+<ul class="simple">
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">X</span> <span class="pre">by</span> <span class="pre">X</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">divided</span> <span class="pre">by</span> <span class="pre">Y</span></code>:</p>
+<ul class="simple">
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">X</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">A</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">X</span></code></p></li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">B</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">Y</span></code></p></li>
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">A</span></code> is less than <code class="docutils literal notranslate"><span class="pre">B</span></code>:</p>
+<ul>
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">X</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">Y</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">1</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">else if <code class="docutils literal notranslate"><span class="pre">X</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">Y</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">1</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">else:</p>
+<ul>
+<li><p class="card-text">return <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">C</span></code> be <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p class="card-text">while <code class="docutils literal notranslate"><span class="pre">A</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">B</span></code></p>
+<ul>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">A</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">subtract</span> <span class="pre">B</span> <span class="pre">from</span> <span class="pre">A</span></code></p></li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">C</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">C</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">X</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">Y</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">C</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">C</span></code></p></li>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">C</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">else if <code class="docutils literal notranslate"><span class="pre">X</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">Y</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">C</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">C</span></code></p></li>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">C</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">else:</p>
+<ul>
+<li><p class="card-text">return <code class="docutils literal notranslate"><span class="pre">C</span></code></p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">modulo</span> <span class="pre">Y</span></code>:</p>
+<ul class="simple">
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">A</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">X</span></code></p></li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">B</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">absolute</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">Y</span></code></p></li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">C</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">divide</span> <span class="pre">A</span> <span class="pre">by</span> <span class="pre">B</span></code></p></li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">D</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">C</span> <span class="pre">by</span> <span class="pre">B</span></code></p></li>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">subtract</span> <span class="pre">D</span> <span class="pre">from</span> <span class="pre">A</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">power</span> <span class="pre">of</span> <span class="pre">Y</span></code>:</p>
+<ul class="simple">
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">Y</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">X</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">1</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">else:</p>
+<ul>
+<li><p class="card-text">return <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">X</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">Y</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">X</span></code> is less than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">A</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">modulo</span> <span class="pre">2</span></code></p></li>
+<li><p class="card-text">if <code class="docutils literal notranslate"><span class="pre">A</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">return the result of <code class="docutils literal notranslate"><span class="pre">negate</span> <span class="pre">1</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="card-text">else:</p>
+<ul>
+<li><p class="card-text">return <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">B</span></code> be <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p class="card-text">while <code class="docutils literal notranslate"><span class="pre">Y</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p>
+<ul>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">B</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">multiply</span> <span class="pre">B</span> <span class="pre">by</span> <span class="pre">X</span></code></p></li>
+<li><p class="card-text">let <code class="docutils literal notranslate"><span class="pre">Y</span></code> be the result of <code class="docutils literal notranslate"><span class="pre">subtract</span> <span class="pre">1</span> <span class="pre">from</span> <span class="pre">Y</span></code></p></li>
+</ul>
+</li>
+<li><p class="card-text">return <code class="docutils literal notranslate"><span class="pre">B</span></code></p></li>
+</ul>
 </div>
+</details></div>
 <div class="section" id="guessing-games">
 <h2>Guessing Games<a class="headerlink" href="#guessing-games" title="Permalink to this headline">¶</a></h2>
 <p>Here are some tips that might be useful when working on the following programs:</p>
@@ -467,7 +661,7 @@ Yay! Thank your for playing!
 <p>Your code should include comments and <a class="reference external" href="https://www.python.org/dev/peps/pep-0257/">docstrings</a> where appropriate and adhere to the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> standard within reason. Make sure to thoroughly test your scripts before submitting!</p>
 <p>Points will be awarded as follows:</p>
 <ul class="simple">
-<li><p>Personalized Greeting (10)</p></li>
+<li><p>Personalized Greeting (5)</p></li>
 <li><p>Drawing Polygons (10 + 5)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">polygon_function.py</span></code> (5)</p></li>
@@ -486,7 +680,7 @@ Yay! Thank your for playing!
 <li><p><code class="docutils literal notranslate"><span class="pre">median_value</span></code> (2)</p></li>
 </ul>
 </li>
-<li><p>Boolean Indexing (5 + 5)</p></li>
+<li><p>Boolean Indexing (10 + 5)</p></li>
 <li><p>Text Analyzer (10)</p></li>
 <li><p>Closest Points (15)</p>
 <ul>
@@ -494,10 +688,11 @@ Yay! Thank your for playing!
 <li><p><code class="docutils literal notranslate"><span class="pre">closest_points</span></code> (10)</p></li>
 </ul>
 </li>
-<li><p>Reinventing Math (15 + 10)</p>
+<li><p>Reinventing Math (15 + 5 + 10)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">reinventing_math.py</span></code> (10)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">testing_math.py</span></code> (5 + 10)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">odd_math.md</span></code> (5)</p></li>
 </ul>
 </li>
 <li><p>Guessing Games (20)</p>
@@ -555,7 +750,7 @@ Yay! Thank your for playing!
           By Uku-Kaspar Uustalu<br/>
         
             &copy; Copyright 2021.<br/>
-          Last updated on Feb 25, 2021.<br/>
+          Last updated on Feb 26, 2021.<br/>
       </p>
     </div>
   </footer>
