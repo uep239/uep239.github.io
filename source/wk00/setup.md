@@ -4,12 +4,12 @@ The following will walk you thorough configuring your **personal Windows or macO
 
 In addition to configuring certain system settings, we will be installing the following software:
 
-- [**Thonny**](https://thonny.org/) – a beginner-friendly integrated development environment (IDE) for Python
-- [**Google Chrome**](https://www.google.com/chrome/) or [**Mozilla Firefox**](https://www.mozilla.org/en-US/firefox/new/) – required to run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) without any issues
-- [**Visual Studio Code**](https://code.visualstudio.com/) (also known as VS Code) – a powerful code-friendly text editor with many useful features
-- [**Git**](https://git-scm.com/) – the most widely used distributed version control software
-- [**Miniconda**](https://docs.conda.io/en/latest/miniconda.html) – a lightweight Python distribution that comes bundled with the [Conda](https://docs.conda.io/en/latest/) package manager
-- [**Windows Terminal**](https://docs.microsoft.com/en-us/windows/terminal/) and [**PowerShell Core**](https://docs.microsoft.com/en-us/powershell/) – the next-generation command-line interface for Windows
+- [**Thonny**](https://thonny.org/) -- a beginner-friendly integrated development environment (IDE) for Python
+- [**Google Chrome**](https://www.google.com/chrome/) or [**Mozilla Firefox**](https://www.mozilla.org/en-US/firefox/new/) -- required to run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) without any issues
+- [**Visual Studio Code**](https://code.visualstudio.com/) (also known as VS Code) -- a powerful code-friendly text editor with many useful features
+- [**Git**](https://git-scm.com/) -- the most widely used distributed version control software
+- [**Miniconda**](https://docs.conda.io/en/latest/miniconda.html) -- a lightweight Python distribution that comes bundled with the [Conda](https://docs.conda.io/en/latest/) package manager
+- [**Windows Terminal**](https://docs.microsoft.com/en-us/windows/terminal/) and [**PowerShell Core**](https://docs.microsoft.com/en-us/powershell/) -- the next-generation command-line interface for Windows
 
 If you already happen to have any of the aforementioned software installed and configured, please carefully review the instructions below to see what configuration is recommended for this course. All course materials after this point assume the following configuration and if yours differs, you want to make sure you are aware of the differences and are able to circumnavigate any potential issues that might result. Also note the following:
 
@@ -123,7 +123,7 @@ Visual Studio Code (VS Code) is a powerful open-source text editor that works we
 
 ## Install and Configure Git
 
-Git is the most popular distributed version control software, originally developed by [Linus Trovalds](https://en.wikipedia.org/wiki/Linus_Torvalds) – the same [Finn](https://en.wikipedia.org/wiki/Finland) who created the Linux operating system (which pretty much runs half of the world). The following will guide you thorough installing Git on your computer and configuring it to be more convenient for you to use throughout the semester.
+Git is the most popular distributed version control software, originally developed by [Linus Trovalds](https://en.wikipedia.org/wiki/Linus_Torvalds) -- the same [Finn](https://en.wikipedia.org/wiki/Finland) who created the Linux operating system (which pretty much runs half of the world). The following will guide you thorough installing Git on your computer and configuring it to be more convenient for you to use throughout the semester.
 
 ```{attention}
 You will need to create GitHub account before proceeding (unless you already have one): **<https://github.com/join>**
@@ -381,9 +381,9 @@ After completing this setup, your base environment will be configured and you sh
 Obviously, the following is for Windows users only. Others are welcome to [**skip ahead**](#install-visual-studio-code-python-extensions) to the next section.
 ```
 
-Windows is often criticized amongst developers for having a clunky and uncomfortable command-line interface. However, that has changed in recent years with the release of Windows Terminal and PowerShell Core – a new and improved cross-platform version of PowerShell. (Note that this is different and actually completely separate from the PowerShell included in Windows by default, also known as Windows PowerShell.) To guarantee that you will have the best and most comfortable possible command-line interface on your Windows computer, let us install Windows Terminal along with PowerShell Core and configure them to work well with both Conda and Git.
+Windows is often criticized amongst developers for having a clunky and uncomfortable command-line interface. However, that has changed in recent years with the release of Windows Terminal and PowerShell Core -- a new and improved cross-platform version of PowerShell. (Note that this is different and actually completely separate from the PowerShell included in Windows by default, also known as Windows PowerShell.) To guarantee that you will have the best and most comfortable possible command-line interface on your Windows computer, let us install Windows Terminal along with PowerShell Core and configure them to work well with both Conda and Git.
 
-Both Windows Terminal and PowerShell Core are available from the [Microsoft Store](https://www.microsoft.com/en-us/store/apps/windows). Use the links below install them in the order specified – PowerShell Core **before** Windows Terminal.
+Both Windows Terminal and PowerShell Core are available from the [Microsoft Store](https://www.microsoft.com/en-us/store/apps/windows). Use the links below install them in the order specified -- PowerShell Core **before** Windows Terminal.
 
 1. Install **PowerShell Core**: <https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d>
 2. Install **Windows Terminal**: <https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701>
@@ -614,7 +614,7 @@ Making your terminal window more beautiful and colorful like this will not add a
 Note that there are numerous other themes available for Oh-My-PoSh as well. However, most of them require additional configuration or a specialized [Nerd Font](https://www.nerdfonts.com/) to display properly. Right now we configured Oh-My-PoSh to use a custom theme that works well with the Cascadia Code PL font, which is an official Microsoft font designed for use with Windows Terminal. Once you are more comfortable with PowerShell and its configuration, feel free to explore the [Oh-My-PoSh documentation ](https://github.com/JanDeDobbeleer/oh-my-posh) and set up a different theme of your liking.
 ````
 ```{tabbed} macOS
-There are two frameworks available for you to customize and beautify your terminal – [**Oh-My-Zsh**](https://ohmyz.sh/) and [**Oh-My-Bash**](https://ohmybash.nntoan.com/). Which you should use depends on your default shell. If you are using macOS 10.15 Catalina or newer and the line where you enter your commands in Terminal ends with a percent sign (`%`), then you are likely using Zsh. And if you are using macOS 10.14 Mojave or older and the line where you enter your commands in Terminal ends with a dollar sign (`$`), then you are probably using Bash. However, various configuration changes can alter both your default shell and its appearance. Hence, to make sure you know which is your default shell, do the following:
+There are two frameworks available for you to customize and beautify your terminal -- [**Oh-My-Zsh**](https://ohmyz.sh/) and [**Oh-My-Bash**](https://ohmybash.nntoan.com/). Which you should use depends on your default shell. If you are using macOS 10.15 Catalina or newer and the line where you enter your commands in Terminal ends with a percent sign (`%`), then you are likely using Zsh. And if you are using macOS 10.14 Mojave or older and the line where you enter your commands in Terminal ends with a dollar sign (`$`), then you are probably using Bash. However, various configuration changes can alter both your default shell and its appearance. Hence, to make sure you know which is your default shell, do the following:
 
 1. Launch **Terminal** from *Applications*.
 2. Run the following command and take note of the response:
