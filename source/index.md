@@ -26,7 +26,7 @@ Teaching Assistant
 
 Lectures
 ^^^
-**Mondays 10:00 am – 12:30 pm EST**\
+**Mondays 10:00 am 12:30 pm EST**\
 *All lectures virtual and synchronous*\
 See [**Canvas**][canvas-link] or [**Piazza**][piazza-link] for meeting details
 ---

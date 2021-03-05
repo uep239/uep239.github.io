@@ -339,7 +339,7 @@ After completing this setup, your base environment will be configured and you sh
     conda update conda --yes
     conda install mamba --yes
     mamba update --all --yes
-    mamba install jupyterlab>=3 nb_conda_kernels --yes
+    mamba install "jupyterlab>=3" nb_conda_kernels --yes
     ```
     *Feel free to just copy all of the commands and paste them into the prompt. All but the last line should automatically run one after the other. __You will need to press Enter to run the last command once all previous commands have finished.__*
 ````
@@ -369,7 +369,7 @@ After completing this setup, your base environment will be configured and you sh
     conda update conda --yes
     conda install mamba --yes
     mamba update --all --yes
-    mamba install jupyterlab>=3 nb_conda_kernels --yes
+    mamba install "jupyterlab>=3" nb_conda_kernels --yes
     ```
     *Feel free to just copy all of the commands and paste them into the terminal. All but the last line should automatically run one after the other. __You will need to press Return to run the last command once all previous commands have finished.__*
 ````
