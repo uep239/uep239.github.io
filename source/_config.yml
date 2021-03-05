@@ -4,7 +4,14 @@ copyright: '2021'
 logo: logo.png
 
 parse:
-  myst_extended_syntax: true
+    myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - linkify
+    - replacements
+    - substitution
 
 repository:
   url: https://github.com/uep239/uep239.github.io
