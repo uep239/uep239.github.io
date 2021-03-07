@@ -1,10 +1,6 @@
 # Geospatial Programming with Python
 UEP-0239 | Tufts University | Urban and Environmental Policy and Planning | Spring 2021
 
-% link definitions
-[canvas-link]: https://canvas.tufts.edu/courses/27438
-[piazza-link]: https://piazza.com/tufts/spring2021/uep239/resources
-
 ```{admonition} Attention
 :class: caution
 Please refer to the the PDF version of the course syllabus available at <https://tufts.box.com/v/uep239-syllabus> for any information not included on the course website. The course website will be updated throughout the semester.
@@ -28,7 +24,7 @@ Lectures
 ^^^
 **Mondays 10:00 am 12:30 pm EST**\
 *All lectures virtual and synchronous*\
-See [**Canvas**][canvas-link] or [**Piazza**][piazza-link] for meeting details
+See **{{ canvas_link }}** or **{{ piazza_link }}** for meeting details
 ---
 
 Office Hours
