@@ -1,10 +1,22 @@
-title: 'UEP-0239: Geospatial Programming with Python'
+title: "UEP-0239: Geospatial Programming with Python"
 author: Uku-Kaspar Uustalu
-copyright: '2021'
+copyright: "2021"
 logo: logo.png
 
 parse:
-  myst_extended_syntax: true
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - linkify
+    - replacements
+    - substitution
+  myst_substitutions:
+    canvas_url: https://canvas.tufts.edu/courses/27438
+    piazza_url: https://piazza.com/tufts/spring2021/uep239/resources
+    canvas_link: "{{ '[Canvas]({})'.format(canvas_url) }}"
+    piazza_link: "{{ '[Piazza]({})'.format(piazza_url) }}"
 
 repository:
   url: https://github.com/uep239/uep239.github.io
@@ -18,8 +30,8 @@ html:
   use_issues_button: true
   use_repository_button: true
   home_page_in_navbar: false
-  extra_navbar: ''
+  extra_navbar: ""
 
 sphinx:
   config:
-    html_last_updated_fmt: '%b %d, %Y'
+    html_last_updated_fmt: "%b %d, %Y"

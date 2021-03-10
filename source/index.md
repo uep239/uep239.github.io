@@ -1,10 +1,6 @@
 # Geospatial Programming with Python
 UEP-0239 | Tufts University | Urban and Environmental Policy and Planning | Spring 2021
 
-% link definitions
-[canvas-link]: https://canvas.tufts.edu/courses/27438
-[piazza-link]: https://piazza.com/tufts/spring2021/uep239/resources
-
 ```{admonition} Attention
 :class: caution
 Please refer to the the PDF version of the course syllabus available at <https://tufts.box.com/v/uep239-syllabus> for any information not included on the course website. The course website will be updated throughout the semester.
@@ -26,14 +22,16 @@ Teaching Assistant
 
 Lectures
 ^^^
-**Mondays 10:00 am – 12:30 pm EST**\
+**Mondays 10:00 am 12:30 pm EST**\
 *All lectures virtual and synchronous*\
-See [**Canvas**][canvas-link] or [**Piazza**][piazza-link] for meeting details
+See **{{ canvas_link }}** or **{{ piazza_link }}** for meeting details
 ---
 
 Office Hours
 ^^^
-*TBA*
+See the [**office hours calendar**](https://calendar.google.com/calendar/u/0/embed?src=ak9d1olh40e05vkeet7q4rsf7o@group.calendar.google.com&ctz=America/New_York&mode=WEEK&showCalendars=0) for scheduled offerings\
+Individual meetings available [**by appointment**](https://tufts.libcal.com/appointments/uku)\
+*Scheduled office hours will take place on __Discord__*
 ```
 
 ## Tentative Schedule
@@ -70,44 +68,44 @@ Office Hours
   - HW 1
 * - 4
   - March 1
-  - Advanced Python and Package Management
-  - HW 3\
-    HW 4
-  - HW 2
+  - Advanced Python
+  -
+  -
 * - 5
   - March 8
-  - Python for Data Analysis and Visualization
-  - HW 5\
-    **Midterm Project**
+  - Package Management and Virtual Environments
   - HW 3\
-    HW 4
+    **Midterm Project**
+  - HW 2
 * - 6
   - March 15
-  - Introduction to Spatial Data in Python
-  - HW 6
-  - HW 5
+  - Python for Data Analysis and Visualization
+  - HW 4\
+    HW 5
+  - HW 3
 * - 7
   - March 22
+  - Introduction to Spatial Data in Python
+  - HW 6
+  - HW 4\
+    HW 5
+* - 8
+  - March 29
   - Vector Analysis
   - HW 7\
     **Final Project**
-  - HW 6\
-    **Midterm Project**
-* - 8
-  - March 29
-  - Raster Analysis
-  - HW 8
-  - HW 7
+  - HW 6
 * - 9
   - April 5
-  - Network Analysis
-  - HW 9
+  - Raster Analysis
   - HW 8
+  - HW 7\
+    **Midterm Project**
 * - 10
   - April 12
-  - Remote Sensing and Machine Learning
-  - HW 10
-  - HW 9\
+  - Network Analysis
+  - HW 9
+  - HW 8\
     *Project Proposal*
 * - 11
   - **April 19**
@@ -116,14 +114,14 @@ Office Hours
   -
 * - 12
   - April 26
-  - Integrating Python with Desktop GIS
-  -
+  - Advanced Geospatial Programming
   - HW 10
+  - HW 9
 * - 13
   - May 3
   - Project Presentations and Course Wrap-Up
   -
-  -
+  - HW 10
 * - 14
   - May 10
   - *No Class*
