@@ -68,44 +68,44 @@ Individual meetings available [**by appointment**](https://tufts.libcal.com/appo
   - HW 1
 * - 4
   - March 1
-  - Advanced Python and Package Management
-  - HW 3\
-    HW 4
-  - HW 2
+  - Advanced Python
+  -
+  -
 * - 5
   - March 8
-  - Python for Data Analysis and Visualization
-  - HW 5\
-    **Midterm Project**
+  - Package Management and Virtual Environments
   - HW 3\
-    HW 4
+    **Midterm Project**
+  - HW 2
 * - 6
   - March 15
-  - Introduction to Spatial Data in Python
-  - HW 6
-  - HW 5
+  - Python for Data Analysis and Visualization
+  - HW 4\
+    HW 5
+  - HW 3
 * - 7
   - March 22
+  - Introduction to Spatial Data in Python
+  - HW 6
+  - HW 4\
+    HW 5
+* - 8
+  - March 29
   - Vector Analysis
   - HW 7\
     **Final Project**
-  - HW 6\
-    **Midterm Project**
-* - 8
-  - March 29
-  - Raster Analysis
-  - HW 8
-  - HW 7
+  - HW 6
 * - 9
   - April 5
-  - Network Analysis
-  - HW 9
+  - Raster Analysis
   - HW 8
+  - HW 7\
+    **Midterm Project**
 * - 10
   - April 12
-  - Remote Sensing and Machine Learning
-  - HW 10
-  - HW 9\
+  - Network Analysis
+  - HW 9
+  - HW 8\
     *Project Proposal*
 * - 11
   - **April 19**
@@ -114,14 +114,14 @@ Individual meetings available [**by appointment**](https://tufts.libcal.com/appo
   -
 * - 12
   - April 26
-  - Integrating Python with Desktop GIS
-  -
+  - Advanced Geospatial Programming
   - HW 10
+  - HW 9
 * - 13
   - May 3
   - Project Presentations and Course Wrap-Up
   -
-  -
+  - HW 10
 * - 14
   - May 10
   - *No Class*
