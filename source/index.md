@@ -29,7 +29,9 @@ See **{{ canvas_link }}** or **{{ piazza_link }}** for meeting details
 
 Office Hours
 ^^^
-*TBA*
+See the [**office hours calendar**](https://calendar.google.com/calendar/u/0/embed?src=ak9d1olh40e05vkeet7q4rsf7o@group.calendar.google.com&ctz=America/New_York&mode=WEEK&showCalendars=0) for scheduled offerings\
+Individual meetings available [**by appointment**](https://tufts.libcal.com/appointments/uku)\
+*Scheduled office hours will take place on __Discord__*
 ```
 
 ## Tentative Schedule
