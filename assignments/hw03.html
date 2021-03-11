@@ -312,12 +312,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">is_palindrome('Kayak')</span></code> should return <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_palindrome('palindrome')</span></code> should return <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
 </ul>
-<p>Your program should be very user-friendly and not display any scary errors if the user makes an error. Instead, you should use <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">...</span> <span class="pre">expect</span></code> to display user-friendly error messages in case any of the following happens:</p>
+<p>Your program should be very user-friendly and not display any scary errors if the user makes an error. Instead, you should use <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">...</span> <span class="pre">except</span></code> to display user-friendly error messages in case any of the following happens:</p>
 <ul class="simple">
 <li><p>The specified input file does not exist or the program is unable to read the specified input file.</p></li>
 <li><p>The program is unable to create or overwrite the specified output file.</p></li>
 </ul>
-<p>You do not need to worry about validating or concatenating file paths. The end user can either specify a filename (in which case it is assumed the filename is in the same directory the script is executed in) or a full path to the file. In either case, you can just pass the user input directly into <code class="docutils literal notranslate"><span class="pre">open()</span></code> and use <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">...</span> <span class="pre">expect</span></code> to catch any errors that might result from the user referring to a nonexisting file or specifying an invalid path.</p>
+<p>You do not need to worry about validating or concatenating file paths. The end user can either specify a filename (in which case it is assumed the filename is in the same directory the script is executed in) or a full path to the file. In either case, you can just pass the user input directly into <code class="docutils literal notranslate"><span class="pre">open()</span></code> and use <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">...</span> <span class="pre">except</span></code> to catch any errors that might result from the user referring to a nonexisting file or specifying an invalid path.</p>
 <p>Note that your <code class="docutils literal notranslate"><span class="pre">is_palindrome()</span></code> function is expected to err when used with input that is not a single string. However, depending on your implementation of the function, it might work perfectly well when used with input that is a list, not a string. To avoid the misuse of your function in this situation, you should include an <code class="docutils literal notranslate"><span class="pre">assert</span></code> statement in your function to ensure the input is a string.</p>
 <div class="section" id="sample-execution">
 <h3>Sample Execution<a class="headerlink" href="#sample-execution" title="Permalink to this headline">¶</a></h3>
@@ -384,7 +384,7 @@ Unable to read file input.txt
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>There are different classes of exceptions that get raised in different situations and the <code class="docutils literal notranslate"><span class="pre">catch</span></code> statement can be modified to catch only a specific class of error instead of all of them. You might want to investigate what kind of errors get raised in these different situations.</p>
+<p>There are different classes of exceptions that get raised in different situations and the <code class="docutils literal notranslate"><span class="pre">except</span></code> statement can be modified to catch only a specific class of error instead of all of them. You might want to investigate what kind of errors get raised in these different situations.</p>
 </div>
 </div>
 <div class="section" id="command-line-arguments">
@@ -525,7 +525,7 @@ usage: palindrome.py [-h] [-q] input_file output_file
           By Uku-Kaspar Uustalu<br/>
         
             &copy; Copyright 2021.<br/>
-          Last updated on Mar 10, 2021.<br/>
+          Last updated on Mar 11, 2021.<br/>
       </p>
     </div>
   </footer>
